@@ -1,0 +1,5185 @@
+{
+  "info": {
+    "matchName": "N/A",
+    "date": "2025-11-29T17:08:11.812Z",
+    "teams": {
+      "teamA": {
+        "name": "You",
+        "label": "A"
+      },
+      "teamB": {
+        "name": "Them",
+        "label": "B"
+      }
+    },
+    "finalScore": {
+      "setsA": 1,
+      "setsB": 2,
+      "formatted": "6-4, 1-6, 5-7",
+      "sets": [
+        {
+          "gamesA": 6,
+          "gamesB": 4,
+          "tieBreakA": 0,
+          "tieBreakB": 0
+        },
+        {
+          "gamesA": 1,
+          "gamesB": 6,
+          "tieBreakA": 0,
+          "tieBreakB": 0
+        },
+        {
+          "gamesA": 5,
+          "gamesB": 7,
+          "tieBreakA": 0,
+          "tieBreakB": 0
+        }
+      ]
+    },
+    "settings": {
+      "goldenPoint": "Disabled",
+      "tieBreak": "Disabled",
+      "proSet": "Disabled",
+      "superTieBreak": "Disabled",
+      "simplifiedScoring": "Disabled"
+    },
+    "duration": {
+      "startTime": "2025-11-29T17:08:11.812Z",
+      "endTime": "2025-11-29T19:47:40.584Z",
+      "totalSeconds": 9568
+    }
+  },
+  "points": [
+    {
+      "pointNumber": 1,
+      "timestamp": "2025-11-29T17:08:30.122Z",
+      "timestampUnix": 1764436110.122782,
+      "elapsedTime": "00:18",
+      "elapsedSeconds": 18.310781955718994,
+      "winner": "B",
+      "server": "B1",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "15",
+        "formatted": "0-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 2,
+      "timestamp": "2025-11-29T17:08:56.096Z",
+      "timestampUnix": 1764436136.096323,
+      "elapsedTime": "00:44",
+      "elapsedSeconds": 44.28432297706604,
+      "winner": "A",
+      "server": "B1",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "15",
+        "formatted": "15-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 3,
+      "timestamp": "2025-11-29T17:09:10.755Z",
+      "timestampUnix": 1764436150.755454,
+      "elapsedTime": "00:58",
+      "elapsedSeconds": 58.9434540271759,
+      "winner": "A",
+      "server": "B1",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "gameScore": {
+        "teamA": "30",
+        "teamB": "15",
+        "formatted": "30-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 4,
+      "timestamp": "2025-11-29T17:09:30.051Z",
+      "timestampUnix": 1764436170.0513391,
+      "elapsedTime": "01:18",
+      "elapsedSeconds": 78.23933911323547,
+      "winner": "B",
+      "server": "B1",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "gameScore": {
+        "teamA": "30",
+        "teamB": "30",
+        "formatted": "30-30"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 5,
+      "timestamp": "2025-11-29T17:09:45.395Z",
+      "timestampUnix": 1764436185.39502,
+      "elapsedTime": "01:33",
+      "elapsedSeconds": 93.58301997184753,
+      "winner": "A",
+      "server": "B1",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "gameScore": {
+        "teamA": "40",
+        "teamB": "30",
+        "formatted": "40-30"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 6,
+      "timestamp": "2025-11-29T17:10:09.831Z",
+      "timestampUnix": 1764436209.831768,
+      "elapsedTime": "01:58",
+      "elapsedSeconds": 118.01976799964905,
+      "winner": "A",
+      "server": "B1",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "0",
+        "formatted": "0-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 7,
+      "timestamp": "2025-11-29T17:10:43.563Z",
+      "timestampUnix": 1764436243.563036,
+      "elapsedTime": "02:31",
+      "elapsedSeconds": 151.7510359287262,
+      "winner": "A",
+      "server": "A2",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "0",
+        "formatted": "15-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 8,
+      "timestamp": "2025-11-29T17:10:58.166Z",
+      "timestampUnix": 1764436258.166343,
+      "elapsedTime": "02:46",
+      "elapsedSeconds": 166.35434293746948,
+      "winner": "A",
+      "server": "A2",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "gameScore": {
+        "teamA": "30",
+        "teamB": "0",
+        "formatted": "30-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 9,
+      "timestamp": "2025-11-29T17:11:14.017Z",
+      "timestampUnix": 1764436274.017102,
+      "elapsedTime": "03:02",
+      "elapsedSeconds": 182.2051019668579,
+      "winner": "B",
+      "server": "A2",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "gameScore": {
+        "teamA": "30",
+        "teamB": "15",
+        "formatted": "30-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 10,
+      "timestamp": "2025-11-29T17:11:19.536Z",
+      "timestampUnix": 1764436279.536067,
+      "elapsedTime": "03:07",
+      "elapsedSeconds": 187.72406697273254,
+      "winner": "B",
+      "server": "A2",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "gameScore": {
+        "teamA": "30",
+        "teamB": "30",
+        "formatted": "30-30"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 11,
+      "timestamp": "2025-11-29T17:11:32.085Z",
+      "timestampUnix": 1764436292.085433,
+      "elapsedTime": "03:20",
+      "elapsedSeconds": 200.273432970047,
+      "winner": "B",
+      "server": "A2",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "gameScore": {
+        "teamA": "30",
+        "teamB": "40",
+        "formatted": "30-40"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 12,
+      "timestamp": "2025-11-29T17:12:04.917Z",
+      "timestampUnix": 1764436324.917416,
+      "elapsedTime": "03:53",
+      "elapsedSeconds": 233.10541605949402,
+      "winner": "A",
+      "server": "A2",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "gameScore": {
+        "teamA": "40",
+        "teamB": "40",
+        "formatted": "40-40"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 13,
+      "timestamp": "2025-11-29T17:12:22.544Z",
+      "timestampUnix": 1764436342.544559,
+      "elapsedTime": "04:10",
+      "elapsedSeconds": 250.73255896568298,
+      "winner": "B",
+      "server": "A2",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "gameScore": {
+        "teamA": "40",
+        "teamB": "Ad",
+        "formatted": "40-Ad"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 14,
+      "timestamp": "2025-11-29T17:12:43.129Z",
+      "timestampUnix": 1764436363.129403,
+      "elapsedTime": "04:31",
+      "elapsedSeconds": 271.3174030780792,
+      "winner": "B",
+      "server": "A2",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "0",
+        "formatted": "0-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 15,
+      "timestamp": "2025-11-29T17:13:15.259Z",
+      "timestampUnix": 1764436395.259877,
+      "elapsedTime": "05:03",
+      "elapsedSeconds": 303.4478769302368,
+      "winner": "A",
+      "server": "B2",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "0",
+        "formatted": "15-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 16,
+      "timestamp": "2025-11-29T17:13:38.035Z",
+      "timestampUnix": 1764436418.0352101,
+      "elapsedTime": "05:26",
+      "elapsedSeconds": 326.22321009635925,
+      "winner": "B",
+      "server": "B2",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "15",
+        "formatted": "15-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 17,
+      "timestamp": "2025-11-29T17:13:58.448Z",
+      "timestampUnix": 1764436438.448271,
+      "elapsedTime": "05:46",
+      "elapsedSeconds": 346.63627099990845,
+      "winner": "B",
+      "server": "B2",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "30",
+        "formatted": "15-30"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 18,
+      "timestamp": "2025-11-29T17:14:12.867Z",
+      "timestampUnix": 1764436452.867931,
+      "elapsedTime": "06:01",
+      "elapsedSeconds": 361.05593085289,
+      "winner": "B",
+      "server": "B2",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "40",
+        "formatted": "15-40"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 19,
+      "timestamp": "2025-11-29T17:14:39.049Z",
+      "timestampUnix": 1764436479.0493379,
+      "elapsedTime": "06:27",
+      "elapsedSeconds": 387.2373378276825,
+      "winner": "A",
+      "server": "B2",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "gameScore": {
+        "teamA": "30",
+        "teamB": "40",
+        "formatted": "30-40"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 20,
+      "timestamp": "2025-11-29T17:14:57.427Z",
+      "timestampUnix": 1764436497.427122,
+      "elapsedTime": "06:45",
+      "elapsedSeconds": 405.61512207984924,
+      "winner": "A",
+      "server": "B2",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "gameScore": {
+        "teamA": "40",
+        "teamB": "40",
+        "formatted": "40-40"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 21,
+      "timestamp": "2025-11-29T17:15:15.462Z",
+      "timestampUnix": 1764436515.4622111,
+      "elapsedTime": "07:03",
+      "elapsedSeconds": 423.65021109580994,
+      "winner": "B",
+      "server": "B2",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "gameScore": {
+        "teamA": "40",
+        "teamB": "Ad",
+        "formatted": "40-Ad"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 22,
+      "timestamp": "2025-11-29T17:15:46.391Z",
+      "timestampUnix": 1764436546.3916469,
+      "elapsedTime": "07:34",
+      "elapsedSeconds": 454.5796468257904,
+      "winner": "A",
+      "server": "B2",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "gameScore": {
+        "teamA": "40",
+        "teamB": "40",
+        "formatted": "40-40"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 23,
+      "timestamp": "2025-11-29T17:16:15.779Z",
+      "timestampUnix": 1764436575.779186,
+      "elapsedTime": "08:03",
+      "elapsedSeconds": 483.9671859741211,
+      "winner": "A",
+      "server": "B2",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "gameScore": {
+        "teamA": "Ad",
+        "teamB": "40",
+        "formatted": "Ad-40"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 24,
+      "timestamp": "2025-11-29T17:16:37.821Z",
+      "timestampUnix": 1764436597.8216472,
+      "elapsedTime": "08:26",
+      "elapsedSeconds": 506.0096471309662,
+      "winner": "B",
+      "server": "B2",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "gameScore": {
+        "teamA": "40",
+        "teamB": "40",
+        "formatted": "40-40"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 25,
+      "timestamp": "2025-11-29T17:17:12.845Z",
+      "timestampUnix": 1764436632.845635,
+      "elapsedTime": "09:01",
+      "elapsedSeconds": 541.0336349010468,
+      "winner": "A",
+      "server": "B2",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "gameScore": {
+        "teamA": "Ad",
+        "teamB": "40",
+        "formatted": "Ad-40"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 26,
+      "timestamp": "2025-11-29T17:17:28.381Z",
+      "timestampUnix": 1764436648.3810291,
+      "elapsedTime": "09:16",
+      "elapsedSeconds": 556.5690290927887,
+      "winner": "B",
+      "server": "B2",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "gameScore": {
+        "teamA": "40",
+        "teamB": "40",
+        "formatted": "40-40"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 27,
+      "timestamp": "2025-11-29T17:17:56.122Z",
+      "timestampUnix": 1764436676.1228209,
+      "elapsedTime": "09:44",
+      "elapsedSeconds": 584.3108208179474,
+      "winner": "B",
+      "server": "B2",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "gameScore": {
+        "teamA": "40",
+        "teamB": "Ad",
+        "formatted": "40-Ad"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 28,
+      "timestamp": "2025-11-29T17:18:26.461Z",
+      "timestampUnix": 1764436706.4615831,
+      "elapsedTime": "10:14",
+      "elapsedSeconds": 614.6495831012726,
+      "winner": "B",
+      "server": "B2",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 1,
+        "teamB": 2,
+        "formatted": "1-2"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "0",
+        "formatted": "0-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 29,
+      "timestamp": "2025-11-29T17:19:08.123Z",
+      "timestampUnix": 1764436748.1236691,
+      "elapsedTime": "10:56",
+      "elapsedSeconds": 656.3116691112518,
+      "winner": "A",
+      "server": "A1",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 1,
+        "teamB": 2,
+        "formatted": "1-2"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "0",
+        "formatted": "15-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 30,
+      "timestamp": "2025-11-29T17:20:06.966Z",
+      "timestampUnix": 1764436806.966939,
+      "elapsedTime": "11:55",
+      "elapsedSeconds": 715.1549389362335,
+      "winner": "B",
+      "server": "A1",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 1,
+        "teamB": 2,
+        "formatted": "1-2"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "15",
+        "formatted": "15-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 31,
+      "timestamp": "2025-11-29T17:20:08.415Z",
+      "timestampUnix": 1764436808.4156651,
+      "elapsedTime": "11:56",
+      "elapsedSeconds": 716.6036651134491,
+      "winner": "A",
+      "server": "A1",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 1,
+        "teamB": 2,
+        "formatted": "1-2"
+      },
+      "gameScore": {
+        "teamA": "30",
+        "teamB": "15",
+        "formatted": "30-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 32,
+      "timestamp": "2025-11-29T17:20:20.651Z",
+      "timestampUnix": 1764436820.651515,
+      "elapsedTime": "12:08",
+      "elapsedSeconds": 728.8395149707794,
+      "winner": "A",
+      "server": "A1",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 1,
+        "teamB": 2,
+        "formatted": "1-2"
+      },
+      "gameScore": {
+        "teamA": "40",
+        "teamB": "15",
+        "formatted": "40-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 33,
+      "timestamp": "2025-11-29T17:20:28.826Z",
+      "timestampUnix": 1764436828.826803,
+      "elapsedTime": "12:17",
+      "elapsedSeconds": 737.0148029327393,
+      "winner": "A",
+      "server": "A1",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 2,
+        "teamB": 2,
+        "formatted": "2-2"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "0",
+        "formatted": "0-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 34,
+      "timestamp": "2025-11-29T17:20:54.764Z",
+      "timestampUnix": 1764436854.7647328,
+      "elapsedTime": "12:42",
+      "elapsedSeconds": 762.9527328014374,
+      "winner": "A",
+      "server": "B1",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 2,
+        "teamB": 2,
+        "formatted": "2-2"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "0",
+        "formatted": "15-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 35,
+      "timestamp": "2025-11-29T17:21:37.225Z",
+      "timestampUnix": 1764436897.2259932,
+      "elapsedTime": "13:25",
+      "elapsedSeconds": 805.4139931201935,
+      "winner": "B",
+      "server": "B1",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 2,
+        "teamB": 2,
+        "formatted": "2-2"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "15",
+        "formatted": "15-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 36,
+      "timestamp": "2025-11-29T17:21:59.539Z",
+      "timestampUnix": 1764436919.539001,
+      "elapsedTime": "13:47",
+      "elapsedSeconds": 827.727000951767,
+      "winner": "A",
+      "server": "B1",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 2,
+        "teamB": 2,
+        "formatted": "2-2"
+      },
+      "gameScore": {
+        "teamA": "30",
+        "teamB": "15",
+        "formatted": "30-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 37,
+      "timestamp": "2025-11-29T17:22:20.592Z",
+      "timestampUnix": 1764436940.59275,
+      "elapsedTime": "14:08",
+      "elapsedSeconds": 848.7807500362396,
+      "winner": "B",
+      "server": "B1",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 2,
+        "teamB": 2,
+        "formatted": "2-2"
+      },
+      "gameScore": {
+        "teamA": "30",
+        "teamB": "30",
+        "formatted": "30-30"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 38,
+      "timestamp": "2025-11-29T17:22:46.125Z",
+      "timestampUnix": 1764436966.125595,
+      "elapsedTime": "14:34",
+      "elapsedSeconds": 874.3135950565338,
+      "winner": "A",
+      "server": "B1",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 2,
+        "teamB": 2,
+        "formatted": "2-2"
+      },
+      "gameScore": {
+        "teamA": "40",
+        "teamB": "30",
+        "formatted": "40-30"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 39,
+      "timestamp": "2025-11-29T17:23:13.107Z",
+      "timestampUnix": 1764436993.10703,
+      "elapsedTime": "15:01",
+      "elapsedSeconds": 901.2950298786163,
+      "winner": "A",
+      "server": "B1",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 3,
+        "teamB": 2,
+        "formatted": "3-2"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "0",
+        "formatted": "0-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 40,
+      "timestamp": "2025-11-29T17:24:05.861Z",
+      "timestampUnix": 1764437045.861032,
+      "elapsedTime": "15:54",
+      "elapsedSeconds": 954.0490319728851,
+      "winner": "A",
+      "server": "A2",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 3,
+        "teamB": 2,
+        "formatted": "3-2"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "0",
+        "formatted": "15-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 41,
+      "timestamp": "2025-11-29T17:24:05.992Z",
+      "timestampUnix": 1764437045.9925408,
+      "elapsedTime": "15:54",
+      "elapsedSeconds": 954.1805408000946,
+      "winner": "A",
+      "server": "A2",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 3,
+        "teamB": 2,
+        "formatted": "3-2"
+      },
+      "gameScore": {
+        "teamA": "30",
+        "teamB": "0",
+        "formatted": "30-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 42,
+      "timestamp": "2025-11-29T17:24:19.323Z",
+      "timestampUnix": 1764437059.323195,
+      "elapsedTime": "16:07",
+      "elapsedSeconds": 967.5111949443817,
+      "winner": "B",
+      "server": "A2",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 3,
+        "teamB": 2,
+        "formatted": "3-2"
+      },
+      "gameScore": {
+        "teamA": "30",
+        "teamB": "15",
+        "formatted": "30-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 43,
+      "timestamp": "2025-11-29T17:24:31.015Z",
+      "timestampUnix": 1764437071.015822,
+      "elapsedTime": "16:19",
+      "elapsedSeconds": 979.2038218975067,
+      "winner": "A",
+      "server": "A2",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 3,
+        "teamB": 2,
+        "formatted": "3-2"
+      },
+      "gameScore": {
+        "teamA": "40",
+        "teamB": "15",
+        "formatted": "40-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 44,
+      "timestamp": "2025-11-29T17:24:45.861Z",
+      "timestampUnix": 1764437085.861326,
+      "elapsedTime": "16:34",
+      "elapsedSeconds": 994.0493259429932,
+      "winner": "B",
+      "server": "A2",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 3,
+        "teamB": 2,
+        "formatted": "3-2"
+      },
+      "gameScore": {
+        "teamA": "40",
+        "teamB": "30",
+        "formatted": "40-30"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 45,
+      "timestamp": "2025-11-29T17:25:06.614Z",
+      "timestampUnix": 1764437106.614862,
+      "elapsedTime": "16:54",
+      "elapsedSeconds": 1014.8028619289398,
+      "winner": "A",
+      "server": "A2",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 4,
+        "teamB": 2,
+        "formatted": "4-2"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "0",
+        "formatted": "0-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 46,
+      "timestamp": "2025-11-29T17:25:21.994Z",
+      "timestampUnix": 1764437121.994254,
+      "elapsedTime": "17:10",
+      "elapsedSeconds": 1030.182254076004,
+      "winner": "A",
+      "server": "B2",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 4,
+        "teamB": 2,
+        "formatted": "4-2"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "0",
+        "formatted": "15-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 47,
+      "timestamp": "2025-11-29T17:25:50.050Z",
+      "timestampUnix": 1764437150.05001,
+      "elapsedTime": "17:38",
+      "elapsedSeconds": 1058.238009929657,
+      "winner": "A",
+      "server": "B2",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 4,
+        "teamB": 2,
+        "formatted": "4-2"
+      },
+      "gameScore": {
+        "teamA": "30",
+        "teamB": "0",
+        "formatted": "30-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 48,
+      "timestamp": "2025-11-29T17:26:06.877Z",
+      "timestampUnix": 1764437166.877252,
+      "elapsedTime": "17:55",
+      "elapsedSeconds": 1075.0652520656586,
+      "winner": "B",
+      "server": "B2",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 4,
+        "teamB": 2,
+        "formatted": "4-2"
+      },
+      "gameScore": {
+        "teamA": "30",
+        "teamB": "15",
+        "formatted": "30-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 49,
+      "timestamp": "2025-11-29T17:26:27.347Z",
+      "timestampUnix": 1764437187.347631,
+      "elapsedTime": "18:15",
+      "elapsedSeconds": 1095.535630941391,
+      "winner": "B",
+      "server": "B2",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 4,
+        "teamB": 2,
+        "formatted": "4-2"
+      },
+      "gameScore": {
+        "teamA": "30",
+        "teamB": "30",
+        "formatted": "30-30"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 50,
+      "timestamp": "2025-11-29T17:27:08.658Z",
+      "timestampUnix": 1764437228.6585932,
+      "elapsedTime": "18:56",
+      "elapsedSeconds": 1136.8465931415558,
+      "winner": "A",
+      "server": "B2",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 4,
+        "teamB": 2,
+        "formatted": "4-2"
+      },
+      "gameScore": {
+        "teamA": "40",
+        "teamB": "30",
+        "formatted": "40-30"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 51,
+      "timestamp": "2025-11-29T17:27:12.544Z",
+      "timestampUnix": 1764437232.5443969,
+      "elapsedTime": "19:00",
+      "elapsedSeconds": 1140.7323968410492,
+      "winner": "B",
+      "server": "B2",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 4,
+        "teamB": 2,
+        "formatted": "4-2"
+      },
+      "gameScore": {
+        "teamA": "40",
+        "teamB": "40",
+        "formatted": "40-40"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 52,
+      "timestamp": "2025-11-29T17:27:58.102Z",
+      "timestampUnix": 1764437278.1020432,
+      "elapsedTime": "19:46",
+      "elapsedSeconds": 1186.2900431156158,
+      "winner": "A",
+      "server": "B2",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 4,
+        "teamB": 2,
+        "formatted": "4-2"
+      },
+      "gameScore": {
+        "teamA": "Ad",
+        "teamB": "40",
+        "formatted": "Ad-40"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 53,
+      "timestamp": "2025-11-29T17:28:24.442Z",
+      "timestampUnix": 1764437304.442626,
+      "elapsedTime": "20:12",
+      "elapsedSeconds": 1212.630625963211,
+      "winner": "A",
+      "server": "B2",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 5,
+        "teamB": 2,
+        "formatted": "5-2"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "0",
+        "formatted": "0-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 54,
+      "timestamp": "2025-11-29T17:28:50.731Z",
+      "timestampUnix": 1764437330.7313719,
+      "elapsedTime": "20:38",
+      "elapsedSeconds": 1238.919371843338,
+      "winner": "B",
+      "server": "A1",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 5,
+        "teamB": 2,
+        "formatted": "5-2"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "15",
+        "formatted": "0-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 55,
+      "timestamp": "2025-11-29T17:30:13.682Z",
+      "timestampUnix": 1764437413.6820211,
+      "elapsedTime": "22:01",
+      "elapsedSeconds": 1321.8700211048126,
+      "winner": "B",
+      "server": "A1",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 5,
+        "teamB": 2,
+        "formatted": "5-2"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "30",
+        "formatted": "0-30"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 56,
+      "timestamp": "2025-11-29T17:30:14.248Z",
+      "timestampUnix": 1764437414.248637,
+      "elapsedTime": "22:02",
+      "elapsedSeconds": 1322.4366369247437,
+      "winner": "A",
+      "server": "A1",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 5,
+        "teamB": 2,
+        "formatted": "5-2"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "30",
+        "formatted": "15-30"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 57,
+      "timestamp": "2025-11-29T17:30:45.085Z",
+      "timestampUnix": 1764437445.085114,
+      "elapsedTime": "22:33",
+      "elapsedSeconds": 1353.2731139659882,
+      "winner": "B",
+      "server": "A1",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 5,
+        "teamB": 2,
+        "formatted": "5-2"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "40",
+        "formatted": "15-40"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 58,
+      "timestamp": "2025-11-29T17:31:13.588Z",
+      "timestampUnix": 1764437473.588904,
+      "elapsedTime": "23:01",
+      "elapsedSeconds": 1381.7769038677216,
+      "winner": "A",
+      "server": "A1",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 5,
+        "teamB": 2,
+        "formatted": "5-2"
+      },
+      "gameScore": {
+        "teamA": "30",
+        "teamB": "40",
+        "formatted": "30-40"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 59,
+      "timestamp": "2025-11-29T17:31:34.502Z",
+      "timestampUnix": 1764437494.502598,
+      "elapsedTime": "23:22",
+      "elapsedSeconds": 1402.6905980110168,
+      "winner": "B",
+      "server": "A1",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 5,
+        "teamB": 3,
+        "formatted": "5-3"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "0",
+        "formatted": "0-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 60,
+      "timestamp": "2025-11-29T17:32:05.440Z",
+      "timestampUnix": 1764437525.4403791,
+      "elapsedTime": "23:53",
+      "elapsedSeconds": 1433.6283791065216,
+      "winner": "A",
+      "server": "B1",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 5,
+        "teamB": 3,
+        "formatted": "5-3"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "0",
+        "formatted": "15-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 61,
+      "timestamp": "2025-11-29T17:32:47.321Z",
+      "timestampUnix": 1764437567.32122,
+      "elapsedTime": "24:35",
+      "elapsedSeconds": 1475.5092198848724,
+      "winner": "B",
+      "server": "B1",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 5,
+        "teamB": 3,
+        "formatted": "5-3"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "15",
+        "formatted": "15-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 62,
+      "timestamp": "2025-11-29T17:32:47.553Z",
+      "timestampUnix": 1764437567.553791,
+      "elapsedTime": "24:35",
+      "elapsedSeconds": 1475.741791009903,
+      "winner": "A",
+      "server": "B1",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 5,
+        "teamB": 3,
+        "formatted": "5-3"
+      },
+      "gameScore": {
+        "teamA": "30",
+        "teamB": "15",
+        "formatted": "30-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 63,
+      "timestamp": "2025-11-29T17:33:31.762Z",
+      "timestampUnix": 1764437611.762312,
+      "elapsedTime": "25:19",
+      "elapsedSeconds": 1519.9503118991852,
+      "winner": "B",
+      "server": "B1",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 5,
+        "teamB": 3,
+        "formatted": "5-3"
+      },
+      "gameScore": {
+        "teamA": "30",
+        "teamB": "30",
+        "formatted": "30-30"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 64,
+      "timestamp": "2025-11-29T17:33:58.556Z",
+      "timestampUnix": 1764437638.556716,
+      "elapsedTime": "25:46",
+      "elapsedSeconds": 1546.7447159290314,
+      "winner": "B",
+      "server": "B1",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 5,
+        "teamB": 3,
+        "formatted": "5-3"
+      },
+      "gameScore": {
+        "teamA": "30",
+        "teamB": "40",
+        "formatted": "30-40"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 65,
+      "timestamp": "2025-11-29T17:34:30.452Z",
+      "timestampUnix": 1764437670.452199,
+      "elapsedTime": "26:18",
+      "elapsedSeconds": 1578.6401989459991,
+      "winner": "B",
+      "server": "B1",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 5,
+        "teamB": 4,
+        "formatted": "5-4"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "0",
+        "formatted": "0-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 66,
+      "timestamp": "2025-11-29T17:35:01.418Z",
+      "timestampUnix": 1764437701.418489,
+      "elapsedTime": "26:49",
+      "elapsedSeconds": 1609.6064889431,
+      "winner": "A",
+      "server": "A2",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 5,
+        "teamB": 4,
+        "formatted": "5-4"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "0",
+        "formatted": "15-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 67,
+      "timestamp": "2025-11-29T17:35:37.241Z",
+      "timestampUnix": 1764437737.2412682,
+      "elapsedTime": "27:25",
+      "elapsedSeconds": 1645.4292681217194,
+      "winner": "A",
+      "server": "A2",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 5,
+        "teamB": 4,
+        "formatted": "5-4"
+      },
+      "gameScore": {
+        "teamA": "30",
+        "teamB": "0",
+        "formatted": "30-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 68,
+      "timestamp": "2025-11-29T17:35:37.508Z",
+      "timestampUnix": 1764437737.508113,
+      "elapsedTime": "27:25",
+      "elapsedSeconds": 1645.69611287117,
+      "winner": "B",
+      "server": "A2",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 5,
+        "teamB": 4,
+        "formatted": "5-4"
+      },
+      "gameScore": {
+        "teamA": "30",
+        "teamB": "15",
+        "formatted": "30-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 69,
+      "timestamp": "2025-11-29T17:36:06.628Z",
+      "timestampUnix": 1764437766.6287951,
+      "elapsedTime": "27:54",
+      "elapsedSeconds": 1674.8167951107025,
+      "winner": "A",
+      "server": "A2",
+      "sets": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "currentSet": 1,
+      "games": {
+        "teamA": 5,
+        "teamB": 4,
+        "formatted": "5-4"
+      },
+      "gameScore": {
+        "teamA": "40",
+        "teamB": "15",
+        "formatted": "40-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 70,
+      "timestamp": "2025-11-29T17:36:24.013Z",
+      "timestampUnix": 1764437784.0135121,
+      "elapsedTime": "28:12",
+      "elapsedSeconds": 1692.2015120983124,
+      "winner": "A",
+      "server": "A2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "currentSet": 2,
+      "games": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "0",
+        "formatted": "0-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 71,
+      "timestamp": "2025-11-29T17:39:09.674Z",
+      "timestampUnix": 1764437949.674644,
+      "elapsedTime": "30:57",
+      "elapsedSeconds": 1857.862643957138,
+      "winner": "B",
+      "server": "B2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "currentSet": 2,
+      "games": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "15",
+        "formatted": "0-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 72,
+      "timestamp": "2025-11-29T17:39:40.008Z",
+      "timestampUnix": 1764437980.008662,
+      "elapsedTime": "31:28",
+      "elapsedSeconds": 1888.1966619491577,
+      "winner": "A",
+      "server": "B2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "currentSet": 2,
+      "games": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "15",
+        "formatted": "15-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 73,
+      "timestamp": "2025-11-29T17:40:02.171Z",
+      "timestampUnix": 1764438002.1713018,
+      "elapsedTime": "31:50",
+      "elapsedSeconds": 1910.3593018054962,
+      "winner": "A",
+      "server": "B2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "currentSet": 2,
+      "games": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "gameScore": {
+        "teamA": "30",
+        "teamB": "15",
+        "formatted": "30-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 74,
+      "timestamp": "2025-11-29T17:40:36.995Z",
+      "timestampUnix": 1764438036.995673,
+      "elapsedTime": "32:25",
+      "elapsedSeconds": 1945.1836729049683,
+      "winner": "B",
+      "server": "B2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "currentSet": 2,
+      "games": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "gameScore": {
+        "teamA": "30",
+        "teamB": "30",
+        "formatted": "30-30"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 75,
+      "timestamp": "2025-11-29T17:40:53.897Z",
+      "timestampUnix": 1764438053.89787,
+      "elapsedTime": "32:42",
+      "elapsedSeconds": 1962.0858700275421,
+      "winner": "B",
+      "server": "B2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "currentSet": 2,
+      "games": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "gameScore": {
+        "teamA": "30",
+        "teamB": "40",
+        "formatted": "30-40"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 76,
+      "timestamp": "2025-11-29T17:41:21.269Z",
+      "timestampUnix": 1764438081.269331,
+      "elapsedTime": "33:09",
+      "elapsedSeconds": 1989.457330942154,
+      "winner": "B",
+      "server": "B2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "currentSet": 2,
+      "games": {
+        "teamA": 0,
+        "teamB": 1,
+        "formatted": "0-1"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "0",
+        "formatted": "0-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 77,
+      "timestamp": "2025-11-29T17:42:13.621Z",
+      "timestampUnix": 1764438133.621675,
+      "elapsedTime": "34:01",
+      "elapsedSeconds": 2041.8096749782562,
+      "winner": "A",
+      "server": "A1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "currentSet": 2,
+      "games": {
+        "teamA": 0,
+        "teamB": 1,
+        "formatted": "0-1"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "0",
+        "formatted": "15-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 78,
+      "timestamp": "2025-11-29T17:42:13.754Z",
+      "timestampUnix": 1764438133.754459,
+      "elapsedTime": "34:01",
+      "elapsedSeconds": 2041.9424588680267,
+      "winner": "A",
+      "server": "A1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "currentSet": 2,
+      "games": {
+        "teamA": 0,
+        "teamB": 1,
+        "formatted": "0-1"
+      },
+      "gameScore": {
+        "teamA": "30",
+        "teamB": "0",
+        "formatted": "30-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 79,
+      "timestamp": "2025-11-29T17:42:27.876Z",
+      "timestampUnix": 1764438147.8762488,
+      "elapsedTime": "34:16",
+      "elapsedSeconds": 2056.0642488002777,
+      "winner": "A",
+      "server": "A1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "currentSet": 2,
+      "games": {
+        "teamA": 0,
+        "teamB": 1,
+        "formatted": "0-1"
+      },
+      "gameScore": {
+        "teamA": "40",
+        "teamB": "0",
+        "formatted": "40-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 80,
+      "timestamp": "2025-11-29T17:42:53.715Z",
+      "timestampUnix": 1764438173.715455,
+      "elapsedTime": "34:41",
+      "elapsedSeconds": 2081.903455018997,
+      "winner": "B",
+      "server": "A1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "currentSet": 2,
+      "games": {
+        "teamA": 0,
+        "teamB": 1,
+        "formatted": "0-1"
+      },
+      "gameScore": {
+        "teamA": "40",
+        "teamB": "15",
+        "formatted": "40-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 81,
+      "timestamp": "2025-11-29T17:43:26.178Z",
+      "timestampUnix": 1764438206.178381,
+      "elapsedTime": "35:14",
+      "elapsedSeconds": 2114.366380929947,
+      "winner": "A",
+      "server": "A1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "currentSet": 2,
+      "games": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "0",
+        "formatted": "0-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 82,
+      "timestamp": "2025-11-29T17:43:53.858Z",
+      "timestampUnix": 1764438233.858876,
+      "elapsedTime": "35:42",
+      "elapsedSeconds": 2142.0468759536743,
+      "winner": "B",
+      "server": "B1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "currentSet": 2,
+      "games": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "15",
+        "formatted": "0-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 83,
+      "timestamp": "2025-11-29T17:44:24.499Z",
+      "timestampUnix": 1764438264.499574,
+      "elapsedTime": "36:12",
+      "elapsedSeconds": 2172.6875739097595,
+      "winner": "A",
+      "server": "B1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "currentSet": 2,
+      "games": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "15",
+        "formatted": "15-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 84,
+      "timestamp": "2025-11-29T17:45:00.914Z",
+      "timestampUnix": 1764438300.9143581,
+      "elapsedTime": "36:49",
+      "elapsedSeconds": 2209.1023581027985,
+      "winner": "B",
+      "server": "B1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "currentSet": 2,
+      "games": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "30",
+        "formatted": "15-30"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 85,
+      "timestamp": "2025-11-29T17:45:13.355Z",
+      "timestampUnix": 1764438313.355089,
+      "elapsedTime": "37:01",
+      "elapsedSeconds": 2221.543088912964,
+      "winner": "B",
+      "server": "B1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "currentSet": 2,
+      "games": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "40",
+        "formatted": "15-40"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 86,
+      "timestamp": "2025-11-29T17:45:35.318Z",
+      "timestampUnix": 1764438335.318963,
+      "elapsedTime": "37:23",
+      "elapsedSeconds": 2243.5069630146027,
+      "winner": "B",
+      "server": "B1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "currentSet": 2,
+      "games": {
+        "teamA": 1,
+        "teamB": 2,
+        "formatted": "1-2"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "0",
+        "formatted": "0-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 87,
+      "timestamp": "2025-11-29T17:46:32.385Z",
+      "timestampUnix": 1764438392.3854508,
+      "elapsedTime": "38:20",
+      "elapsedSeconds": 2300.5734508037567,
+      "winner": "B",
+      "server": "A2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "currentSet": 2,
+      "games": {
+        "teamA": 1,
+        "teamB": 2,
+        "formatted": "1-2"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "15",
+        "formatted": "0-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 88,
+      "timestamp": "2025-11-29T17:46:32.568Z",
+      "timestampUnix": 1764438392.568297,
+      "elapsedTime": "38:20",
+      "elapsedSeconds": 2300.7562968730927,
+      "winner": "B",
+      "server": "A2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "currentSet": 2,
+      "games": {
+        "teamA": 1,
+        "teamB": 2,
+        "formatted": "1-2"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "30",
+        "formatted": "0-30"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 89,
+      "timestamp": "2025-11-29T17:46:46.721Z",
+      "timestampUnix": 1764438406.7218719,
+      "elapsedTime": "38:34",
+      "elapsedSeconds": 2314.909871816635,
+      "winner": "A",
+      "server": "A2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "currentSet": 2,
+      "games": {
+        "teamA": 1,
+        "teamB": 2,
+        "formatted": "1-2"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "30",
+        "formatted": "15-30"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 90,
+      "timestamp": "2025-11-29T17:47:16.895Z",
+      "timestampUnix": 1764438436.8952398,
+      "elapsedTime": "39:05",
+      "elapsedSeconds": 2345.0832397937775,
+      "winner": "B",
+      "server": "A2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "currentSet": 2,
+      "games": {
+        "teamA": 1,
+        "teamB": 2,
+        "formatted": "1-2"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "40",
+        "formatted": "15-40"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 91,
+      "timestamp": "2025-11-29T17:47:35.664Z",
+      "timestampUnix": 1764438455.664222,
+      "elapsedTime": "39:23",
+      "elapsedSeconds": 2363.85222196579,
+      "winner": "B",
+      "server": "A2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "currentSet": 2,
+      "games": {
+        "teamA": 1,
+        "teamB": 3,
+        "formatted": "1-3"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "0",
+        "formatted": "0-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 92,
+      "timestamp": "2025-11-29T17:48:11.888Z",
+      "timestampUnix": 1764438491.888164,
+      "elapsedTime": "40:00",
+      "elapsedSeconds": 2400.076164007187,
+      "winner": "B",
+      "server": "B2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "currentSet": 2,
+      "games": {
+        "teamA": 1,
+        "teamB": 3,
+        "formatted": "1-3"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "15",
+        "formatted": "0-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 93,
+      "timestamp": "2025-11-29T17:48:12.187Z",
+      "timestampUnix": 1764438492.187306,
+      "elapsedTime": "40:00",
+      "elapsedSeconds": 2400.375305891037,
+      "winner": "A",
+      "server": "B2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "currentSet": 2,
+      "games": {
+        "teamA": 1,
+        "teamB": 3,
+        "formatted": "1-3"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "15",
+        "formatted": "15-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 94,
+      "timestamp": "2025-11-29T17:48:46.804Z",
+      "timestampUnix": 1764438526.804867,
+      "elapsedTime": "40:34",
+      "elapsedSeconds": 2434.9928669929504,
+      "winner": "B",
+      "server": "B2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "currentSet": 2,
+      "games": {
+        "teamA": 1,
+        "teamB": 3,
+        "formatted": "1-3"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "30",
+        "formatted": "15-30"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 95,
+      "timestamp": "2025-11-29T17:49:22.106Z",
+      "timestampUnix": 1764438562.106258,
+      "elapsedTime": "41:10",
+      "elapsedSeconds": 2470.294257879257,
+      "winner": "A",
+      "server": "B2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "currentSet": 2,
+      "games": {
+        "teamA": 1,
+        "teamB": 3,
+        "formatted": "1-3"
+      },
+      "gameScore": {
+        "teamA": "30",
+        "teamB": "30",
+        "formatted": "30-30"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 96,
+      "timestamp": "2025-11-29T17:49:42.943Z",
+      "timestampUnix": 1764438582.943166,
+      "elapsedTime": "41:31",
+      "elapsedSeconds": 2491.1311659812927,
+      "winner": "A",
+      "server": "B2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "currentSet": 2,
+      "games": {
+        "teamA": 1,
+        "teamB": 3,
+        "formatted": "1-3"
+      },
+      "gameScore": {
+        "teamA": "40",
+        "teamB": "30",
+        "formatted": "40-30"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 97,
+      "timestamp": "2025-11-29T17:50:04.813Z",
+      "timestampUnix": 1764438604.813861,
+      "elapsedTime": "41:53",
+      "elapsedSeconds": 2513.00186085701,
+      "winner": "B",
+      "server": "B2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "currentSet": 2,
+      "games": {
+        "teamA": 1,
+        "teamB": 3,
+        "formatted": "1-3"
+      },
+      "gameScore": {
+        "teamA": "40",
+        "teamB": "40",
+        "formatted": "40-40"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 98,
+      "timestamp": "2025-11-29T17:50:53.035Z",
+      "timestampUnix": 1764438653.035461,
+      "elapsedTime": "42:41",
+      "elapsedSeconds": 2561.2234609127045,
+      "winner": "B",
+      "server": "B2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "currentSet": 2,
+      "games": {
+        "teamA": 1,
+        "teamB": 3,
+        "formatted": "1-3"
+      },
+      "gameScore": {
+        "teamA": "40",
+        "teamB": "Ad",
+        "formatted": "40-Ad"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 99,
+      "timestamp": "2025-11-29T17:50:53.168Z",
+      "timestampUnix": 1764438653.168714,
+      "elapsedTime": "42:41",
+      "elapsedSeconds": 2561.3567140102386,
+      "winner": "B",
+      "server": "B2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "currentSet": 2,
+      "games": {
+        "teamA": 1,
+        "teamB": 4,
+        "formatted": "1-4"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "0",
+        "formatted": "0-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 100,
+      "timestamp": "2025-11-29T17:51:30.583Z",
+      "timestampUnix": 1764438690.583358,
+      "elapsedTime": "43:18",
+      "elapsedSeconds": 2598.771358013153,
+      "winner": "B",
+      "server": "A1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "currentSet": 2,
+      "games": {
+        "teamA": 1,
+        "teamB": 4,
+        "formatted": "1-4"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "15",
+        "formatted": "0-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 101,
+      "timestamp": "2025-11-29T17:51:47.977Z",
+      "timestampUnix": 1764438707.9773622,
+      "elapsedTime": "43:36",
+      "elapsedSeconds": 2616.1653621196747,
+      "winner": "B",
+      "server": "A1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "currentSet": 2,
+      "games": {
+        "teamA": 1,
+        "teamB": 4,
+        "formatted": "1-4"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "30",
+        "formatted": "0-30"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 102,
+      "timestamp": "2025-11-29T17:52:16.791Z",
+      "timestampUnix": 1764438736.791723,
+      "elapsedTime": "44:04",
+      "elapsedSeconds": 2644.9797229766846,
+      "winner": "A",
+      "server": "A1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "currentSet": 2,
+      "games": {
+        "teamA": 1,
+        "teamB": 4,
+        "formatted": "1-4"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "30",
+        "formatted": "15-30"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 103,
+      "timestamp": "2025-11-29T17:52:41.045Z",
+      "timestampUnix": 1764438761.045267,
+      "elapsedTime": "44:29",
+      "elapsedSeconds": 2669.233267068863,
+      "winner": "A",
+      "server": "A1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "currentSet": 2,
+      "games": {
+        "teamA": 1,
+        "teamB": 4,
+        "formatted": "1-4"
+      },
+      "gameScore": {
+        "teamA": "30",
+        "teamB": "30",
+        "formatted": "30-30"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 104,
+      "timestamp": "2025-11-29T17:53:12.021Z",
+      "timestampUnix": 1764438792.021147,
+      "elapsedTime": "45:00",
+      "elapsedSeconds": 2700.209146976471,
+      "winner": "B",
+      "server": "A1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "currentSet": 2,
+      "games": {
+        "teamA": 1,
+        "teamB": 4,
+        "formatted": "1-4"
+      },
+      "gameScore": {
+        "teamA": "30",
+        "teamB": "40",
+        "formatted": "30-40"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 105,
+      "timestamp": "2025-11-29T17:53:40.727Z",
+      "timestampUnix": 1764438820.7273111,
+      "elapsedTime": "45:28",
+      "elapsedSeconds": 2728.9153110980988,
+      "winner": "B",
+      "server": "A1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "currentSet": 2,
+      "games": {
+        "teamA": 1,
+        "teamB": 5,
+        "formatted": "1-5"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "0",
+        "formatted": "0-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 106,
+      "timestamp": "2025-11-29T17:54:48.902Z",
+      "timestampUnix": 1764438888.902405,
+      "elapsedTime": "46:37",
+      "elapsedSeconds": 2797.090404987335,
+      "winner": "B",
+      "server": "B1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "currentSet": 2,
+      "games": {
+        "teamA": 1,
+        "teamB": 5,
+        "formatted": "1-5"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "15",
+        "formatted": "0-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 107,
+      "timestamp": "2025-11-29T17:54:49.034Z",
+      "timestampUnix": 1764438889.034071,
+      "elapsedTime": "46:37",
+      "elapsedSeconds": 2797.2220709323883,
+      "winner": "B",
+      "server": "B1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "currentSet": 2,
+      "games": {
+        "teamA": 1,
+        "teamB": 5,
+        "formatted": "1-5"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "30",
+        "formatted": "0-30"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 108,
+      "timestamp": "2025-11-29T17:54:49.268Z",
+      "timestampUnix": 1764438889.2685518,
+      "elapsedTime": "46:37",
+      "elapsedSeconds": 2797.4565517902374,
+      "winner": "A",
+      "server": "B1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "currentSet": 2,
+      "games": {
+        "teamA": 1,
+        "teamB": 5,
+        "formatted": "1-5"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "30",
+        "formatted": "15-30"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 109,
+      "timestamp": "2025-11-29T17:57:52.452Z",
+      "timestampUnix": 1764439072.452115,
+      "elapsedTime": "49:40",
+      "elapsedSeconds": 2980.6401150226593,
+      "winner": "B",
+      "server": "B1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "currentSet": 2,
+      "games": {
+        "teamA": 1,
+        "teamB": 5,
+        "formatted": "1-5"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "40",
+        "formatted": "15-40"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 110,
+      "timestamp": "2025-11-29T17:57:52.752Z",
+      "timestampUnix": 1764439072.7524219,
+      "elapsedTime": "49:40",
+      "elapsedSeconds": 2980.940421819687,
+      "winner": "B",
+      "server": "B1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "0",
+        "formatted": "0-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 111,
+      "timestamp": "2025-11-29T17:58:13.579Z",
+      "timestampUnix": 1764439093.579833,
+      "elapsedTime": "50:01",
+      "elapsedSeconds": 3001.767832994461,
+      "winner": "A",
+      "server": "A2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "0",
+        "formatted": "15-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 112,
+      "timestamp": "2025-11-29T17:58:35.416Z",
+      "timestampUnix": 1764439115.416462,
+      "elapsedTime": "50:23",
+      "elapsedSeconds": 3023.6044619083405,
+      "winner": "A",
+      "server": "A2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "gameScore": {
+        "teamA": "30",
+        "teamB": "0",
+        "formatted": "30-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 113,
+      "timestamp": "2025-11-29T17:58:58.810Z",
+      "timestampUnix": 1764439138.810882,
+      "elapsedTime": "50:46",
+      "elapsedSeconds": 3046.9988820552826,
+      "winner": "A",
+      "server": "A2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "gameScore": {
+        "teamA": "40",
+        "teamB": "0",
+        "formatted": "40-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 114,
+      "timestamp": "2025-11-29T17:58:59.227Z",
+      "timestampUnix": 1764439139.227796,
+      "elapsedTime": "50:47",
+      "elapsedSeconds": 3047.4157960414886,
+      "winner": "A",
+      "server": "A2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "0",
+        "formatted": "0-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 115,
+      "timestamp": "2025-11-29T17:59:46.661Z",
+      "timestampUnix": 1764439186.6613169,
+      "elapsedTime": "51:34",
+      "elapsedSeconds": 3094.8493168354034,
+      "winner": "B",
+      "server": "B2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "15",
+        "formatted": "0-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 116,
+      "timestamp": "2025-11-29T18:00:27.483Z",
+      "timestampUnix": 1764439227.483841,
+      "elapsedTime": "52:15",
+      "elapsedSeconds": 3135.671840906143,
+      "winner": "B",
+      "server": "B2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "30",
+        "formatted": "0-30"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 117,
+      "timestamp": "2025-11-29T18:00:54.038Z",
+      "timestampUnix": 1764439254.038125,
+      "elapsedTime": "52:42",
+      "elapsedSeconds": 3162.2261250019073,
+      "winner": "B",
+      "server": "B2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "40",
+        "formatted": "0-40"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 118,
+      "timestamp": "2025-11-29T18:01:38.381Z",
+      "timestampUnix": 1764439298.381042,
+      "elapsedTime": "53:26",
+      "elapsedSeconds": 3206.569041967392,
+      "winner": "A",
+      "server": "B2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "40",
+        "formatted": "15-40"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 119,
+      "timestamp": "2025-11-29T18:02:07.662Z",
+      "timestampUnix": 1764439327.6622171,
+      "elapsedTime": "53:55",
+      "elapsedSeconds": 3235.850217103958,
+      "winner": "A",
+      "server": "B2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "gameScore": {
+        "teamA": "30",
+        "teamB": "40",
+        "formatted": "30-40"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 120,
+      "timestamp": "2025-11-29T18:02:46.459Z",
+      "timestampUnix": 1764439366.45931,
+      "elapsedTime": "54:34",
+      "elapsedSeconds": 3274.6473100185394,
+      "winner": "A",
+      "server": "B2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "gameScore": {
+        "teamA": "40",
+        "teamB": "40",
+        "formatted": "40-40"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 121,
+      "timestamp": "2025-11-29T18:03:10.813Z",
+      "timestampUnix": 1764439390.8130221,
+      "elapsedTime": "54:59",
+      "elapsedSeconds": 3299.0010221004486,
+      "winner": "B",
+      "server": "B2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 1,
+        "teamB": 0,
+        "formatted": "1-0"
+      },
+      "gameScore": {
+        "teamA": "40",
+        "teamB": "Ad",
+        "formatted": "40-Ad"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 122,
+      "timestamp": "2025-11-29T18:03:23.064Z",
+      "timestampUnix": 1764439403.064352,
+      "elapsedTime": "55:11",
+      "elapsedSeconds": 3311.252351999283,
+      "winner": "B",
+      "server": "B2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "0",
+        "formatted": "0-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 123,
+      "timestamp": "2025-11-29T18:04:01.781Z",
+      "timestampUnix": 1764439441.781388,
+      "elapsedTime": "55:49",
+      "elapsedSeconds": 3349.9693880081177,
+      "winner": "A",
+      "server": "A1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "0",
+        "formatted": "15-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 124,
+      "timestamp": "2025-11-29T18:04:22.732Z",
+      "timestampUnix": 1764439462.7321239,
+      "elapsedTime": "56:10",
+      "elapsedSeconds": 3370.9201238155365,
+      "winner": "B",
+      "server": "A1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "15",
+        "formatted": "15-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 125,
+      "timestamp": "2025-11-29T18:04:38.562Z",
+      "timestampUnix": 1764439478.562131,
+      "elapsedTime": "56:26",
+      "elapsedSeconds": 3386.7501308918,
+      "winner": "A",
+      "server": "A1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "gameScore": {
+        "teamA": "30",
+        "teamB": "15",
+        "formatted": "30-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 126,
+      "timestamp": "2025-11-29T18:05:06.608Z",
+      "timestampUnix": 1764439506.6080961,
+      "elapsedTime": "56:54",
+      "elapsedSeconds": 3414.796096086502,
+      "winner": "B",
+      "server": "A1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "gameScore": {
+        "teamA": "30",
+        "teamB": "30",
+        "formatted": "30-30"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 127,
+      "timestamp": "2025-11-29T18:05:21.762Z",
+      "timestampUnix": 1764439521.7628531,
+      "elapsedTime": "57:09",
+      "elapsedSeconds": 3429.9508531093597,
+      "winner": "A",
+      "server": "A1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "gameScore": {
+        "teamA": "40",
+        "teamB": "30",
+        "formatted": "40-30"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 128,
+      "timestamp": "2025-11-29T18:05:47.741Z",
+      "timestampUnix": 1764439547.7419538,
+      "elapsedTime": "57:35",
+      "elapsedSeconds": 3455.929953813553,
+      "winner": "B",
+      "server": "A1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "gameScore": {
+        "teamA": "40",
+        "teamB": "40",
+        "formatted": "40-40"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 129,
+      "timestamp": "2025-11-29T18:05:47.907Z",
+      "timestampUnix": 1764439547.9075851,
+      "elapsedTime": "57:36",
+      "elapsedSeconds": 3456.0955851078033,
+      "winner": "B",
+      "server": "A1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "gameScore": {
+        "teamA": "40",
+        "teamB": "Ad",
+        "formatted": "40-Ad"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 130,
+      "timestamp": "2025-11-29T18:06:14.456Z",
+      "timestampUnix": 1764439574.4565449,
+      "elapsedTime": "58:02",
+      "elapsedSeconds": 3482.644544839859,
+      "winner": "B",
+      "server": "A1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 1,
+        "teamB": 2,
+        "formatted": "1-2"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "0",
+        "formatted": "0-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 131,
+      "timestamp": "2025-11-29T18:06:20.058Z",
+      "timestampUnix": 1764439580.058908,
+      "elapsedTime": "58:08",
+      "elapsedSeconds": 3488.2469079494476,
+      "winner": "B",
+      "server": "B1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 1,
+        "teamB": 2,
+        "formatted": "1-2"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "15",
+        "formatted": "0-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 132,
+      "timestamp": "2025-11-29T18:06:20.292Z",
+      "timestampUnix": 1764439580.2920299,
+      "elapsedTime": "58:08",
+      "elapsedSeconds": 3488.480029821396,
+      "winner": "A",
+      "server": "B1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 1,
+        "teamB": 2,
+        "formatted": "1-2"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "15",
+        "formatted": "15-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 133,
+      "timestamp": "2025-11-29T18:06:49.932Z",
+      "timestampUnix": 1764439609.932791,
+      "elapsedTime": "58:38",
+      "elapsedSeconds": 3518.1207909584045,
+      "winner": "B",
+      "server": "B1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 1,
+        "teamB": 2,
+        "formatted": "1-2"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "30",
+        "formatted": "15-30"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 134,
+      "timestamp": "2025-11-29T18:07:03.331Z",
+      "timestampUnix": 1764439623.331561,
+      "elapsedTime": "58:51",
+      "elapsedSeconds": 3531.5195610523224,
+      "winner": "A",
+      "server": "B1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 1,
+        "teamB": 2,
+        "formatted": "1-2"
+      },
+      "gameScore": {
+        "teamA": "30",
+        "teamB": "30",
+        "formatted": "30-30"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 135,
+      "timestamp": "2025-11-29T18:07:27.346Z",
+      "timestampUnix": 1764439647.3465881,
+      "elapsedTime": "59:15",
+      "elapsedSeconds": 3555.534588098526,
+      "winner": "A",
+      "server": "B1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 1,
+        "teamB": 2,
+        "formatted": "1-2"
+      },
+      "gameScore": {
+        "teamA": "40",
+        "teamB": "30",
+        "formatted": "40-30"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 136,
+      "timestamp": "2025-11-29T18:07:56.637Z",
+      "timestampUnix": 1764439676.637748,
+      "elapsedTime": "59:44",
+      "elapsedSeconds": 3584.8257479667664,
+      "winner": "B",
+      "server": "B1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 1,
+        "teamB": 2,
+        "formatted": "1-2"
+      },
+      "gameScore": {
+        "teamA": "40",
+        "teamB": "40",
+        "formatted": "40-40"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 137,
+      "timestamp": "2025-11-29T18:08:14.323Z",
+      "timestampUnix": 1764439694.323199,
+      "elapsedTime": "01:00:02",
+      "elapsedSeconds": 3602.5111989974976,
+      "winner": "A",
+      "server": "B1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 1,
+        "teamB": 2,
+        "formatted": "1-2"
+      },
+      "gameScore": {
+        "teamA": "Ad",
+        "teamB": "40",
+        "formatted": "Ad-40"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 138,
+      "timestamp": "2025-11-29T18:08:40.742Z",
+      "timestampUnix": 1764439720.742762,
+      "elapsedTime": "01:00:28",
+      "elapsedSeconds": 3628.930762052536,
+      "winner": "A",
+      "server": "B1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 2,
+        "teamB": 2,
+        "formatted": "2-2"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "0",
+        "formatted": "0-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 139,
+      "timestamp": "2025-11-29T18:09:18.454Z",
+      "timestampUnix": 1764439758.454688,
+      "elapsedTime": "01:01:06",
+      "elapsedSeconds": 3666.642688035965,
+      "winner": "B",
+      "server": "A2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 2,
+        "teamB": 2,
+        "formatted": "2-2"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "15",
+        "formatted": "0-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 140,
+      "timestamp": "2025-11-29T18:09:42.169Z",
+      "timestampUnix": 1764439782.1694388,
+      "elapsedTime": "01:01:30",
+      "elapsedSeconds": 3690.357438802719,
+      "winner": "B",
+      "server": "A2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 2,
+        "teamB": 2,
+        "formatted": "2-2"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "30",
+        "formatted": "0-30"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 141,
+      "timestamp": "2025-11-29T18:10:08.012Z",
+      "timestampUnix": 1764439808.012833,
+      "elapsedTime": "01:01:56",
+      "elapsedSeconds": 3716.200833082199,
+      "winner": "A",
+      "server": "A2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 2,
+        "teamB": 2,
+        "formatted": "2-2"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "30",
+        "formatted": "15-30"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 142,
+      "timestamp": "2025-11-29T18:10:08.211Z",
+      "timestampUnix": 1764439808.211988,
+      "elapsedTime": "01:01:56",
+      "elapsedSeconds": 3716.39998793602,
+      "winner": "A",
+      "server": "A2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 2,
+        "teamB": 2,
+        "formatted": "2-2"
+      },
+      "gameScore": {
+        "teamA": "30",
+        "teamB": "30",
+        "formatted": "30-30"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 143,
+      "timestamp": "2025-11-29T18:10:35.060Z",
+      "timestampUnix": 1764439835.060855,
+      "elapsedTime": "01:02:23",
+      "elapsedSeconds": 3743.2488548755646,
+      "winner": "A",
+      "server": "A2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 2,
+        "teamB": 2,
+        "formatted": "2-2"
+      },
+      "gameScore": {
+        "teamA": "40",
+        "teamB": "30",
+        "formatted": "40-30"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 144,
+      "timestamp": "2025-11-29T18:10:59.204Z",
+      "timestampUnix": 1764439859.2045522,
+      "elapsedTime": "01:02:47",
+      "elapsedSeconds": 3767.392552137375,
+      "winner": "A",
+      "server": "A2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 3,
+        "teamB": 2,
+        "formatted": "3-2"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "0",
+        "formatted": "0-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 145,
+      "timestamp": "2025-11-29T18:11:36.312Z",
+      "timestampUnix": 1764439896.3122969,
+      "elapsedTime": "01:03:24",
+      "elapsedSeconds": 3804.500296831131,
+      "winner": "A",
+      "server": "B2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 3,
+        "teamB": 2,
+        "formatted": "3-2"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "0",
+        "formatted": "15-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 146,
+      "timestamp": "2025-11-29T18:12:12.227Z",
+      "timestampUnix": 1764439932.2275882,
+      "elapsedTime": "01:04:00",
+      "elapsedSeconds": 3840.4155881404877,
+      "winner": "B",
+      "server": "B2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 3,
+        "teamB": 2,
+        "formatted": "3-2"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "15",
+        "formatted": "15-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 147,
+      "timestamp": "2025-11-29T18:12:25.354Z",
+      "timestampUnix": 1764439945.354301,
+      "elapsedTime": "01:04:13",
+      "elapsedSeconds": 3853.54230093956,
+      "winner": "A",
+      "server": "B2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 3,
+        "teamB": 2,
+        "formatted": "3-2"
+      },
+      "gameScore": {
+        "teamA": "30",
+        "teamB": "15",
+        "formatted": "30-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 148,
+      "timestamp": "2025-11-29T18:12:55.542Z",
+      "timestampUnix": 1764439975.542506,
+      "elapsedTime": "01:04:43",
+      "elapsedSeconds": 3883.7305059432983,
+      "winner": "A",
+      "server": "B2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 3,
+        "teamB": 2,
+        "formatted": "3-2"
+      },
+      "gameScore": {
+        "teamA": "40",
+        "teamB": "15",
+        "formatted": "40-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 149,
+      "timestamp": "2025-11-29T18:13:18.085Z",
+      "timestampUnix": 1764439998.0858479,
+      "elapsedTime": "01:05:06",
+      "elapsedSeconds": 3906.2738478183746,
+      "winner": "A",
+      "server": "B2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 4,
+        "teamB": 2,
+        "formatted": "4-2"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "0",
+        "formatted": "0-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 150,
+      "timestamp": "2025-11-29T18:13:57.549Z",
+      "timestampUnix": 1764440037.549926,
+      "elapsedTime": "01:05:45",
+      "elapsedSeconds": 3945.737926006317,
+      "winner": "B",
+      "server": "A1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 4,
+        "teamB": 2,
+        "formatted": "4-2"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "15",
+        "formatted": "0-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 151,
+      "timestamp": "2025-11-29T18:14:15.799Z",
+      "timestampUnix": 1764440055.7994099,
+      "elapsedTime": "01:06:03",
+      "elapsedSeconds": 3963.9874098300934,
+      "winner": "B",
+      "server": "A1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 4,
+        "teamB": 2,
+        "formatted": "4-2"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "30",
+        "formatted": "0-30"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 152,
+      "timestamp": "2025-11-29T18:14:38.783Z",
+      "timestampUnix": 1764440078.78357,
+      "elapsedTime": "01:06:26",
+      "elapsedSeconds": 3986.9715700149536,
+      "winner": "B",
+      "server": "A1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 4,
+        "teamB": 2,
+        "formatted": "4-2"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "40",
+        "formatted": "0-40"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 153,
+      "timestamp": "2025-11-29T18:15:29.548Z",
+      "timestampUnix": 1764440129.5481958,
+      "elapsedTime": "01:07:17",
+      "elapsedSeconds": 4037.7361958026886,
+      "winner": "B",
+      "server": "A1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 4,
+        "teamB": 3,
+        "formatted": "4-3"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "0",
+        "formatted": "0-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 154,
+      "timestamp": "2025-11-29T18:15:29.936Z",
+      "timestampUnix": 1764440129.936679,
+      "elapsedTime": "01:07:18",
+      "elapsedSeconds": 4038.124678850174,
+      "winner": "A",
+      "server": "B1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 4,
+        "teamB": 3,
+        "formatted": "4-3"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "0",
+        "formatted": "15-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 155,
+      "timestamp": "2025-11-29T18:16:12.568Z",
+      "timestampUnix": 1764440172.568131,
+      "elapsedTime": "01:08:00",
+      "elapsedSeconds": 4080.7561309337616,
+      "winner": "B",
+      "server": "B1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 4,
+        "teamB": 3,
+        "formatted": "4-3"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "15",
+        "formatted": "15-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 156,
+      "timestamp": "2025-11-29T18:16:12.934Z",
+      "timestampUnix": 1764440172.9344401,
+      "elapsedTime": "01:08:01",
+      "elapsedSeconds": 4081.122440099716,
+      "winner": "A",
+      "server": "B1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 4,
+        "teamB": 3,
+        "formatted": "4-3"
+      },
+      "gameScore": {
+        "teamA": "30",
+        "teamB": "15",
+        "formatted": "30-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 157,
+      "timestamp": "2025-11-29T18:16:46.167Z",
+      "timestampUnix": 1764440206.167172,
+      "elapsedTime": "01:08:34",
+      "elapsedSeconds": 4114.355171918869,
+      "winner": "B",
+      "server": "B1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 4,
+        "teamB": 3,
+        "formatted": "4-3"
+      },
+      "gameScore": {
+        "teamA": "30",
+        "teamB": "30",
+        "formatted": "30-30"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 158,
+      "timestamp": "2025-11-29T18:17:17.855Z",
+      "timestampUnix": 1764440237.855612,
+      "elapsedTime": "01:09:06",
+      "elapsedSeconds": 4146.043612003326,
+      "winner": "B",
+      "server": "B1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 4,
+        "teamB": 3,
+        "formatted": "4-3"
+      },
+      "gameScore": {
+        "teamA": "30",
+        "teamB": "40",
+        "formatted": "30-40"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 159,
+      "timestamp": "2025-11-29T18:17:55.067Z",
+      "timestampUnix": 1764440275.067198,
+      "elapsedTime": "01:09:43",
+      "elapsedSeconds": 4183.255198001862,
+      "winner": "B",
+      "server": "B1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 4,
+        "teamB": 4,
+        "formatted": "4-4"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "0",
+        "formatted": "0-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 160,
+      "timestamp": "2025-11-29T18:18:28.809Z",
+      "timestampUnix": 1764440308.8092098,
+      "elapsedTime": "01:10:16",
+      "elapsedSeconds": 4216.997209787369,
+      "winner": "A",
+      "server": "A2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 4,
+        "teamB": 4,
+        "formatted": "4-4"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "0",
+        "formatted": "15-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 161,
+      "timestamp": "2025-11-29T18:18:48.086Z",
+      "timestampUnix": 1764440328.086051,
+      "elapsedTime": "01:10:36",
+      "elapsedSeconds": 4236.274050951004,
+      "winner": "B",
+      "server": "A2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 4,
+        "teamB": 4,
+        "formatted": "4-4"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "15",
+        "formatted": "15-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 162,
+      "timestamp": "2025-11-29T18:19:15.482Z",
+      "timestampUnix": 1764440355.482976,
+      "elapsedTime": "01:11:03",
+      "elapsedSeconds": 4263.670975923538,
+      "winner": "A",
+      "server": "A2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 4,
+        "teamB": 4,
+        "formatted": "4-4"
+      },
+      "gameScore": {
+        "teamA": "30",
+        "teamB": "15",
+        "formatted": "30-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 163,
+      "timestamp": "2025-11-29T18:19:41.603Z",
+      "timestampUnix": 1764440381.6035352,
+      "elapsedTime": "01:11:29",
+      "elapsedSeconds": 4289.791535139084,
+      "winner": "A",
+      "server": "A2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 4,
+        "teamB": 4,
+        "formatted": "4-4"
+      },
+      "gameScore": {
+        "teamA": "40",
+        "teamB": "15",
+        "formatted": "40-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 164,
+      "timestamp": "2025-11-29T18:20:21.285Z",
+      "timestampUnix": 1764440421.2858438,
+      "elapsedTime": "01:12:09",
+      "elapsedSeconds": 4329.4738438129425,
+      "winner": "B",
+      "server": "A2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 4,
+        "teamB": 4,
+        "formatted": "4-4"
+      },
+      "gameScore": {
+        "teamA": "40",
+        "teamB": "30",
+        "formatted": "40-30"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 165,
+      "timestamp": "2025-11-29T18:20:38.522Z",
+      "timestampUnix": 1764440438.522036,
+      "elapsedTime": "01:12:26",
+      "elapsedSeconds": 4346.710036039352,
+      "winner": "A",
+      "server": "A2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 5,
+        "teamB": 4,
+        "formatted": "5-4"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "0",
+        "formatted": "0-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 166,
+      "timestamp": "2025-11-29T18:21:21.990Z",
+      "timestampUnix": 1764440481.990498,
+      "elapsedTime": "01:13:10",
+      "elapsedSeconds": 4390.178498029709,
+      "winner": "A",
+      "server": "B2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 5,
+        "teamB": 4,
+        "formatted": "5-4"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "0",
+        "formatted": "15-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 167,
+      "timestamp": "2025-11-29T18:21:45.255Z",
+      "timestampUnix": 1764440505.255161,
+      "elapsedTime": "01:13:33",
+      "elapsedSeconds": 4413.443161010742,
+      "winner": "B",
+      "server": "B2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 5,
+        "teamB": 4,
+        "formatted": "5-4"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "15",
+        "formatted": "15-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 168,
+      "timestamp": "2025-11-29T18:22:01.135Z",
+      "timestampUnix": 1764440521.135981,
+      "elapsedTime": "01:13:49",
+      "elapsedSeconds": 4429.323981046677,
+      "winner": "B",
+      "server": "B2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 5,
+        "teamB": 4,
+        "formatted": "5-4"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "30",
+        "formatted": "15-30"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 169,
+      "timestamp": "2025-11-29T18:22:24.511Z",
+      "timestampUnix": 1764440544.511889,
+      "elapsedTime": "01:14:12",
+      "elapsedSeconds": 4452.699888944626,
+      "winner": "B",
+      "server": "B2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 5,
+        "teamB": 4,
+        "formatted": "5-4"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "40",
+        "formatted": "15-40"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 170,
+      "timestamp": "2025-11-29T18:23:14.409Z",
+      "timestampUnix": 1764440594.409761,
+      "elapsedTime": "01:15:02",
+      "elapsedSeconds": 4502.597760915756,
+      "winner": "B",
+      "server": "B2",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 5,
+        "teamB": 5,
+        "formatted": "5-5"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "0",
+        "formatted": "0-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 171,
+      "timestamp": "2025-11-29T18:23:14.592Z",
+      "timestampUnix": 1764440594.592039,
+      "elapsedTime": "01:15:02",
+      "elapsedSeconds": 4502.780039072037,
+      "winner": "A",
+      "server": "A1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 5,
+        "teamB": 5,
+        "formatted": "5-5"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "0",
+        "formatted": "15-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 172,
+      "timestamp": "2025-11-29T18:23:31.448Z",
+      "timestampUnix": 1764440611.448403,
+      "elapsedTime": "01:15:19",
+      "elapsedSeconds": 4519.636402845383,
+      "winner": "B",
+      "server": "A1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 5,
+        "teamB": 5,
+        "formatted": "5-5"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "15",
+        "formatted": "15-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 173,
+      "timestamp": "2025-11-29T18:24:14.921Z",
+      "timestampUnix": 1764440654.921969,
+      "elapsedTime": "01:16:03",
+      "elapsedSeconds": 4563.1099689006805,
+      "winner": "B",
+      "server": "A1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 5,
+        "teamB": 5,
+        "formatted": "5-5"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "30",
+        "formatted": "15-30"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 174,
+      "timestamp": "2025-11-29T18:24:32.546Z",
+      "timestampUnix": 1764440672.546152,
+      "elapsedTime": "01:16:20",
+      "elapsedSeconds": 4580.7341520786285,
+      "winner": "B",
+      "server": "A1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 5,
+        "teamB": 5,
+        "formatted": "5-5"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "40",
+        "formatted": "15-40"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 175,
+      "timestamp": "2025-11-29T18:24:56.785Z",
+      "timestampUnix": 1764440696.7858438,
+      "elapsedTime": "01:16:44",
+      "elapsedSeconds": 4604.9738438129425,
+      "winner": "A",
+      "server": "A1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 5,
+        "teamB": 5,
+        "formatted": "5-5"
+      },
+      "gameScore": {
+        "teamA": "30",
+        "teamB": "40",
+        "formatted": "30-40"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 176,
+      "timestamp": "2025-11-29T18:25:26.384Z",
+      "timestampUnix": 1764440726.384223,
+      "elapsedTime": "01:17:14",
+      "elapsedSeconds": 4634.572222948074,
+      "winner": "B",
+      "server": "A1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 5,
+        "teamB": 6,
+        "formatted": "5-6"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "0",
+        "formatted": "0-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 177,
+      "timestamp": "2025-11-29T18:25:53.280Z",
+      "timestampUnix": 1764440753.280093,
+      "elapsedTime": "01:17:41",
+      "elapsedSeconds": 4661.468092918396,
+      "winner": "B",
+      "server": "B1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 5,
+        "teamB": 6,
+        "formatted": "5-6"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "15",
+        "formatted": "0-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 178,
+      "timestamp": "2025-11-29T18:26:33.463Z",
+      "timestampUnix": 1764440793.463841,
+      "elapsedTime": "01:18:21",
+      "elapsedSeconds": 4701.651840925217,
+      "winner": "A",
+      "server": "B1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 5,
+        "teamB": 6,
+        "formatted": "5-6"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "15",
+        "formatted": "15-15"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 179,
+      "timestamp": "2025-11-29T18:27:11.948Z",
+      "timestampUnix": 1764440831.948267,
+      "elapsedTime": "01:19:00",
+      "elapsedSeconds": 4740.136266946793,
+      "winner": "B",
+      "server": "B1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 5,
+        "teamB": 6,
+        "formatted": "5-6"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "30",
+        "formatted": "15-30"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 180,
+      "timestamp": "2025-11-29T18:27:27.351Z",
+      "timestampUnix": 1764440847.351819,
+      "elapsedTime": "01:19:15",
+      "elapsedSeconds": 4755.5398190021515,
+      "winner": "B",
+      "server": "B1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 5,
+        "teamB": 6,
+        "formatted": "5-6"
+      },
+      "gameScore": {
+        "teamA": "15",
+        "teamB": "40",
+        "formatted": "15-40"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 181,
+      "timestamp": "2025-11-29T18:27:43.732Z",
+      "timestampUnix": 1764440863.732099,
+      "elapsedTime": "01:19:31",
+      "elapsedSeconds": 4771.920099020004,
+      "winner": "A",
+      "server": "B1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 5,
+        "teamB": 6,
+        "formatted": "5-6"
+      },
+      "gameScore": {
+        "teamA": "30",
+        "teamB": "40",
+        "formatted": "30-40"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 182,
+      "timestamp": "2025-11-29T18:28:11.212Z",
+      "timestampUnix": 1764440891.212916,
+      "elapsedTime": "01:19:59",
+      "elapsedSeconds": 4799.40091586113,
+      "winner": "A",
+      "server": "B1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 5,
+        "teamB": 6,
+        "formatted": "5-6"
+      },
+      "gameScore": {
+        "teamA": "40",
+        "teamB": "40",
+        "formatted": "40-40"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 183,
+      "timestamp": "2025-11-29T18:28:45.371Z",
+      "timestampUnix": 1764440925.371594,
+      "elapsedTime": "01:20:33",
+      "elapsedSeconds": 4833.559593915939,
+      "winner": "B",
+      "server": "B1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 5,
+        "teamB": 6,
+        "formatted": "5-6"
+      },
+      "gameScore": {
+        "teamA": "40",
+        "teamB": "Ad",
+        "formatted": "40-Ad"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 184,
+      "timestamp": "2025-11-29T18:29:19.171Z",
+      "timestampUnix": 1764440959.171534,
+      "elapsedTime": "01:21:07",
+      "elapsedSeconds": 4867.359534025192,
+      "winner": "A",
+      "server": "B1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 5,
+        "teamB": 6,
+        "formatted": "5-6"
+      },
+      "gameScore": {
+        "teamA": "40",
+        "teamB": "40",
+        "formatted": "40-40"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 185,
+      "timestamp": "2025-11-29T18:29:42.444Z",
+      "timestampUnix": 1764440982.4442549,
+      "elapsedTime": "01:21:30",
+      "elapsedSeconds": 4890.6322548389435,
+      "winner": "B",
+      "server": "B1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 5,
+        "teamB": 6,
+        "formatted": "5-6"
+      },
+      "gameScore": {
+        "teamA": "40",
+        "teamB": "Ad",
+        "formatted": "40-Ad"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 186,
+      "timestamp": "2025-11-29T18:29:42.744Z",
+      "timestampUnix": 1764440982.744739,
+      "elapsedTime": "01:21:30",
+      "elapsedSeconds": 4890.932739019394,
+      "winner": "A",
+      "server": "B1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 5,
+        "teamB": 6,
+        "formatted": "5-6"
+      },
+      "gameScore": {
+        "teamA": "40",
+        "teamB": "40",
+        "formatted": "40-40"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 187,
+      "timestamp": "2025-11-29T18:29:43.161Z",
+      "timestampUnix": 1764440983.161035,
+      "elapsedTime": "01:21:31",
+      "elapsedSeconds": 4891.349035024643,
+      "winner": "A",
+      "server": "B1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 5,
+        "teamB": 6,
+        "formatted": "5-6"
+      },
+      "gameScore": {
+        "teamA": "Ad",
+        "teamB": "40",
+        "formatted": "Ad-40"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 188,
+      "timestamp": "2025-11-29T18:29:57.448Z",
+      "timestampUnix": 1764440997.4483771,
+      "elapsedTime": "01:21:45",
+      "elapsedSeconds": 4905.636377096176,
+      "winner": "B",
+      "server": "B1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 5,
+        "teamB": 6,
+        "formatted": "5-6"
+      },
+      "gameScore": {
+        "teamA": "40",
+        "teamB": "40",
+        "formatted": "40-40"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 189,
+      "timestamp": "2025-11-29T18:30:42.791Z",
+      "timestampUnix": 1764441042.791872,
+      "elapsedTime": "01:22:30",
+      "elapsedSeconds": 4950.9798719882965,
+      "winner": "B",
+      "server": "B1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 1,
+        "formatted": "1-1"
+      },
+      "currentSet": 3,
+      "games": {
+        "teamA": 5,
+        "teamB": 6,
+        "formatted": "5-6"
+      },
+      "gameScore": {
+        "teamA": "40",
+        "teamB": "Ad",
+        "formatted": "40-Ad"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    },
+    {
+      "pointNumber": 190,
+      "timestamp": "2025-11-29T18:31:39.051Z",
+      "timestampUnix": 1764441099.051388,
+      "elapsedTime": "01:23:27",
+      "elapsedSeconds": 5007.239387989044,
+      "winner": "B",
+      "server": "B1",
+      "sets": {
+        "teamA": 1,
+        "teamB": 2,
+        "formatted": "1-2"
+      },
+      "currentSet": 4,
+      "games": {
+        "teamA": 0,
+        "teamB": 0,
+        "formatted": "0-0"
+      },
+      "gameScore": {
+        "teamA": "0",
+        "teamB": "0",
+        "formatted": "0-0"
+      },
+      "gameType": "Regular",
+      "wasGoldenPoint": false
+    }
+  ]
+}
