@@ -1,10 +1,18 @@
 from PIL import Image, ImageDraw, ImageFont
 from .games import GameHandler
+from ..dtos import SetDto
 
 class SetHandler:
 
-    def __init__(self, set_js, us_name, them_name, deuces_allowed,output_path2):
-        self.games = set_js['games']
+    def __init__(
+        self,
+        set:SetDto,
+        us_name,
+        them_name,
+        deuces_allowed,
+        output_path2
+    ):
+        self.set = set
         self.us_name = us_name
         self.them_name = them_name
         self.deuces_allowed = deuces_allowed
@@ -18,8 +26,8 @@ class SetHandler:
 
     def get_frames_and_durations(self, sets_dicts):
         frames = []
-        for game in self.games:
-            gh = GameHandler(game_js=game, deuces_allowed=self.deuces_allowed)
+        for game in self.set.games:
+            gh = GameHandler(game=game, deuces_allowed=self.deuces_allowed)
             game_scores, game_winner = gh.get_game_scores()
             for ix, game_score in enumerate(game_scores):
                 if ix == len(game_scores) - 1:

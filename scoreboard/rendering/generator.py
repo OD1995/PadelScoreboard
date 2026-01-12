@@ -2,15 +2,23 @@ from ..scoring import SetHandler
 from PIL import Image
 from datetime import datetime
 from pathlib import Path
+from ..dtos import MatchDto
 
 class ScoreboardGenerator:
 
-    def __init__(self, js, match_ix):
-        self.match = js['matches'][match_ix]
-        self.sets = self.match['sets']
-        self.deuces_allowed = self.get_deuces_allowed(self.match['pointsFormat'])
-        self.us_name = "US"
-        self.them_name = "THEM"
+    def __init__(
+        self,
+        match:MatchDto,
+        # sets,
+        deuces_allowed,
+        us_name,
+        them_name
+    ):
+        self.match = match
+        # self.sets = sets
+        self.deuces_allowed = deuces_allowed
+        self.us_name = us_name
+        self.them_name = them_name
 
     def output_gif(self, output_path):
         dt = datetime.now().strftime("%d%b%y_%H%M%S")
@@ -19,9 +27,9 @@ class ScoreboardGenerator:
         sets_dicts = []
         all_frames = []
         all_durations = []
-        for set in self.sets:
+        for set in self.match.sets:
             sh = SetHandler(
-                set_js=set,
+                set=set,
                 us_name=self.us_name,
                 them_name=self.them_name,
                 deuces_allowed=self.deuces_allowed,
@@ -46,12 +54,3 @@ class ScoreboardGenerator:
             color="white"
         )
         return img
-    
-    def get_deuces_allowed(self, deuce_format):
-        match deuce_format:
-            case "classic":
-                return 99
-            case "goldenPoint":
-                return 1
-            case _:
-                raise ValueError("Unexpected deuce format")

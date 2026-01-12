@@ -1,1 +1,1 @@
-from .rendering import ScoreboardGenerator
+from .rendering import PadelPointerScoreboardGenerator, PadelMaxScoreboardGenerator
