@@ -12,16 +12,16 @@ class PadelPointerScoreboardGenerator(ScoreboardGenerator):
     ):
         ScoreboardGenerator.__init__(
             self=self,
-            match=self.build_match(js, match_ix),
+            match=self.build_match(js['matches'][match_ix]),
             # sets=js['matches'][match_ix]['sets'],
             deuces_allowed=self.get_deuces_allowed(js['matches'][match_ix]['pointsFormat']),
             us_name="US",
             them_name='THEM'
         )
     
-    def build_match(self, js, match_ix) -> MatchDto:
+    def build_match(self, match_js) -> MatchDto:
         sets = []
-        for set_js in js['matches'][match_ix]['sets']:
+        for set_js in match_js['sets']:
             games = []
             for game_js in set_js['games']:
                 points = []
@@ -44,6 +44,7 @@ class PadelPointerScoreboardGenerator(ScoreboardGenerator):
                 )
             )
         return MatchDto(
+            start_timestamp=datetime.fromisoformat(match_js['startTime'].replace("Z", "+00:00")),
             sets=sets
         )
 

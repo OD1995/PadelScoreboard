@@ -1,11 +1,14 @@
+from ..dtos import PointDto
+
 class ScoreCalculator:
 
-    def __init__(self, deuces_allowed):
+    def __init__(self, deuces_allowed, first_point:PointDto):
         self.us = "us"
         self.them = "them"
         self.score_dict = {
             self.us : "0",
             self.them : "0",
+            "server" : self.get_server(first_point)
         }
         self.deuces_allowed = deuces_allowed
         self.deuce_count = 0
@@ -13,8 +16,13 @@ class ScoreCalculator:
         self.game_winner = None
         self.is_deuce = True
 
-    def add_point(self, us_winner:bool, us_server:bool):
-        self.score_dict['server'] = self.us if us_server else self.them
+    def get_server(self, point:PointDto):
+        us_server = point.serving_pair == "us"
+        return self.us if us_server else self.them
+
+    def add_point(self, point:PointDto):
+        us_winner = point.winner == "us"        
+        self.score_dict['server'] = self.get_server(point)
         winner = self.us if us_winner else self.them
         loser = self.them if us_winner else self.us
         match self.score_dict[winner]:
