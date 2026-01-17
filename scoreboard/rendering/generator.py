@@ -4,6 +4,8 @@ from datetime import datetime
 from pathlib import Path
 from ..dtos import MatchDto
 from ..timing import VideoTiming
+import os
+import subprocess
 
 class ScoreboardGenerator:
 
@@ -27,9 +29,10 @@ class ScoreboardGenerator:
         dt = datetime.now().strftime("%d%b%y_%H%M%S")
         output_path2 = fr"{output_path}\{dt}"
         Path(output_path2).mkdir(parents=True, exist_ok=True)
-        video_start = self.video_timer.get_video_start()
         sets_dicts = []
-        all_frames = []
+        all_frames = [
+            self.get_empty_opening_frame()
+        ]
         for set_ix, set in enumerate(self.match.sets):
             if not set.has_points():
                 continue
@@ -45,20 +48,89 @@ class ScoreboardGenerator:
             sets_dicts = sh.update_sets_dict(sets_dicts)
             all_frames.extend(frames)
         durations = self.get_durations()
-        all_frames[0].save(
-            fp=fr"{output_path2}\a.gif",
-            append_images=all_frames[1:],
+        self.create_output(
+            output_path=output_path2,
+            frames=all_frames,
+            durations=durations
+        )
+        
+    
+    def create_output(self, output_path, frames, durations):
+        if True:
+            self.create_mp4(output_path, frames, durations)
+        else:
+            self.create_gif(output_path, frames, durations)
+
+    def create_mp4(self, output_path, frames, durations, temp_dir="temp_frames"):
+        """
+        Create an MP4 from a list of PIL.Image objects with per-frame durations using FFmpeg.
+
+        Parameters:
+            images: List of PIL.Image objects
+            durations: List of float, duration of each frame in seconds
+            output_path: Path to the final MP4
+            temp_dir: Temporary directory to store frames
+        """
+
+        # 1️⃣ Create temporary folder
+        os.makedirs(temp_dir, exist_ok=True)
+
+        # 2️⃣ Save each frame as a PNG
+        frame_files = []
+        for i, img in enumerate(frames):
+            frame_path = os.path.join(temp_dir, f"frame_{i:06d}.png")
+            img.save(frame_path)
+            frame_files.append(frame_path)
+
+        # 3️⃣ Create FFmpeg concat list
+        concat_file_path = os.path.join(temp_dir, "frames.txt")
+        with open(concat_file_path, "w") as f:
+            for frame, duration in zip(frame_files, durations):
+                f.write(f"file '{os.path.abspath(frame)}'\n")
+                f.write(f"duration {duration/1000}\n")
+            # FFmpeg requires the last file repeated without duration
+            f.write(f"file '{os.path.abspath(frame_files[-1])}'\n")
+
+        # 4️⃣ Call FFmpeg
+        ffmpeg_cmd = [
+            "ffmpeg",
+            "-f", "concat",
+            "-safe", "0",
+            "-i", concat_file_path,
+            "-vsync", "vfr",            # variable frame rate
+            "-c:v", "ffv1", 
+            "-pix_fmt", "yuva420p",     # preserves transparency (alpha)
+            "-movflags", "+faststart",   # optional: helps playback in editors
+            fr"{output_path}/a.mkv"
+        ]
+
+        subprocess.run(ffmpeg_cmd, check=True)
+
+        # 5️⃣ Cleanup (optional)
+        # import shutil
+        # shutil.rmtree(temp_dir)
+
+        print(f"Video saved to {output_path}")
+
+
+    def create_gif(self, output_path, frames, durations):
+        frames[0].save(
+            fp=fr"{output_path}\a.gif",
+            append_images=frames[1:],
             duration=durations,
             loop=0
         )
 
 
-    def get_base_image(self) -> Image:
-        img = Image.new(
-            mode="RGB",
-            size=(500,300),
-            color="white"
-        )
+    def get_empty_opening_frame(
+        self,
+        cell_width: int = 120,
+        cell_height: int = 80,
+        rows: int = 2
+    ) -> Image:
+        width = 5 * cell_width
+        height = rows * cell_height
+        img = Image.new("RGBA", (width, height), (0, 0, 0, 0))        
         return img
     
     def get_durations(self) -> list[int]:
@@ -73,6 +145,9 @@ class ScoreboardGenerator:
         for ts in reversed(timestamps[:-1]):
             durations_reversed.append(int((last_timestamp - ts).total_seconds() * 1000))
             last_timestamp = ts
+        # ## Have empty frame from video start to match start
+        video_start = self.video_timer.get_video_start()
+        durations_reversed.append(int((last_timestamp - video_start).total_seconds() * 1000)) #07:45
         durations = list(reversed(durations_reversed))
         ## Show final score for 10 seconds
         durations.append(10*1000)

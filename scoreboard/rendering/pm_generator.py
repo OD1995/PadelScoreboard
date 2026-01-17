@@ -7,14 +7,16 @@ class PadelMaxScoreboardGenerator(ScoreboardGenerator):
     def __init__(
         self,
         js,
-        match_ix
+        # match_ix,
+        video_file_path
     ):
         ScoreboardGenerator.__init__(
             self=self,
             match=self.build_match(js['points'], js['info']['duration']['startTime']),
             deuces_allowed=self.get_deuces_allowed(js['info']['settings']),
             us_name="US",
-            them_name='THEM'
+            them_name='THEM',
+            video_file_path=video_file_path
         )
 
     def build_match(self, points_js, start_timestamp) -> MatchDto:

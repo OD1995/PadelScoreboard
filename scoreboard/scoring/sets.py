@@ -2,11 +2,12 @@ from PIL import Image, ImageDraw, ImageFont
 from .games import GameHandler
 from ..dtos import SetDto
 
+
 class SetHandler:
 
     def __init__(
         self,
-        set:SetDto,
+        set: SetDto,
         set_ix,
         us_name,
         them_name,
@@ -20,8 +21,8 @@ class SetHandler:
         self.deuces_allowed = deuces_allowed
         self.output_path2 = output_path2
         self.games_counts = {
-            "us" : 0,
-            "them" : 0
+            "us": 0,
+            "them": 0
         }
 
     def get_frames(self, sets_dicts):
@@ -44,7 +45,6 @@ class SetHandler:
                         frame_ix=len(frames)
                     )
                 )
-        # durations = [500 for _ in frames]
         return frames
 
     def update_sets_dict(self, sets_dicts):
@@ -65,7 +65,8 @@ class SetHandler:
         width = 5 * cell_width
         height = rows * cell_height
 
-        img = Image.new("RGB", (width, height), "white")
+        # ---------- transparent base image ----------
+        img = Image.new("RGBA", (width, height), (0, 0, 0, 0))
         draw = ImageDraw.Draw(img)
 
         try:
@@ -75,16 +76,17 @@ class SetHandler:
 
         # ---------- helpers ----------
 
-        def fill_cell(col, row, color):
-            draw.rectangle(
-                (
-                    col * cell_width,
-                    row * cell_height,
-                    (col + 1) * cell_width,
-                    (row + 1) * cell_height,
-                ),
-                fill=color
-            )
+        def fill_cell_if_text(col, row, text, bg_color="white"):
+            if text not in (None, ""):
+                draw.rectangle(
+                    (
+                        col * cell_width,
+                        row * cell_height,
+                        (col + 1) * cell_width,
+                        (row + 1) * cell_height,
+                    ),
+                    fill=bg_color
+                )
 
         def draw_centered_text(text, col, row, fill="black"):
             x0 = col * cell_width
@@ -99,13 +101,7 @@ class SetHandler:
 
             draw.text((x, y), text, fill=fill, font=font)
 
-        # ---------- serving indicator ----------
-
-        serving_row = 0 if game_score["server"] == "us" else 1
-        fill_cell(0, serving_row, "#b6e7a7")
-
         # ---------- grid ----------
-
         for c in range(cols + 1):
             x = c * cell_width
             draw.line((x, 0, x, height), fill="black", width=2)
@@ -115,29 +111,35 @@ class SetHandler:
             draw.line((0, y, cols * cell_width, y), fill="black", width=2)
 
         # ---------- names ----------
-
+        # ---------- serving indicator ----------
+        serving_row = 0 if game_score.get("server") == "us" else 1
+        fill_cell_if_text(0, serving_row, self.us_name if serving_row == 0 else self.them_name, "#b6e7a7")
+        fill_cell_if_text(0, 1 if game_score.get("server") == "us" else 0, self.us_name, "white")
         draw_centered_text(self.us_name, 0, 0)
         draw_centered_text(self.them_name, 0, 1)
 
-        # ---------- set columns (BLACK BG, WHITE TEXT) ----------
 
+        # ---------- set columns (BLACK BG, WHITE TEXT) ----------
         for i, set_score in enumerate(sets_dicts):
             col = 1 + i
 
-            fill_cell(col, 0, "black")
-            fill_cell(col, 1, "black")
+            # only fill if score exists
+            fill_cell_if_text(col, 0, set_score.get("us"), "black")
+            fill_cell_if_text(col, 1, set_score.get("them"), "black")
 
-            draw_centered_text(str(set_score["us"]), col, 0, fill="white")
-            draw_centered_text(str(set_score["them"]), col, 1, fill="white")
+            draw_centered_text(str(set_score.get("us", "")), col, 0, fill="white")
+            draw_centered_text(str(set_score.get("them", "")), col, 1, fill="white")
 
         # ---------- current game score ----------
-
         last_col = cols - 1
-        draw_centered_text(str(game_score["us"]), last_col, 0)
-        draw_centered_text(str(game_score["them"]), last_col, 1)
+
+        fill_cell_if_text(last_col, 0, game_score.get("us"), "white")
+        fill_cell_if_text(last_col, 1, game_score.get("them"), "white")
+
+        draw_centered_text(str(game_score.get("us", "")), last_col, 0)
+        draw_centered_text(str(game_score.get("them", "")), last_col, 1)
 
         # ---------- save frame ----------
-
         img.save(
             fp=fr"{self.output_path2}\{set_ix}-{frame_ix}.png"
         )
