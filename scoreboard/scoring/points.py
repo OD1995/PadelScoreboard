@@ -16,6 +16,10 @@ class ScoreCalculator:
         self.game_winner = None
         self.is_deuce = True
 
+        self.GAME_NOT_STARTED_YET = "-"
+        self.OPPONENT_ON_ADVANTAGE = "/"
+        self.ADVANTAGE = "AD"
+
     def get_server(self, point:PointDto):
         us_server = point.serving_pair == "us"
         return self.us if us_server else self.them
@@ -35,16 +39,16 @@ class ScoreCalculator:
             case "40":
                 if self.score_dict[loser] == "40":
                     if self.deuces_allowed > self.deuce_count:
-                        self.score_dict[winner] = "Ad"
-                        self.score_dict[loser] = "X"
+                        self.score_dict[winner] = self.ADVANTAGE
+                        self.score_dict[loser] = self.OPPONENT_ON_ADVANTAGE
                     else:
                         self.set_game_over(winner)
                 else:
                     self.set_game_over(winner)
-            case "X":
+            case self.OPPONENT_ON_ADVANTAGE:
                 self.score_dict[winner] = "40"
                 self.score_dict[loser] = "40"
-            case "Ad":
+            case self.ADVANTAGE:
                 self.set_game_over(winner)
         self.update_deuce_count()
 
@@ -57,10 +61,5 @@ class ScoreCalculator:
     def set_game_over(self, point_winner):
         # self.game_over = True
         self.game_winner = point_winner
-        self.score_dict[self.us] = ""
-        self.score_dict[self.them] = ""
-
-
-    
-
-
+        self.score_dict[self.us] = self.GAME_NOT_STARTED_YET
+        self.score_dict[self.them] = self.GAME_NOT_STARTED_YET

@@ -12,7 +12,7 @@ class SetHandler:
         us_name,
         them_name,
         deuces_allowed,
-        output_path2
+        output_path2=None
     ):
         self.set = set
         self.set_ix = set_ix
@@ -49,6 +49,30 @@ class SetHandler:
 
     def update_sets_dict(self, sets_dicts):
         return sets_dicts + [self.games_counts]
+    
+    def get_match_states(self):
+        match_states = []
+        for game_ix, game in enumerate(self.set.games):
+            if not game.has_points():
+                continue
+            gh = GameHandler(game=game, deuces_allowed=self.deuces_allowed)
+            game_scores, game_winner = gh.get_game_scores(
+                is_first_point_of_match=((game_ix == 0) and (self.set_ix == 0))
+            )
+            for ix, game_score in enumerate(game_scores):
+                if ix == len(game_scores) - 1:
+                    self.games_counts[game_winner] += 1
+                match_states.append(self.calculate_match_state(game_score))
+        return match_states
+        
+    def calculate_match_state(self, game_score):
+        return {
+            "Game Score" : 0,
+            "Set Score" : 0,
+            "Set Number" : 0,
+            "Winner" : 0,
+            "Server" : 0
+        }
 
     def generate_scoreboard_image(
         self,
@@ -140,8 +164,9 @@ class SetHandler:
         draw_centered_text(str(game_score.get("them", "")), last_col, 1)
 
         # ---------- save frame ----------
-        img.save(
-            fp=fr"{self.output_path2}\{set_ix}-{frame_ix}.png"
-        )
+        if self.output_path2:
+            img.save(
+                fp=fr"{self.output_path2}\{set_ix}-{frame_ix}.png"
+            )
 
         return img

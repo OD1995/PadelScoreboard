@@ -154,3 +154,16 @@ class ScoreboardGenerator:
         ## Show final score for 10 seconds
         durations.append(10*1000)
         return durations
+    
+    def copy_analysis_df(self):
+        rows = []
+        for set_ix, set in enumerate(self.match.sets):
+            if not set.has_points():
+                continue
+            sh = SetHandler(
+                set=set,
+                set_ix=set_ix,
+                us_name=self.us_name,
+                them_name=self.them_name,
+                deuces_allowed=self.deuces_allowed
+            )
