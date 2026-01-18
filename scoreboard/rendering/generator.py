@@ -97,12 +97,14 @@ class ScoreboardGenerator:
             "-f", "concat",
             "-safe", "0",
             "-i", concat_file_path,
-            "-vsync", "vfr",            # variable frame rate
-            "-c:v", "ffv1", 
-            "-pix_fmt", "yuva420p",     # preserves transparency (alpha)
-            "-movflags", "+faststart",   # optional: helps playback in editors
-            fr"{output_path}/a.mkv"
-        ]
+            # "-vsync", "vfr",            # variable frame rate
+            "-c:v", "libvpx-vp9", 
+            "-pix_fmt", "yuva420p",
+            # "-movflags", "+faststart",   # optional: helps playback in editors
+            fr"{output_path}\a.webm"
+        ] #-c:v prores -pix_fmt yuva444p10le logo.mov
+        #ffmpeg -f concat -safe 0 -i frames.txt -vf format=yuva444p -c:v prores_ks -profile:v 4444 a_alpha.mov
+
 
         subprocess.run(ffmpeg_cmd, check=True)
 
