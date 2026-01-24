@@ -10,7 +10,12 @@ VIDEO_FILE_PATH = r"D:\PadelVideos\Full Videos\IMG_5834.MOV"
 with open(JSON_PATH) as f:
     js = json.load(f)
 
-sg = PadelMaxScoreboardGenerator(js, video_file_path=VIDEO_FILE_PATH)
+sg = PadelMaxScoreboardGenerator(
+    js=js,
+    us_name="ALEX\nOLI",
+    them_name="PETR\nSAM",
+    video_file_path=VIDEO_FILE_PATH
+)
 
-# sg.output_gif(OUTPUT_FOLDER)
-sg.copy_analysis_df()
+sg.output_gif(OUTPUT_FOLDER)
+# sg.copy_analysis_df()

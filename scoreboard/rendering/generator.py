@@ -6,6 +6,7 @@ from ..dtos import MatchDto
 from ..timing import VideoTiming
 import os
 import subprocess
+import pandas as pd
 
 class ScoreboardGenerator:
 
@@ -157,6 +158,7 @@ class ScoreboardGenerator:
     
     def copy_analysis_df(self):
         rows = []
+        sets_dicts = []
         for set_ix, set in enumerate(self.match.sets):
             if not set.has_points():
                 continue
@@ -167,3 +169,8 @@ class ScoreboardGenerator:
                 them_name=self.them_name,
                 deuces_allowed=self.deuces_allowed
             )
+            set_rows = sh.get_match_states(sets_dicts, self.video_timer.get_video_start())
+            sets_dicts = sh.update_sets_dict(sets_dicts)
+            rows.extend(set_rows)
+        df = pd.DataFrame(rows)
+        df.to_clipboard(index=False, header=None)

@@ -27,6 +27,8 @@ class ScoreCalculator:
     def add_point(self, point:PointDto):
         us_winner = point.winner == "us"        
         self.score_dict['server'] = self.get_server(point)
+        self.score_dict['point_winner'] = point.winner
+        self.score_dict['timestamp'] = point.timestamp
         winner = self.us if us_winner else self.them
         loser = self.them if us_winner else self.us
         match self.score_dict[winner]:

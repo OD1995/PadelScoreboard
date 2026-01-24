@@ -7,6 +7,8 @@ class PadelMaxScoreboardGenerator(ScoreboardGenerator):
     def __init__(
         self,
         js,
+        us_name,
+        them_name,
         # match_ix,
         video_file_path
     ):
@@ -14,8 +16,8 @@ class PadelMaxScoreboardGenerator(ScoreboardGenerator):
             self=self,
             match=self.build_match(js['points'], js['info']['duration']['startTime']),
             deuces_allowed=self.get_deuces_allowed(js['info']['settings']),
-            us_name="US",
-            them_name='THEM',
+            us_name=us_name,
+            them_name=them_name,
             video_file_path=video_file_path
         )
 

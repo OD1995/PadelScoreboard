@@ -50,29 +50,43 @@ class SetHandler:
     def update_sets_dict(self, sets_dicts):
         return sets_dicts + [self.games_counts]
     
-    def get_match_states(self):
+    def get_match_states(self, sets_dicts, video_start):
         match_states = []
         for game_ix, game in enumerate(self.set.games):
             if not game.has_points():
                 continue
             gh = GameHandler(game=game, deuces_allowed=self.deuces_allowed)
-            game_scores, game_winner = gh.get_game_scores(
-                is_first_point_of_match=((game_ix == 0) and (self.set_ix == 0))
-            )
+            is_first_point_of_match = ((game_ix == 0) and (self.set_ix == 0))
+            game_scores, game_winner = gh.get_game_scores(is_first_point_of_match)
             for ix, game_score in enumerate(game_scores):
                 if ix == len(game_scores) - 1:
                     self.games_counts[game_winner] += 1
-                match_states.append(self.calculate_match_state(game_score))
+                if not ((ix == 0) and is_first_point_of_match):
+                    match_states.append(self.calculate_match_state(game_score, sets_dicts, video_start))
         return match_states
         
-    def calculate_match_state(self, game_score):
+    def calculate_match_state(self, game_score, sets_dicts, video_start):
         return {
-            "Game Score" : 0,
-            "Set Score" : 0,
-            "Set Number" : 0,
-            "Winner" : 0,
-            "Server" : 0
+            "Game Score" : game_score['us'] + "-" + game_score['them'],
+            "Set Score" : self.calculate_set_score(sets_dicts),
+            "Set Number" : self.set_ix + 1,
+            "Video Timestamp" : self.calculate_video_timestamp(video_start, game_score['timestamp']),
+            "Winner" : "A" if game_score['point_winner'] == "us" else "B",
+            "Server" : "A" if game_score['server'] == "us" else "B"
         }
+    
+    def calculate_video_timestamp(self, video_start, event_time):
+            delta = event_time - video_start
+            total_seconds = max(0, int(delta.total_seconds()))
+            hours = total_seconds // 3600
+            minutes = (total_seconds % 3600) // 60
+            seconds = total_seconds % 60
+            return f"{hours:02d}:{minutes:02d}:{seconds:02d}"
+    
+    def calculate_set_score(self, sets_dicts):
+        # if len(sets_dicts) == 0:
+        #     return None
+        return ",".join([f"{sd['us']}-{sd['them']}" for sd in sets_dicts + [self.games_counts]])
 
     def generate_scoreboard_image(
         self,
