@@ -1,7 +1,7 @@
 from PIL import Image, ImageDraw, ImageFont
 from .games import GameHandler
 from ..dtos import SetDto
-
+from pathlib import Path
 
 class SetHandler:
 
@@ -101,31 +101,59 @@ class SetHandler:
         cols = 2 + len(sets_dicts)
         rows = 2
 
-        width = 5 * cell_width
+        # ---------- logo ----------
+        # logo_path = r"D:\Dev\PadelScoreboard\logos\PadelPointerWithTextV2.png"
+        logo_path = (
+            Path(__file__)
+            .resolve()
+            .parents[2]      # go up to project root
+            / "logos"
+            / "PadelPointerWithTextV2.png"
+        )
+        logo_img = Image.open(logo_path).convert("RGBA")
+
+        scoreboard_width = cols * cell_width
         height = rows * cell_height
+
+        # scale logo to fit height
+        scale = height / logo_img.height
+        logo_img = logo_img.resize(
+            (int(logo_img.width * scale), height),
+            Image.LANCZOS
+        )
+        logo_width = logo_img.width
+
+        width = logo_width + scoreboard_width
 
         # ---------- transparent base image ----------
         img = Image.new("RGBA", (width, height), (0, 0, 0, 0))
         draw = ImageDraw.Draw(img)
 
+        # paste logo
+        img.paste(logo_img, (0, 0), logo_img)
+
+        x_offset = logo_width
+
         try:
-            font = ImageFont.truetype("arial.ttf", 28)
+            base_font_path = "arial.ttf"
+            ImageFont.truetype(base_font_path, 28)
         except:
-            font = ImageFont.load_default()
+            base_font_path = None
 
         # ---------- helpers ----------
 
         def fill_cell_if_text(col, row, text, bg_color="white"):
-            if text not in (None, ""):
-                draw.rectangle(
-                    (
-                        col * cell_width,
-                        row * cell_height,
-                        (col + 1) * cell_width,
-                        (row + 1) * cell_height,
-                    ),
-                    fill=bg_color
-                )
+            if text is None or text == "":
+                return
+            draw.rectangle(
+                (
+                    x_offset + col * cell_width,
+                    row * cell_height,
+                    x_offset + (col + 1) * cell_width,
+                    (row + 1) * cell_height,
+                ),
+                fill=bg_color
+            )
 
         def draw_centered_text(
             text,
@@ -139,7 +167,7 @@ class SetHandler:
             if text is None or text == "":
                 return
 
-            x0 = col * cell_width
+            x0 = x_offset + col * cell_width
             y0 = row * cell_height
             cell_w = cell_width - padding * 2
             cell_h = cell_height - padding * 2
@@ -148,14 +176,14 @@ class SetHandler:
 
             while font_size >= min_font_size:
                 try:
-                    font_candidate = ImageFont.truetype("arial.ttf", font_size)
+                    font = ImageFont.truetype(base_font_path, font_size) if base_font_path else ImageFont.load_default()
                 except:
-                    font_candidate = ImageFont.load_default()
+                    font = ImageFont.load_default()
 
                 bbox = draw.multiline_textbbox(
                     (0, 0),
                     str(text),
-                    font=font_candidate,
+                    font=font,
                     align="center"
                 )
 
@@ -174,36 +202,34 @@ class SetHandler:
                 (x, y),
                 str(text),
                 fill=fill,
-                font=font_candidate,
+                font=font,
                 align="center",
                 spacing=2
             )
 
-
         # ---------- grid ----------
         for c in range(cols + 1):
-            x = c * cell_width
+            x = x_offset + c * cell_width
             draw.line((x, 0, x, height), fill="black", width=2)
 
         for r in range(rows + 1):
             y = r * cell_height
-            draw.line((0, y, cols * cell_width, y), fill="black", width=2)
+            draw.line((x_offset, y, x_offset + scoreboard_width, y), fill="black", width=2)
 
-        # ---------- names ----------
-        # ---------- serving indicator ----------
-        server = game_score['next_server'] or game_score['server']
+        # ---------- names + serving indicator ----------
+        server = game_score.get("next_server") or game_score.get("server")
         serving_row = 0 if server == "us" else 1
+
         fill_cell_if_text(0, serving_row, self.us_name if serving_row == 0 else self.them_name, "#b6e7a7")
-        fill_cell_if_text(0, 1 if server == "us" else 0, self.us_name, "white")
+        fill_cell_if_text(0, 1 - serving_row, self.us_name if serving_row == 1 else self.them_name, "white")
+
         draw_centered_text(self.us_name, 0, 0)
         draw_centered_text(self.them_name, 0, 1)
 
-
-        # ---------- set columns (BLACK BG, WHITE TEXT) ----------
+        # ---------- set columns ----------
         for i, set_score in enumerate(sets_dicts):
             col = 1 + i
 
-            # only fill if score exists
             fill_cell_if_text(col, 0, set_score.get("us"), "black")
             fill_cell_if_text(col, 1, set_score.get("them"), "black")
 

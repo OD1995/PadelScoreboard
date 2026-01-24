@@ -18,4 +18,4 @@ sg = PadelMaxScoreboardGenerator(
 )
 
 sg.output_gif(OUTPUT_FOLDER)
-sg.copy_analysis_df()
+# sg.copy_analysis_df()
