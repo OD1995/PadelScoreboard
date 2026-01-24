@@ -72,6 +72,7 @@ class SetHandler:
             "Set Number" : self.set_ix + 1,
             "Video Timestamp" : self.calculate_video_timestamp(video_start, game_score['timestamp']),
             "Winner" : "A" if game_score['point_winner'] == "us" else "B",
+            ## Use next_server if it's set (when game winning point has just happened)
             "Server" : "A" if game_score['server'] == "us" else "B"
         }
     
@@ -126,18 +127,58 @@ class SetHandler:
                     fill=bg_color
                 )
 
-        def draw_centered_text(text, col, row, fill="black"):
+        def draw_centered_text(
+            text,
+            col,
+            row,
+            fill="black",
+            max_font_size=28,
+            min_font_size=12,
+            padding=8
+        ):
+            if text is None or text == "":
+                return
+
             x0 = col * cell_width
             y0 = row * cell_height
+            cell_w = cell_width - padding * 2
+            cell_h = cell_height - padding * 2
 
-            bbox = draw.textbbox((0, 0), text, font=font)
-            text_w = bbox[2] - bbox[0]
-            text_h = bbox[3] - bbox[1]
+            font_size = max_font_size
+
+            while font_size >= min_font_size:
+                try:
+                    font_candidate = ImageFont.truetype("arial.ttf", font_size)
+                except:
+                    font_candidate = ImageFont.load_default()
+
+                bbox = draw.multiline_textbbox(
+                    (0, 0),
+                    str(text),
+                    font=font_candidate,
+                    align="center"
+                )
+
+                text_w = bbox[2] - bbox[0]
+                text_h = bbox[3] - bbox[1]
+
+                if text_w <= cell_w and text_h <= cell_h:
+                    break
+
+                font_size -= 1
 
             x = x0 + (cell_width - text_w) // 2
             y = y0 + (cell_height - text_h) // 2
 
-            draw.text((x, y), text, fill=fill, font=font)
+            draw.multiline_text(
+                (x, y),
+                str(text),
+                fill=fill,
+                font=font_candidate,
+                align="center",
+                spacing=2
+            )
+
 
         # ---------- grid ----------
         for c in range(cols + 1):
@@ -150,9 +191,10 @@ class SetHandler:
 
         # ---------- names ----------
         # ---------- serving indicator ----------
-        serving_row = 0 if game_score.get("server") == "us" else 1
+        server = game_score['next_server'] or game_score['server']
+        serving_row = 0 if server == "us" else 1
         fill_cell_if_text(0, serving_row, self.us_name if serving_row == 0 else self.them_name, "#b6e7a7")
-        fill_cell_if_text(0, 1 if game_score.get("server") == "us" else 0, self.us_name, "white")
+        fill_cell_if_text(0, 1 if server == "us" else 0, self.us_name, "white")
         draw_centered_text(self.us_name, 0, 0)
         draw_centered_text(self.them_name, 0, 1)
 

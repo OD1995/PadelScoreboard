@@ -8,7 +8,8 @@ class ScoreCalculator:
         self.score_dict = {
             self.us : "0",
             self.them : "0",
-            "server" : self.get_server(first_point)
+            "server" : self.get_server(first_point),
+            "next_server" : None
         }
         self.deuces_allowed = deuces_allowed
         self.deuce_count = 0
@@ -23,6 +24,10 @@ class ScoreCalculator:
     def get_server(self, point:PointDto):
         us_server = point.serving_pair == "us"
         return self.us if us_server else self.them
+    
+    def get_next_server(self, point:PointDto):
+        us_server = point.serving_pair == "us"
+        return self.them if us_server else self.us
 
     def add_point(self, point:PointDto):
         us_winner = point.winner == "us"        
@@ -44,14 +49,14 @@ class ScoreCalculator:
                         self.score_dict[winner] = self.ADVANTAGE
                         self.score_dict[loser] = self.OPPONENT_ON_ADVANTAGE
                     else:
-                        self.set_game_over(winner)
+                        self.set_game_over(winner, point)
                 else:
-                    self.set_game_over(winner)
+                    self.set_game_over(winner, point)
             case self.OPPONENT_ON_ADVANTAGE:
                 self.score_dict[winner] = "40"
                 self.score_dict[loser] = "40"
             case self.ADVANTAGE:
-                self.set_game_over(winner)
+                self.set_game_over(winner, point)
         self.update_deuce_count()
 
     def update_deuce_count(self):
@@ -60,8 +65,9 @@ class ScoreCalculator:
         if us_40 and tied:
             self.deuce_count += 1
 
-    def set_game_over(self, point_winner):
+    def set_game_over(self, point_winner, point):
         # self.game_over = True
         self.game_winner = point_winner
         self.score_dict[self.us] = self.GAME_NOT_STARTED_YET
         self.score_dict[self.them] = self.GAME_NOT_STARTED_YET
+        self.score_dict['next_server'] = self.get_next_server(point)

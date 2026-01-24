@@ -13,9 +13,9 @@ with open(JSON_PATH) as f:
 sg = PadelMaxScoreboardGenerator(
     js=js,
     us_name="ALEX\nOLI",
-    them_name="PETR\nSAM",
+    them_name="PETR\nMUHAMMED",
     video_file_path=VIDEO_FILE_PATH
 )
 
 sg.output_gif(OUTPUT_FOLDER)
-# sg.copy_analysis_df()
+sg.copy_analysis_df()
