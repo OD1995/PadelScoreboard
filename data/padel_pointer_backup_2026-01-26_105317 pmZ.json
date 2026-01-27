@@ -1,0 +1,1840 @@
+{
+  "exportedAt" : "2026-01-26T22:53:17Z",
+  "matches" : [
+    {
+      "averageHeartRate" : 154,
+      "date" : "2026-01-26T21:06:31Z",
+      "deuceCount" : 99,
+      "distance" : 3190.0246209349716,
+      "endTime" : "2026-01-26T22:34:56Z",
+      "firstServer" : "user",
+      "id" : "FE0FBBCE-459D-48CB-8569-70F671FC1632",
+      "isComplete" : false,
+      "isManualEntry" : false,
+      "isTrainingMatch" : false,
+      "maxHeartRate" : 178,
+      "minHeartRate" : 129,
+      "pointsFormat" : "classic",
+      "sets" : [
+        {
+          "games" : [
+            {
+              "deuceCount" : 0,
+              "gameType" : "regular",
+              "points" : [
+                {
+                  "courtSide" : "right",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T21:06:48Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T21:07:04Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T21:07:17Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T21:07:29Z",
+                  "winner" : "user"
+                }
+              ],
+              "server" : "user",
+              "theirPoints" : 0,
+              "wasDeuce" : false,
+              "wasGoldenPoint" : false,
+              "youWonGame" : true,
+              "yourPoints" : 4
+            },
+            {
+              "deuceCount" : 0,
+              "gameType" : "regular",
+              "points" : [
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T21:07:50Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T21:08:04Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T21:08:17Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T21:08:44Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T21:09:11Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T21:09:36Z",
+                  "winner" : "opponentA"
+                }
+              ],
+              "server" : "opponentA",
+              "theirPoints" : 4,
+              "wasDeuce" : false,
+              "wasGoldenPoint" : false,
+              "youWonGame" : false,
+              "yourPoints" : 2
+            },
+            {
+              "deuceCount" : 0,
+              "gameType" : "regular",
+              "points" : [
+                {
+                  "courtSide" : "right",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T21:09:51Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T21:09:57Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T21:10:07Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T21:10:17Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T21:10:30Z",
+                  "winner" : "user"
+                }
+              ],
+              "server" : "partner",
+              "theirPoints" : 1,
+              "wasDeuce" : false,
+              "wasGoldenPoint" : false,
+              "youWonGame" : true,
+              "yourPoints" : 4
+            },
+            {
+              "deuceCount" : 0,
+              "gameType" : "regular",
+              "points" : [
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T21:10:44Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T21:11:11Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T21:11:24Z",
+                  "winner" : "opponentB"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T21:11:32Z",
+                  "winner" : "opponentB"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T21:11:56Z",
+                  "winner" : "opponentB"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T21:12:15Z",
+                  "winner" : "opponentB"
+                }
+              ],
+              "server" : "opponentB",
+              "theirPoints" : 4,
+              "wasDeuce" : false,
+              "wasGoldenPoint" : false,
+              "youWonGame" : false,
+              "yourPoints" : 2
+            },
+            {
+              "deuceCount" : 0,
+              "gameType" : "regular",
+              "points" : [
+                {
+                  "courtSide" : "right",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T21:12:59Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T21:13:12Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T21:13:23Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T21:13:42Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T21:13:53Z",
+                  "winner" : "user"
+                }
+              ],
+              "server" : "user",
+              "theirPoints" : 1,
+              "wasDeuce" : false,
+              "wasGoldenPoint" : false,
+              "youWonGame" : true,
+              "yourPoints" : 4
+            },
+            {
+              "deuceCount" : 6,
+              "gameType" : "regular",
+              "points" : [
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T21:14:19Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T21:14:21Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T21:14:39Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T21:14:57Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T21:15:32Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T21:15:51Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T21:16:51Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T21:17:00Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T21:17:16Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T21:17:36Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T21:18:06Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T21:18:15Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T21:18:29Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T21:18:48Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T21:19:02Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T21:19:33Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T21:19:50Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T21:20:05Z",
+                  "winner" : "opponentA"
+                }
+              ],
+              "server" : "opponentA",
+              "theirPoints" : 4,
+              "wasDeuce" : true,
+              "wasGoldenPoint" : false,
+              "youWonGame" : false,
+              "yourPoints" : 3
+            },
+            {
+              "deuceCount" : 3,
+              "gameType" : "regular",
+              "points" : [
+                {
+                  "courtSide" : "right",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T21:20:24Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T21:20:51Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T21:21:09Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T21:21:20Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T21:21:43Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T21:22:07Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T21:22:26Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T21:22:48Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T21:23:09Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T21:23:26Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T21:23:36Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T21:23:53Z",
+                  "winner" : "user"
+                }
+              ],
+              "server" : "partner",
+              "theirPoints" : 3,
+              "wasDeuce" : true,
+              "wasGoldenPoint" : false,
+              "youWonGame" : true,
+              "yourPoints" : 4
+            },
+            {
+              "deuceCount" : 0,
+              "gameType" : "regular",
+              "points" : [
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T21:24:41Z",
+                  "winner" : "opponentB"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T21:25:07Z",
+                  "winner" : "opponentB"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T21:25:25Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T21:25:49Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T21:26:13Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T21:26:33Z",
+                  "winner" : "user"
+                }
+              ],
+              "server" : "opponentB",
+              "theirPoints" : 2,
+              "wasDeuce" : false,
+              "wasGoldenPoint" : false,
+              "youWonGame" : true,
+              "yourPoints" : 4
+            },
+            {
+              "deuceCount" : 0,
+              "gameType" : "regular",
+              "points" : [
+                {
+                  "courtSide" : "right",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T21:27:09Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T21:27:29Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T21:27:48Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T21:28:11Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T21:28:35Z",
+                  "winner" : "user"
+                }
+              ],
+              "server" : "user",
+              "theirPoints" : 1,
+              "wasDeuce" : false,
+              "wasGoldenPoint" : false,
+              "youWonGame" : true,
+              "yourPoints" : 4
+            }
+          ],
+          "isMatchTiebreak" : false,
+          "isTiebreak" : false,
+          "theirGames" : 3,
+          "yourGames" : 6
+        },
+        {
+          "games" : [
+            {
+              "deuceCount" : 0,
+              "gameType" : "regular",
+              "points" : [
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T21:30:15Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T21:30:27Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T21:30:38Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T21:30:56Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T21:31:12Z",
+                  "winner" : "opponentA"
+                }
+              ],
+              "server" : "opponentA",
+              "theirPoints" : 4,
+              "wasDeuce" : false,
+              "wasGoldenPoint" : false,
+              "youWonGame" : false,
+              "yourPoints" : 1
+            },
+            {
+              "deuceCount" : 0,
+              "gameType" : "regular",
+              "points" : [
+                {
+                  "courtSide" : "right",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T21:32:08Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T21:32:17Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T21:32:28Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T21:32:39Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T21:32:57Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T21:33:18Z",
+                  "winner" : "user"
+                }
+              ],
+              "server" : "partner",
+              "theirPoints" : 2,
+              "wasDeuce" : false,
+              "wasGoldenPoint" : false,
+              "youWonGame" : true,
+              "yourPoints" : 4
+            },
+            {
+              "deuceCount" : 0,
+              "gameType" : "regular",
+              "points" : [
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T21:33:46Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T21:33:57Z",
+                  "winner" : "opponentB"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T21:34:23Z",
+                  "winner" : "opponentB"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T21:35:14Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T21:35:20Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T21:35:31Z",
+                  "winner" : "user"
+                }
+              ],
+              "server" : "opponentB",
+              "theirPoints" : 2,
+              "wasDeuce" : false,
+              "wasGoldenPoint" : false,
+              "youWonGame" : true,
+              "yourPoints" : 4
+            },
+            {
+              "deuceCount" : 0,
+              "gameType" : "regular",
+              "points" : [
+                {
+                  "courtSide" : "right",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T21:36:07Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T21:36:23Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T21:36:41Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T21:36:56Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T21:37:14Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T21:37:33Z",
+                  "winner" : "opponentA"
+                }
+              ],
+              "server" : "user",
+              "theirPoints" : 4,
+              "wasDeuce" : false,
+              "wasGoldenPoint" : false,
+              "youWonGame" : false,
+              "yourPoints" : 2
+            },
+            {
+              "deuceCount" : 1,
+              "gameType" : "regular",
+              "points" : [
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T21:37:52Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T21:38:17Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T21:38:28Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T21:38:48Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T21:39:12Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T21:39:41Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T21:39:49Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T21:40:28Z",
+                  "winner" : "user"
+                }
+              ],
+              "server" : "opponentA",
+              "theirPoints" : 3,
+              "wasDeuce" : true,
+              "wasGoldenPoint" : false,
+              "youWonGame" : true,
+              "yourPoints" : 4
+            },
+            {
+              "deuceCount" : 0,
+              "gameType" : "regular",
+              "points" : [
+                {
+                  "courtSide" : "right",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T21:40:58Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T21:41:09Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T21:41:24Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T21:41:39Z",
+                  "winner" : "user"
+                }
+              ],
+              "server" : "partner",
+              "theirPoints" : 0,
+              "wasDeuce" : false,
+              "wasGoldenPoint" : false,
+              "youWonGame" : true,
+              "yourPoints" : 4
+            },
+            {
+              "deuceCount" : 0,
+              "gameType" : "regular",
+              "points" : [
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T21:42:02Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T21:42:24Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T21:42:51Z",
+                  "winner" : "opponentB"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T21:43:11Z",
+                  "winner" : "opponentB"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T21:43:48Z",
+                  "winner" : "opponentB"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T21:44:13Z",
+                  "winner" : "opponentB"
+                }
+              ],
+              "server" : "opponentB",
+              "theirPoints" : 4,
+              "wasDeuce" : false,
+              "wasGoldenPoint" : false,
+              "youWonGame" : false,
+              "yourPoints" : 2
+            },
+            {
+              "deuceCount" : 0,
+              "gameType" : "regular",
+              "points" : [
+                {
+                  "courtSide" : "right",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T21:44:43Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T21:44:43Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T21:45:40Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T21:46:07Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T21:46:21Z",
+                  "winner" : "opponentA"
+                }
+              ],
+              "server" : "user",
+              "theirPoints" : 4,
+              "wasDeuce" : false,
+              "wasGoldenPoint" : false,
+              "youWonGame" : false,
+              "yourPoints" : 1
+            },
+            {
+              "deuceCount" : 0,
+              "gameType" : "regular",
+              "points" : [
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T21:46:40Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T21:46:56Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T21:47:16Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T21:47:38Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T21:47:53Z",
+                  "winner" : "opponentA"
+                }
+              ],
+              "server" : "opponentA",
+              "theirPoints" : 4,
+              "wasDeuce" : false,
+              "wasGoldenPoint" : false,
+              "youWonGame" : false,
+              "yourPoints" : 1
+            },
+            {
+              "deuceCount" : 0,
+              "gameType" : "regular",
+              "points" : [
+                {
+                  "courtSide" : "right",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T21:48:23Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T21:48:30Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T21:49:02Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T21:49:36Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T21:49:53Z",
+                  "winner" : "user"
+                }
+              ],
+              "server" : "partner",
+              "theirPoints" : 1,
+              "wasDeuce" : false,
+              "wasGoldenPoint" : false,
+              "youWonGame" : true,
+              "yourPoints" : 4
+            },
+            {
+              "deuceCount" : 0,
+              "gameType" : "regular",
+              "points" : [
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T21:50:29Z",
+                  "winner" : "opponentB"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T21:50:30Z",
+                  "winner" : "opponentB"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T21:50:41Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T21:51:07Z",
+                  "winner" : "opponentB"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T21:51:35Z",
+                  "winner" : "opponentB"
+                }
+              ],
+              "server" : "opponentB",
+              "theirPoints" : 4,
+              "wasDeuce" : false,
+              "wasGoldenPoint" : false,
+              "youWonGame" : false,
+              "yourPoints" : 1
+            },
+            {
+              "deuceCount" : 2,
+              "gameType" : "regular",
+              "points" : [
+                {
+                  "courtSide" : "right",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T21:52:17Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T21:52:28Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T21:52:54Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T21:53:14Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T21:53:37Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T21:53:52Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T21:54:07Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T21:54:32Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T21:54:55Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T21:55:25Z",
+                  "winner" : "user"
+                }
+              ],
+              "server" : "user",
+              "theirPoints" : 3,
+              "wasDeuce" : true,
+              "wasGoldenPoint" : false,
+              "youWonGame" : true,
+              "yourPoints" : 4
+            }
+          ],
+          "isMatchTiebreak" : false,
+          "isTiebreak" : true,
+          "theirGames" : 7,
+          "tiebreakScore" : {
+            "points" : [
+              {
+                "courtSide" : "right",
+                "server" : "opponentA",
+                "timestamp" : "2026-01-26T21:55:58Z",
+                "winner" : "opponentA"
+              },
+              {
+                "courtSide" : "left",
+                "server" : "user",
+                "timestamp" : "2026-01-26T21:56:24Z",
+                "winner" : "user"
+              },
+              {
+                "courtSide" : "right",
+                "server" : "user",
+                "timestamp" : "2026-01-26T21:56:43Z",
+                "winner" : "opponentA"
+              },
+              {
+                "courtSide" : "left",
+                "server" : "opponentA",
+                "timestamp" : "2026-01-26T21:57:03Z",
+                "winner" : "opponentA"
+              },
+              {
+                "courtSide" : "right",
+                "server" : "opponentA",
+                "timestamp" : "2026-01-26T21:57:38Z",
+                "winner" : "user"
+              },
+              {
+                "courtSide" : "left",
+                "server" : "user",
+                "timestamp" : "2026-01-26T21:57:54Z",
+                "winner" : "opponentA"
+              },
+              {
+                "courtSide" : "right",
+                "server" : "user",
+                "timestamp" : "2026-01-26T21:58:14Z",
+                "winner" : "opponentA"
+              },
+              {
+                "courtSide" : "left",
+                "server" : "opponentA",
+                "timestamp" : "2026-01-26T21:58:29Z",
+                "winner" : "user"
+              },
+              {
+                "courtSide" : "right",
+                "server" : "opponentA",
+                "timestamp" : "2026-01-26T21:58:48Z",
+                "winner" : "opponentA"
+              },
+              {
+                "courtSide" : "left",
+                "server" : "user",
+                "timestamp" : "2026-01-26T21:59:21Z",
+                "winner" : "user"
+              },
+              {
+                "courtSide" : "right",
+                "server" : "user",
+                "timestamp" : "2026-01-26T21:59:52Z",
+                "winner" : "user"
+              },
+              {
+                "courtSide" : "left",
+                "server" : "opponentA",
+                "timestamp" : "2026-01-26T22:00:21Z",
+                "winner" : "opponentA"
+              }
+            ],
+            "theirPoints" : 7,
+            "yourPoints" : 5
+          },
+          "yourGames" : 6
+        },
+        {
+          "games" : [
+            {
+              "deuceCount" : 0,
+              "gameType" : "regular",
+              "points" : [
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T22:03:16Z",
+                  "winner" : "opponentB"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T22:04:00Z",
+                  "winner" : "opponentB"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T22:04:00Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T22:04:17Z",
+                  "winner" : "opponentB"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T22:04:32Z",
+                  "winner" : "opponentB"
+                }
+              ],
+              "server" : "opponentB",
+              "theirPoints" : 4,
+              "wasDeuce" : false,
+              "wasGoldenPoint" : false,
+              "youWonGame" : false,
+              "yourPoints" : 1
+            },
+            {
+              "deuceCount" : 1,
+              "gameType" : "regular",
+              "points" : [
+                {
+                  "courtSide" : "right",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T22:04:47Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T22:05:00Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T22:05:09Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T22:05:37Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T22:06:10Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T22:06:20Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T22:06:42Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T22:07:07Z",
+                  "winner" : "opponentA"
+                }
+              ],
+              "server" : "partner",
+              "theirPoints" : 4,
+              "wasDeuce" : true,
+              "wasGoldenPoint" : false,
+              "youWonGame" : false,
+              "yourPoints" : 3
+            },
+            {
+              "deuceCount" : 3,
+              "gameType" : "regular",
+              "points" : [
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T22:07:42Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T22:08:15Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T22:08:32Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T22:08:45Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T22:09:22Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T22:09:39Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T22:09:56Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T22:10:21Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T22:10:34Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T22:10:58Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T22:11:17Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T22:11:33Z",
+                  "winner" : "opponentA"
+                }
+              ],
+              "server" : "opponentA",
+              "theirPoints" : 4,
+              "wasDeuce" : true,
+              "wasGoldenPoint" : false,
+              "youWonGame" : false,
+              "yourPoints" : 3
+            },
+            {
+              "deuceCount" : 1,
+              "gameType" : "regular",
+              "points" : [
+                {
+                  "courtSide" : "right",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T22:12:13Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T22:12:39Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T22:13:10Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T22:13:22Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T22:13:43Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T22:14:12Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T22:14:42Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T22:15:36Z",
+                  "winner" : "user"
+                }
+              ],
+              "server" : "user",
+              "theirPoints" : 3,
+              "wasDeuce" : true,
+              "wasGoldenPoint" : false,
+              "youWonGame" : true,
+              "yourPoints" : 4
+            },
+            {
+              "deuceCount" : 5,
+              "gameType" : "regular",
+              "points" : [
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T22:15:37Z",
+                  "winner" : "opponentB"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T22:15:42Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T22:16:21Z",
+                  "winner" : "opponentB"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T22:16:21Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T22:16:33Z",
+                  "winner" : "opponentB"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T22:16:56Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T22:17:24Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T22:17:42Z",
+                  "winner" : "opponentB"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T22:17:57Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T22:18:14Z",
+                  "winner" : "opponentB"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T22:18:43Z",
+                  "winner" : "opponentB"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T22:19:07Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T22:19:24Z",
+                  "winner" : "opponentB"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T22:19:36Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T22:19:58Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T22:20:10Z",
+                  "winner" : "user"
+                }
+              ],
+              "server" : "opponentB",
+              "theirPoints" : 3,
+              "wasDeuce" : true,
+              "wasGoldenPoint" : false,
+              "youWonGame" : true,
+              "yourPoints" : 4
+            },
+            {
+              "deuceCount" : 0,
+              "gameType" : "regular",
+              "points" : [
+                {
+                  "courtSide" : "right",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T22:20:39Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T22:21:05Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T22:21:22Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T22:21:37Z",
+                  "winner" : "user"
+                }
+              ],
+              "server" : "partner",
+              "theirPoints" : 0,
+              "wasDeuce" : false,
+              "wasGoldenPoint" : false,
+              "youWonGame" : true,
+              "yourPoints" : 4
+            },
+            {
+              "deuceCount" : 1,
+              "gameType" : "regular",
+              "points" : [
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T22:22:16Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T22:22:39Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T22:23:04Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T22:23:34Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T22:23:52Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T22:24:46Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T22:25:08Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T22:25:08Z",
+                  "winner" : "user"
+                }
+              ],
+              "server" : "opponentA",
+              "theirPoints" : 3,
+              "wasDeuce" : true,
+              "wasGoldenPoint" : false,
+              "youWonGame" : true,
+              "yourPoints" : 4
+            },
+            {
+              "deuceCount" : 0,
+              "gameType" : "regular",
+              "points" : [
+                {
+                  "courtSide" : "right",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T22:25:35Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T22:26:12Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T22:26:39Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T22:27:14Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "user",
+                  "timestamp" : "2026-01-26T22:27:26Z",
+                  "winner" : "user"
+                }
+              ],
+              "server" : "user",
+              "theirPoints" : 1,
+              "wasDeuce" : false,
+              "wasGoldenPoint" : false,
+              "youWonGame" : true,
+              "yourPoints" : 4
+            },
+            {
+              "deuceCount" : 0,
+              "gameType" : "regular",
+              "points" : [
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T22:27:53Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T22:28:07Z",
+                  "winner" : "opponentB"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T22:28:36Z",
+                  "winner" : "opponentB"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T22:28:37Z",
+                  "winner" : "opponentB"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentB",
+                  "timestamp" : "2026-01-26T22:28:37Z",
+                  "winner" : "opponentB"
+                }
+              ],
+              "server" : "opponentB",
+              "theirPoints" : 4,
+              "wasDeuce" : false,
+              "wasGoldenPoint" : false,
+              "youWonGame" : false,
+              "yourPoints" : 1
+            },
+            {
+              "deuceCount" : 0,
+              "gameType" : "regular",
+              "points" : [
+                {
+                  "courtSide" : "right",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T22:29:12Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T22:29:27Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T22:29:52Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T22:30:04Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "partner",
+                  "timestamp" : "2026-01-26T22:30:16Z",
+                  "winner" : "opponentA"
+                }
+              ],
+              "server" : "partner",
+              "theirPoints" : 4,
+              "wasDeuce" : false,
+              "wasGoldenPoint" : false,
+              "youWonGame" : false,
+              "yourPoints" : 1
+            },
+            {
+              "deuceCount" : 0,
+              "gameType" : "regular",
+              "points" : [
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T22:30:47Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T22:31:00Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T22:31:22Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T22:31:42Z",
+                  "winner" : "user"
+                },
+                {
+                  "courtSide" : "right",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T22:31:55Z",
+                  "winner" : "opponentA"
+                },
+                {
+                  "courtSide" : "left",
+                  "server" : "opponentA",
+                  "timestamp" : "2026-01-26T22:32:13Z",
+                  "winner" : "opponentA"
+                }
+              ],
+              "server" : "opponentA",
+              "theirPoints" : 4,
+              "wasDeuce" : false,
+              "wasGoldenPoint" : false,
+              "youWonGame" : false,
+              "yourPoints" : 2
+            }
+          ],
+          "isMatchTiebreak" : false,
+          "isTiebreak" : false,
+          "theirGames" : 6,
+          "yourGames" : 5
+        }
+      ],
+      "startTime" : "2026-01-26T21:06:31Z",
+      "venueName" : "Padium",
+      "warmUpDuration" : 169.79122698307037,
+      "workoutCalories" : 1230.3266454333407,
+      "youServedFirst" : true
+    }
+  ],
+  "venues" : [
+    {
+      "createdAt" : "2026-01-04T23:22:57Z",
+      "name" : "Padium"
+    }
+  ],
+  "version" : "1.0"
+}

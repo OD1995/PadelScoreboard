@@ -6,16 +6,14 @@ class ScoreCalculator:
         self.us = "us"
         self.them = "them"
         self.score_dict = {
-            self.us : "0",
-            self.them : "0",
+            self.us : "0" if isinstance(self, NormalGameScoreCalculator) else 0,
+            self.them : "0" if isinstance(self, NormalGameScoreCalculator) else 0,
             "server" : self.get_server(first_point),
             "next_server" : None
         }
         self.deuces_allowed = deuces_allowed
         self.deuce_count = 0
-        # self.game_over = False
         self.game_winner = None
-        self.is_deuce = True
 
         self.GAME_NOT_STARTED_YET = "-"
         self.OPPONENT_ON_ADVANTAGE = "/"
@@ -28,6 +26,21 @@ class ScoreCalculator:
     def get_next_server(self, point:PointDto):
         us_server = point.serving_pair == "us"
         return self.them if us_server else self.us
+
+    def set_game_over(self, point_winner, point):
+        self.game_winner = point_winner
+        self.score_dict[self.us] = self.GAME_NOT_STARTED_YET
+        self.score_dict[self.them] = self.GAME_NOT_STARTED_YET
+        self.score_dict['next_server'] = self.get_next_server(point)
+
+class NormalGameScoreCalculator(ScoreCalculator):
+
+    def __init__(self, deuces_allowed, first_point:PointDto):
+        ScoreCalculator.__init__(
+            self=self,
+            deuces_allowed=deuces_allowed,
+            first_point=first_point
+        )        
 
     def add_point(self, point:PointDto):
         us_winner = point.winner == "us"        
@@ -65,9 +78,23 @@ class ScoreCalculator:
         if us_40 and tied:
             self.deuce_count += 1
 
-    def set_game_over(self, point_winner, point):
-        # self.game_over = True
-        self.game_winner = point_winner
-        self.score_dict[self.us] = self.GAME_NOT_STARTED_YET
-        self.score_dict[self.them] = self.GAME_NOT_STARTED_YET
-        self.score_dict['next_server'] = self.get_next_server(point)
+class TiebreakGameScoreCalculator(ScoreCalculator):
+
+    def __init__(self, deuces_allowed, first_point:PointDto):
+        ScoreCalculator.__init__(
+            self=self,
+            deuces_allowed=deuces_allowed,
+            first_point=first_point
+        )        
+
+    def add_point(self, point:PointDto):
+        us_winner = point.winner == "us"        
+        self.score_dict['server'] = self.get_server(point)
+        self.score_dict['point_winner'] = point.winner
+        self.score_dict['timestamp'] = point.timestamp
+        winner = self.us if us_winner else self.them
+        loser = self.them if us_winner else self.us
+        if (self.score_dict[winner] < 6) or (self.score_dict[winner] - self.score_dict[loser] != 1):
+            self.score_dict[winner] = self.score_dict[winner] + 1
+        else:
+            self.set_game_over(winner, point)

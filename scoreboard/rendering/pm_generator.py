@@ -40,7 +40,8 @@ class PadelMaxScoreboardGenerator(ScoreboardGenerator):
             if is_new_set or is_new_game:
                 games.append(
                     GameDto(
-                        points=points
+                        points=points,
+                        is_tiebreak=False
                     )
                 )
             
@@ -58,7 +59,8 @@ class PadelMaxScoreboardGenerator(ScoreboardGenerator):
                 
         games.append(
             GameDto(
-                points=points
+                points=points,
+                is_tiebreak=False
             )
         )
         sets.append(

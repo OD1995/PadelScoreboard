@@ -67,7 +67,7 @@ class SetHandler:
         
     def calculate_match_state(self, game_score, sets_dicts, video_start):
         return {
-            "Game Score" : game_score['us'] + "-" + game_score['them'],
+            "Game Score" : f"{game_score['us']}-{game_score['them']}",
             "Set Score" : self.calculate_set_score(sets_dicts),
             "Set Number" : self.set_ix + 1,
             "Video Timestamp" : self.calculate_video_timestamp(video_start, game_score['timestamp']),
