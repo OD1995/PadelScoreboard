@@ -17,6 +17,7 @@ class VideoTiming:
             "format_tags=creation_time:stream_tags=creation_time",
             self.video_file_path
         ]
+        # ffprobe -v error -print_format json -show_entries format_tags=creation_time:stream_tags=creation_time 
 
         result = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
         data = json.loads(result.stdout)
