@@ -17,14 +17,30 @@ class ScoreboardGenerator:
         deuces_allowed,
         us_name,
         them_name,
-        video_file_path
+        video_file_path=None,
+        video_start=None,
+        video_end=None,
+        video_duration=None
     ):
         self.match = match
         # self.sets = sets
         self.deuces_allowed = deuces_allowed
         self.us_name = us_name
         self.them_name = them_name
-        self.video_timer = VideoTiming(video_file_path)
+        self.video_timer = VideoTiming(video_file_path) \
+            if video_file_path is not None \
+            else None
+        self.video_start = video_start
+        self.video_end = video_end
+        self.video_duration = video_duration
+   
+    
+    def get_video_start(self):
+        if self.video_timer is not None:
+            return self.video_timer.get_video_start()
+        if self.video_start is not None:
+            return self.video_start
+        raise ValueError('logic required here')
 
     def output_gif(self, output_path):
         dt = datetime.now().strftime("%d%b%y_%H%M%S")
@@ -159,7 +175,7 @@ class ScoreboardGenerator:
             durations_reversed.append(int((last_timestamp - ts).total_seconds() * 1000))
             last_timestamp = ts
         # ## Have empty frame from video start to match start
-        video_start = self.video_timer.get_video_start()
+        video_start = self.get_video_start()
         durations_reversed.append(int((last_timestamp - video_start).total_seconds() * 1000)) #07:45
         durations = list(reversed(durations_reversed))
         ## Show final score for 10 seconds
@@ -179,7 +195,7 @@ class ScoreboardGenerator:
                 them_name=self.them_name,
                 deuces_allowed=self.deuces_allowed
             )
-            set_rows = sh.get_match_states(sets_dicts, self.video_timer.get_video_start())
+            set_rows = sh.get_match_states(sets_dicts, self.get_video_start())
             sets_dicts = sh.update_sets_dict(sets_dicts)
             rows.extend(set_rows)
         df = pd.DataFrame(rows)

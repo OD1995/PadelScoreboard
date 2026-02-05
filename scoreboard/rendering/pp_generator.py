@@ -11,16 +11,22 @@ class PadelPointerScoreboardGenerator(ScoreboardGenerator):
         match_ix,
         us_name,
         them_name,
-        video_file_path
+        video_file_path,
+        video_start=None,
+        video_end=None,
+        video_duration=None
     ):
         ScoreboardGenerator.__init__(
             self=self,
             match=self.build_match(js['matches'][match_ix]),
             # sets=js['matches'][match_ix]['sets'],
-            deuces_allowed=self.get_deuces_allowed(js['matches'][match_ix]['pointsFormat']),
+            deuces_allowed=js['matches'][match_ix]['deuceCount'],
             us_name=us_name,
             them_name=them_name,
-            video_file_path=video_file_path
+            video_file_path=video_file_path,
+            video_start=video_start,
+            video_end=video_end,
+            video_duration=video_duration
         )
     
     def build_match(self, match_js) -> MatchDto:
