@@ -1,6 +1,6 @@
 from ..scoring import SetHandler
 from PIL import Image
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 from ..dtos import MatchDto
 from ..timing import VideoTiming
@@ -36,16 +36,17 @@ class ScoreboardGenerator:
    
     
     def get_video_start(self):
-        if self.video_timer is not None:
-            return self.video_timer.get_video_start()
         if self.video_start is not None:
             return self.video_start
+        if self.video_timer is not None:
+            return self.video_timer.get_video_start()
         raise ValueError('logic required here')
-
-    def output_gif(self, output_path):
-        dt = datetime.now().strftime("%d%b%y_%H%M%S")
-        output_path2 = fr"{output_path}\{dt}"
-        Path(output_path2).mkdir(parents=True, exist_ok=True)
+    
+    def build_video(self, output_path, starting_i, create_mov):
+        # dt = datetime.now().strftime("%d%b%y_%H%M%S")
+        # output_path2 = fr"{output_path}\{dt}"
+        # Path(output_path2).mkdir(parents=True, exist_ok=True)
+        Path(output_path).mkdir(parents=True, exist_ok=True)
         sets_dicts = []
         all_frames = [
             self.get_empty_opening_frame()
@@ -58,27 +59,40 @@ class ScoreboardGenerator:
                 set_ix=set_ix,
                 us_name=self.us_name,
                 them_name=self.them_name,
-                deuces_allowed=self.deuces_allowed,
-                output_path2=output_path2
+                deuces_allowed=self.deuces_allowed
+                # output_path2=output_path2
             )
             frames = sh.get_frames(sets_dicts)
             sets_dicts = sh.update_sets_dict(sets_dicts)
             all_frames.extend(frames)
         durations = self.get_durations()
-        self.create_output(
-            output_path=output_path2,
+        self.create_mp4(
+            output_path=output_path,
             frames=all_frames,
-            durations=durations
+            durations=durations,
+            starting_i=starting_i,
+            create_mov=create_mov
         )
+        new_video_start = self.get_video_start() + timedelta(seconds=sum(durations)/1000)
+        new_starting_i = starting_i + len(all_frames)
+        return new_video_start, new_starting_i
         
     
-    def create_output(self, output_path, frames, durations):
-        if True:
-            self.create_mp4(output_path, frames, durations)
-        else:
-            self.create_gif(output_path, frames, durations)
+    # def create_output(self, output_path, frames, durations):
+    #     if True:
+    #         self.create_mp4(output_path, frames, durations)
+    #     else:
+    #         self.create_gif(output_path, frames, durations)
 
-    def create_mp4(self, output_path, frames, durations, temp_dir="temp_frames"):
+    def create_mp4(
+        self,
+        output_path,
+        frames,
+        durations,
+        starting_i=0,
+        create_mov=True
+        # temp_dir="temp_frames"
+    ):
         """
         Create an MP4 from a list of PIL.Image objects with per-frame durations using FFmpeg.
 
@@ -88,25 +102,26 @@ class ScoreboardGenerator:
             output_path: Path to the final MP4
             temp_dir: Temporary directory to store frames
         """
-
+        temp_dir = output_path
         # 1️⃣ Create temporary folder
         os.makedirs(temp_dir, exist_ok=True)
 
         # 2️⃣ Save each frame as a PNG
         frame_files = []
-        for i, img in enumerate(frames):
+        for i, img in enumerate(frames, starting_i):
             frame_path = os.path.join(temp_dir, f"frame_{i:06d}.png")
             img.save(frame_path)
             frame_files.append(frame_path)
 
         # 3️⃣ Create FFmpeg concat list
         concat_file_path = os.path.join(temp_dir, "frames.txt")
-        with open(concat_file_path, "w") as f:
+        with open(concat_file_path, "a") as f:
             for frame, duration in zip(frame_files, durations):
                 f.write(f"file '{os.path.abspath(frame)}'\n")
                 f.write(f"duration {duration/1000}\n")
-            # FFmpeg requires the last file repeated without duration
-            f.write(f"file '{os.path.abspath(frame_files[-1])}'\n")
+            if create_mov:
+                # FFmpeg requires the last file repeated without duration
+                f.write(f"file '{os.path.abspath(frame_files[-1])}'\n")
 
         # 4️⃣ Call FFmpeg
         # ffmpeg_cmd = [
@@ -122,24 +137,25 @@ class ScoreboardGenerator:
         # ] #-c:v prores -pix_fmt yuva444p10le logo.mov
         #ffmpeg -f concat -safe 0 -i frames.txt -vf format=yuva444p -c:v prores_ks -profile:v 4444 a_alpha.mov
 
-        ffmpeg_cmd = [
-            "ffmpeg",
-            "-f", "concat",
-            "-safe", "0",
-            "-i", concat_file_path,
-            "-vf", "format=yuva444p",
-            "-c:v", "prores_ks", 
-            "-profile:v", "4444",
-            fr"{output_path}\a_alpha.mov"
-        ]
+        if create_mov:
+            ffmpeg_cmd = [
+                "ffmpeg",
+                "-f", "concat",
+                "-safe", "0",
+                "-i", concat_file_path,
+                "-vf", "format=yuva444p",
+                "-c:v", "prores_ks", 
+                "-profile:v", "4444",
+                fr"{output_path}\a_alpha.mov"
+            ]
 
-        subprocess.run(ffmpeg_cmd, check=True)
+            subprocess.run(ffmpeg_cmd, check=True)
 
-        # 5️⃣ Cleanup (optional)
-        # import shutil
-        # shutil.rmtree(temp_dir)
+            # 5️⃣ Cleanup (optional)
+            # import shutil
+            # shutil.rmtree(temp_dir)
 
-        print(f"Video saved to {output_path}")
+            print(f"Video saved to {output_path}")
 
 
     def create_gif(self, output_path, frames, durations):

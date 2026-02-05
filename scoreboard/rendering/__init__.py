@@ -1,3 +1,4 @@
 from .generator import ScoreboardGenerator
 from .pm_generator import PadelMaxScoreboardGenerator
 from .pp_generator import PadelPointerScoreboardGenerator
+from .multi_match_generator import MultiMatchScoreboardGenerator

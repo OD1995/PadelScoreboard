@@ -296,9 +296,9 @@ class ScoreboardImageDrawer:
         # draw_centered_text(str(game_score.get("them", "")), last_col, 1, widths['game_scores'])
 
         # ---------- save frame ----------
-        if output_path2:
-            img.save(
-                fp=fr"{output_path2}\{set_ix}-{frame_ix}.png"
-            )
+        # if output_path2:
+        #     img.save(
+        #         fp=fr"{output_path2}\{set_ix}-{frame_ix}.png"
+        #     )
 
         return img

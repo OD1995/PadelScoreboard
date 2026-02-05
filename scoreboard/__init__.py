@@ -1,1 +1,5 @@
-from .rendering import PadelPointerScoreboardGenerator, PadelMaxScoreboardGenerator
+from .rendering import (
+    PadelPointerScoreboardGenerator,
+    PadelMaxScoreboardGenerator,
+    MultiMatchScoreboardGenerator
+)
