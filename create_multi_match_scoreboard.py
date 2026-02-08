@@ -1,22 +1,22 @@
 import json
 from scoreboard import MultiMatchScoreboardGenerator
 from datetime import datetime
-import pytz
+from zoneinfo import ZoneInfo
 from collections import OrderedDict
 
 JSON_PATH = r"D:\Dev\PadelScoreboard\data\padel_pointer_backup_2026-02-05_121526Z.json"
 MATCH_IX = 1
 OUTPUT_FOLDER = r"D:\Dev\PadelScoreboard\movs"
-VIDEO_FILE_PATH = r"D:\PadelVideos\Full Videos\IMG_5924.MOV"
-VIDEO_START = None#datetime(
-#     year=2026,
-#     month=2,
-#     day=2,
-#     hour=9,
-#     minute=3,
-#     second=31,
-#     tzinfo=pytz.timezone('Europe/London')
-# )
+VIDEO_FILE_PATH = None#r"D:\PadelVideos\Full Videos\IMG_5924.MOV"
+VIDEO_START = datetime(
+    year=2026,
+    month=2,
+    day=4,
+    hour=21,
+    minute=2,
+    second=12,
+    tzinfo=ZoneInfo('Europe/London')
+)
 MATCH_PLAYERS = OrderedDict(
     [
         (
@@ -35,6 +35,7 @@ MATCH_PLAYERS = OrderedDict(
         )
     ]
 )
+JUST_ANALYSIS = True
 
 with open(JSON_PATH) as f:
     js = json.load(f)
@@ -46,7 +47,7 @@ sg = MultiMatchScoreboardGenerator(
     player_info=MATCH_PLAYERS,
     video_file_path=VIDEO_FILE_PATH,
     video_start=VIDEO_START,
-    output_folder=fr"{OUTPUT_FOLDER}\{dt}"
+    output_folder=fr"{OUTPUT_FOLDER}\{dt}"    
 )
 
-sg.output_scoreboard()
+sg.output_scoreboard(just_analysis=JUST_ANALYSIS)

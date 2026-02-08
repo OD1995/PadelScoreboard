@@ -22,7 +22,7 @@ class ScoreboardImageDrawer:
         self.sets_dicts = []
         self.game_score = {}
 
-        self.multiplier = 10
+        self.multiplier = 1
 
 
         self.widths = {
@@ -186,7 +186,6 @@ class ScoreboardImageDrawer:
         rows = 2
 
         # ---------- logo ----------
-        # logo_path = r"D:\Dev\PadelScoreboard\logos\PadelPointerWithTextV2.png"
         logo_path = (
             Path(__file__)
             .resolve()
@@ -205,10 +204,8 @@ class ScoreboardImageDrawer:
             (int(self.widths['logo']), int(self.widths['logo'])),
             Image.LANCZOS
         )
-        logo_width = logo_img.width
-
         width = self.calculate_scoreboard_width(self.widths)
-        scoreboard_width = width - self.widths['logo']
+        # scoreboard_width = width - self.widths['logo']
 
         # ---------- transparent base image ----------
         img = Image.new("RGBA", (width, height), (0, 0, 0, 0))
@@ -224,7 +221,6 @@ class ScoreboardImageDrawer:
         for y in range(len(cell_informations)):
             for x in range(len(cell_informations[0])):
                 cell_info = cell_informations[y][x]
-                # x0 = cumulative_cell_widths[cell_info.col_ix - 1]
                 x0 = cell_info.get_x0(cumulative_cell_widths)
                 y0 = cell_info.get_y0()
                 width = cell_widths[cell_info.col_ix]
@@ -233,72 +229,4 @@ class ScoreboardImageDrawer:
                 if y == 1:
                     ## Draw vertical line
                     draw.line((x0, 0, x0, 2 * self.cell_height), fill="black", width=2)
-                    # ## Draw horizontal line
-                    # draw.line((x0, y0, x0 + width, y0), fill="black", width=2)
-        
-        # if isinstance(self.us_name, list):
-        #     self.us_name = "\n".join(self.us_name)
-        # if isinstance(self.them_name, list):
-        #     self.them_name = "\n".join(self.them_name)
-
-        
-
-        # ---------- grid ----------
-        # for c in range(cols + 1):
-        #     x = x_offset + c * cell_width
-        #     draw.line((x, 0, x, height), fill="black", width=2)
-        
-        # for cw in cumulative_cell_widths:
-        #     draw.line((cw, 0, cw, height), fill="black", width=2)
-
-        # for r in range(rows + 1):
-        #     y = r * self.cell_height
-        #     draw.line((x_offset, y, x_offset + scoreboard_width, y), fill="black", width=2)
-
-        # ---------- names + serving indicator ----------
-
-
-        # fill_cell_if_text(
-        #     col=0,
-        #     row=serving_row,
-        #     text=self.us_name if serving_row == 0 else self.them_name,
-        #     cell_width=self.widths["player_names"],
-        #     bg_color="#b6e7a7"
-        # )
-        # fill_cell_if_text(
-        #     col=1,
-        #     row=1-serving_row,
-        #     text=self.us_name if serving_row == 1 else self.them_name,
-        #     cell_width=self.widths["player_names"],
-        #     bg_color="white"
-        # )
-
-        # draw_centered_text(self.us_name, 0, 0, widths['player_names'])
-        # draw_centered_text(self.them_name, 0, 1, widths['player_names'])
-
-        # # ---------- set columns ----------
-        # for i, set_score in enumerate(sets_dicts):
-        #     col = 1 + i
-
-        #     fill_cell_if_text(col, 0, set_score.get("us"), widths["set_games"], "black")
-        #     fill_cell_if_text(col, 1, set_score.get("them"), widths["set_games"], "black")
-
-        #     draw_centered_text(str(set_score.get("us", "")), col, 0, widths['set_games'], fill="white")
-        #     draw_centered_text(str(set_score.get("them", "")), col, 1, widths['set_games'], fill="white")
-
-        # # ---------- current game score ----------
-        # last_col = cols - 1
-
-        # fill_cell_if_text(last_col, 0, game_score.get("us"), widths["game_scores"], "white")
-        # fill_cell_if_text(last_col, 1, game_score.get("them"), widths["game_scores"], "white")
-
-        # draw_centered_text(str(game_score.get("us", "")), last_col, 0, widths['game_scores'])
-        # draw_centered_text(str(game_score.get("them", "")), last_col, 1, widths['game_scores'])
-
-        # ---------- save frame ----------
-        # if output_path2:
-        #     img.save(
-        #         fp=fr"{output_path2}\{set_ix}-{frame_ix}.png"
-        #     )
-
         return img

@@ -199,6 +199,10 @@ class ScoreboardGenerator:
         return durations
     
     def copy_analysis_df(self):
+        df = self.get_analysis_df()
+        df.to_clipboard(index=False, header=None)
+
+    def get_analysis_df(self, video_start_override=None):
         rows = []
         sets_dicts = []
         for set_ix, set in enumerate(self.match.sets):
@@ -211,8 +215,8 @@ class ScoreboardGenerator:
                 them_name=self.them_name,
                 deuces_allowed=self.deuces_allowed
             )
-            set_rows = sh.get_match_states(sets_dicts, self.get_video_start())
+            set_rows = sh.get_match_states(sets_dicts, video_start_override or self.get_video_start())
             sets_dicts = sh.update_sets_dict(sets_dicts)
             rows.extend(set_rows)
         df = pd.DataFrame(rows)
-        df.to_clipboard(index=False, header=None)
+        return df
