@@ -33,47 +33,62 @@ class SetHandler:
 
     def get_empty_opening_frame(self):
         return self.sid.get_empty_opening_frame()
-
-    def get_frames(self, sets_dicts):
-        frames = []
-        for game_ix, game in enumerate(self.set.games):
-            if not game.has_points():
-                continue
-            gh = GameHandler(game=game, deuces_allowed=self.deuces_allowed)
-            game_scores, game_winner = gh.get_game_scores(
-                is_first_point_of_match=((game_ix == 0) and (self.set_ix == 0))
-            )
-            for ix, game_score in enumerate(game_scores):
-                if ix == len(game_scores) - 1:
-                    self.games_counts[game_winner] += 1
-                frames.append(
-                    self.sid.generate_scoreboard_image(
-                        sets_dicts=[*sets_dicts, self.games_counts],
-                        game_score=game_score,
-                        # set_ix=len(sets_dicts),
-                        # frame_ix=len(frames),
-                        # output_path2=self.output_path2
-                    )
-                )
-        return frames
-
-    def update_sets_dict(self, sets_dicts):
-        return sets_dicts + [self.games_counts]
     
-    def get_match_states(self, sets_dicts, video_start):
+    def get_frames_and_match_states(self, sets_dicts, video_start, match_stats):
+        frames = []
         match_states = []
         for game_ix, game in enumerate(self.set.games):
             if not game.has_points():
                 continue
-            gh = GameHandler(game=game, deuces_allowed=self.deuces_allowed)
+            gh = GameHandler(
+                game=game,
+                us_name=self.us_name,
+                them_name=self.them_name,
+                deuces_allowed=self.deuces_allowed,
+                match_stats=match_stats,
+            )
             is_first_point_of_match = ((game_ix == 0) and (self.set_ix == 0))
-            game_scores, game_winner = gh.get_game_scores(is_first_point_of_match)
+            is_last_game_of_set = game_ix == len(self.set.games) - 1
+            game_scores, game_winner, match_stats_array = gh.get_game_scores(
+                is_first_point_of_match=is_first_point_of_match,
+                match_stats=match_stats,
+                is_last_game_of_set=is_last_game_of_set
+            )
             for ix, game_score in enumerate(game_scores):
                 if ix == len(game_scores) - 1:
                     self.games_counts[game_winner] += 1
                 if not ((ix == 0) and is_first_point_of_match):
                     match_states.append(self.calculate_match_state(game_score, sets_dicts, video_start))
-        return match_states
+                frames.append(
+                    self.sid.generate_whole_screen_image(
+                        sets_dicts=[*sets_dicts, self.games_counts],
+                        game_score=game_score,
+                        match_stats=match_stats
+                    )
+                )
+        return frames, match_stats_array[-1]
+
+    def update_sets_dict(self, sets_dicts):
+        return sets_dicts + [self.games_counts]
+    
+    # def get_match_states(self, sets_dicts, video_start):
+    #     match_states = []
+    #     for game_ix, game in enumerate(self.set.games):
+    #         if not game.has_points():
+    #             continue
+    #         gh = GameHandler(
+    #             game=game,
+    #             deuces_allowed=self.deuces_allowed,
+
+    #         )
+    #         is_first_point_of_match = ((game_ix == 0) and (self.set_ix == 0))
+    #         game_scores, game_winner = gh.get_game_scores(is_first_point_of_match)
+    #         for ix, game_score in enumerate(game_scores):
+    #             if ix == len(game_scores) - 1:
+    #                 self.games_counts[game_winner] += 1
+    #             if not ((ix == 0) and is_first_point_of_match):
+    #                 match_states.append(self.calculate_match_state(game_score, sets_dicts, video_start))
+    #     return match_states
         
     def calculate_match_state(self, game_score, sets_dicts, video_start):
         return {

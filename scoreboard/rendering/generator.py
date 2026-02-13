@@ -35,6 +35,7 @@ class ScoreboardGenerator:
         self.video_duration = video_duration
         self.just_analysis = just_analysis
     
+
     def get_video_start(self):
         if self.video_start is not None:
             return self.video_start
@@ -42,13 +43,27 @@ class ScoreboardGenerator:
             return self.video_timer.get_video_start()
         raise ValueError('logic required here')
     
-    def build_video(self, output_path, starting_i, create_mov):
-        # dt = datetime.now().strftime("%d%b%y_%H%M%S")
-        # output_path2 = fr"{output_path}\{dt}"
-        # Path(output_path2).mkdir(parents=True, exist_ok=True)
+
+    def build_video_and_get_analysis_df(self, output_path, starting_i, create_mov, video_start_override):
         Path(output_path).mkdir(parents=True, exist_ok=True)
         sets_dicts = []
         all_frames = []
+        match_metrics = [
+            "setsWon",
+            "gamesWon",
+            "serviceGamesWon",
+            "returnGamesWon",
+            "pointsWon",
+            "breakPoints",
+            "breakPointsConverted",
+            "decidingPointsWon",
+        ]
+        match_stats = {
+            pair : {metric : 0 for metric in match_metrics}
+            for pair in [self.us_name, self.them_name]
+        }
+        rows = []
+        sets_dicts = []
         for set_ix, set in enumerate(self.match.sets):
             if not set.has_points():
                 continue
@@ -63,9 +78,14 @@ class ScoreboardGenerator:
             )
             if set_ix == 0:
                 all_frames.append(sh.get_empty_opening_frame())
-            frames = sh.get_frames(sets_dicts)
+            frames, set_rows = sh.get_frames_and_match_states(
+                sets=sets_dicts,
+                video_start=video_start_override or self.get_video_start(),
+                match_stats=match_stats
+            )
             sets_dicts = sh.update_sets_dict(sets_dicts)
             all_frames.extend(frames)
+            rows.extend(set_rows)
         durations = self.get_durations()
         self.create_mp4(
             output_path=output_path,
@@ -74,16 +94,11 @@ class ScoreboardGenerator:
             starting_i=starting_i,
             create_mov=create_mov
         )
+        df = pd.DataFrame(rows)
         new_video_start = self.get_video_start() + timedelta(seconds=sum(durations)/1000)
         new_starting_i = starting_i + len(all_frames)
-        return new_video_start, new_starting_i
+        return new_video_start, new_starting_i, df
         
-    
-    # def create_output(self, output_path, frames, durations):
-    #     if True:
-    #         self.create_mp4(output_path, frames, durations)
-    #     else:
-    #         self.create_gif(output_path, frames, durations)
 
     def create_mp4(
         self,
@@ -160,6 +175,7 @@ class ScoreboardGenerator:
             duration=durations,
             loop=0
         )
+
     
     def get_durations(self) -> list[int]:
         timestamps = [self.match.start_timestamp]
@@ -181,25 +197,26 @@ class ScoreboardGenerator:
         durations.append(10*1000)
         return durations
     
-    def copy_analysis_df(self):
-        df = self.get_analysis_df()
-        df.to_clipboard(index=False, header=None)
+    
+    # def copy_analysis_df(self):
+    #     df = self.get_analysis_df()
+    #     df.to_clipboard(index=False, header=None)
 
-    def get_analysis_df(self, video_start_override=None):
-        rows = []
-        sets_dicts = []
-        for set_ix, set in enumerate(self.match.sets):
-            if not set.has_points():
-                continue
-            sh = SetHandler(
-                set=set,
-                set_ix=set_ix,
-                us_name=self.us_name,
-                them_name=self.them_name,
-                deuces_allowed=self.deuces_allowed
-            )
-            set_rows = sh.get_match_states(sets_dicts, video_start_override or self.get_video_start())
-            sets_dicts = sh.update_sets_dict(sets_dicts)
-            rows.extend(set_rows)
-        df = pd.DataFrame(rows)
-        return df
+    # def get_analysis_df(self, video_start_override=None):
+    #     rows = []
+    #     sets_dicts = []
+    #     for set_ix, set in enumerate(self.match.sets):
+    #         if not set.has_points():
+    #             continue
+    #         sh = SetHandler(
+    #             set=set,
+    #             set_ix=set_ix,
+    #             us_name=self.us_name,
+    #             them_name=self.them_name,
+    #             deuces_allowed=self.deuces_allowed
+    #         )
+    #         set_rows = sh.get_match_states(sets_dicts, video_start_override or self.get_video_start())
+    #         sets_dicts = sh.update_sets_dict(sets_dicts)
+    #         rows.extend(set_rows)
+    #     df = pd.DataFrame(rows)
+    #     return df

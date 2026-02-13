@@ -37,12 +37,13 @@ class MultiMatchScoreboardGenerator:
                 video_duration=None,
                 just_analysis=self.just_analysis
             )
-            video_start, starting_i = sg.build_video(
+            video_start, starting_i, df = sg.build_video_and_get_analysis_df(
                 output_path=self.output_folder,
                 starting_i=starting_i,
-                create_mov=(i == len(self.player_info) - 1)
+                create_mov=(i == len(self.player_info) - 1),
+                video_start_override=(None if i == 0 else self.video_start)
             )
-            df = sg.get_analysis_df(None if i == 0 else self.video_start)
+            # df = sg.get_analysis_df(None if i == 0 else self.video_start)
             dfs.append(df)
         combined_df = pd.concat(dfs)
         combined_df.to_excel(fr"{self.output_folder}/analysis.xlsx")

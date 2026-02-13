@@ -4,9 +4,9 @@ from datetime import datetime
 from zoneinfo import ZoneInfo
 from collections import OrderedDict
 
-JSON_PATH = r"D:\Dev\PadelScoreboard\data\padel_pointer_backup_2026-02-08_224035Z.json"
+JSON_PATH = r"D:\Dev\PadelScoreboard\data\padel_pointer_backup_2026-01-29_84332 amZ.json"
 OUTPUT_FOLDER = r"D:\Dev\PadelScoreboard\movs"
-VIDEO_FILE_PATH = r"D:\PadelVideos\Full Videos\IMG_5929.MOV"
+VIDEO_FILE_PATH = r"D:\PadelVideos\Full Videos\28 Jan 26 Padel Original.mp4"
 VIDEO_START = None
 # VIDEO_START = datetime(
 #     year=2026,
@@ -23,14 +23,14 @@ MATCH_PLAYERS = OrderedDict(
             1,
             {
                 'us_name' : ["ALEX", "OLI"],
-                'them_name' : ["JAMES", "ALAN"]
+                'them_name' : ["NIGEL", "KUSHAGRA"]
             }
         ),
         (
             0,
             {
                 'us_name' : ["ALEX", "OLI"],
-                'them_name' : ["JAMES", "ALAN"]
+                'them_name' : ["NIGEL", "KUSHAGRA"]
             }
         )
     ]
