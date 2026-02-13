@@ -4,38 +4,38 @@ from datetime import datetime
 from zoneinfo import ZoneInfo
 from collections import OrderedDict
 
-JSON_PATH = r"D:\Dev\PadelScoreboard\data\padel_pointer_backup_2026-02-05_121526Z.json"
-MATCH_IX = 1
+JSON_PATH = r"D:\Dev\PadelScoreboard\data\padel_pointer_backup_2026-02-08_224035Z.json"
 OUTPUT_FOLDER = r"D:\Dev\PadelScoreboard\movs"
-VIDEO_FILE_PATH = None#r"D:\PadelVideos\Full Videos\IMG_5924.MOV"
-VIDEO_START = datetime(
-    year=2026,
-    month=2,
-    day=4,
-    hour=21,
-    minute=2,
-    second=12,
-    tzinfo=ZoneInfo('Europe/London')
-)
+VIDEO_FILE_PATH = r"D:\PadelVideos\Full Videos\IMG_5929.MOV"
+VIDEO_START = None
+# VIDEO_START = datetime(
+#     year=2026,
+#     month=2,
+#     day=2,
+#     hour=21,
+#     minute=3,
+#     second=31,
+#     tzinfo=ZoneInfo('Europe/London')
+# )
 MATCH_PLAYERS = OrderedDict(
     [
         (
             1,
             {
-                'us_name' : ["LARRY", "OLI"],
-                'them_name' : ["DAN", "ALEX"]
+                'us_name' : ["ALEX", "OLI"],
+                'them_name' : ["JAMES", "ALAN"]
             }
         ),
         (
             0,
             {
-                'us_name' : ["OLI", "DAN"],
-                'them_name' : ["ALEX", "LARRY"]
+                'us_name' : ["ALEX", "OLI"],
+                'them_name' : ["JAMES", "ALAN"]
             }
         )
     ]
 )
-JUST_ANALYSIS = True
+JUST_ANALYSIS = False
 
 with open(JSON_PATH) as f:
     js = json.load(f)
@@ -47,7 +47,21 @@ sg = MultiMatchScoreboardGenerator(
     player_info=MATCH_PLAYERS,
     video_file_path=VIDEO_FILE_PATH,
     video_start=VIDEO_START,
-    output_folder=fr"{OUTPUT_FOLDER}\{dt}"    
+    output_folder=fr"{OUTPUT_FOLDER}\{dt}",
+    just_analysis=JUST_ANALYSIS
 )
 
-sg.output_scoreboard(just_analysis=JUST_ANALYSIS)
+sg.output_scoreboard()
+
+# sets won
+# games won
+# service games won
+# return games won
+# points won
+# break point conversion %
+# golden points won
+
+## height (total) - 2.25 (14.25) 15%
+# scoreboard height - 15%
+# stats table height - 75%
+# stats table width - 60%

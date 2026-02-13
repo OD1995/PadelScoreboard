@@ -7,7 +7,8 @@ class ScoreboardImageDrawer:
     def __init__(
         self,
         us_name,
-        them_name
+        them_name,
+        just_analysis=False
     ):
         self.us_name = us_name
         self.them_name = them_name
@@ -22,8 +23,7 @@ class ScoreboardImageDrawer:
         self.sets_dicts = []
         self.game_score = {}
 
-        self.multiplier = 1
-
+        self.multiplier = 1 if just_analysis else 10
 
         self.widths = {
             'logo' : 120 * self.multiplier,
@@ -33,6 +33,12 @@ class ScoreboardImageDrawer:
         }
         self.cell_height = 60 * self.multiplier
         self.font_size = 20 * self.multiplier
+               
+    def get_empty_opening_frame(self) -> Image:
+        width = self.calculate_scoreboard_width()
+        height = self.cell_height * 2
+        img = Image.new("RGBA", (width, height), (0, 0, 0, 0))        
+        return img
 
     def calculate_player_name_width(self):
         width = 0
@@ -47,12 +53,12 @@ class ScoreboardImageDrawer:
     def width_calc(self, name):
         return (len(name)*20) + 5
     
-    def calculate_scoreboard_width(self, widths):
+    def calculate_scoreboard_width(self):
         return (
-            widths['logo'] +
-            (widths['set_games'] * 3) +
-            widths['game_scores'] +
-            widths['player_names']
+            self.widths['logo'] +
+            (self.widths['set_games'] * 3) +
+            self.widths['game_scores'] +
+            self.widths['player_names']
         )
     
     def get_cell_widths(self):
@@ -176,13 +182,13 @@ class ScoreboardImageDrawer:
         self,
         sets_dicts: list,
         game_score: dict,
-        set_ix=0,
-        frame_ix=0,
-        output_path2=None
+        # set_ix=0,
+        # frame_ix=0,
+        # output_path2=None
     ):
         self.sets_dicts = sets_dicts
         self.game_score = game_score
-        cols = 3 + len(sets_dicts)
+        # cols = 3 + len(sets_dicts)
         rows = 2
 
         # ---------- logo ----------
@@ -204,7 +210,7 @@ class ScoreboardImageDrawer:
             (int(self.widths['logo']), int(self.widths['logo'])),
             Image.LANCZOS
         )
-        width = self.calculate_scoreboard_width(self.widths)
+        width = self.calculate_scoreboard_width()
         # scoreboard_width = width - self.widths['logo']
 
         # ---------- transparent base image ----------

@@ -11,9 +11,11 @@ class ScoreCalculator:
             "server" : self.get_server(first_point),
             "next_server" : None
         }
-        self.deuces_allowed = deuces_allowed
+        ## Plus one to take into account the first time you reach 40-40
+        self.deuces_allowed = deuces_allowed + 1
         self.deuce_count = 0
         self.game_winner = None
+        self.point_history = []
 
         self.GAME_NOT_STARTED_YET = "-"
         self.OPPONENT_ON_ADVANTAGE = "/"
@@ -43,6 +45,7 @@ class NormalGameScoreCalculator(ScoreCalculator):
         )        
 
     def add_point(self, point:PointDto):
+        self.point_history.append(point)
         us_winner = point.winner == "us"        
         self.score_dict['server'] = self.get_server(point)
         self.score_dict['point_winner'] = point.winner
@@ -88,8 +91,11 @@ class TiebreakGameScoreCalculator(ScoreCalculator):
         )        
 
     def add_point(self, point:PointDto):
+        self.point_history.append(point)
         us_winner = point.winner == "us"        
         self.score_dict['server'] = self.get_server(point)
+        if len(self.point_history) % 2 == 1:
+            self.score_dict['next_server'] = self.get_next_server(point)
         self.score_dict['point_winner'] = point.winner
         self.score_dict['timestamp'] = point.timestamp
         winner = self.us if us_winner else self.them

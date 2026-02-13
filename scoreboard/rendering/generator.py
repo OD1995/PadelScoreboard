@@ -1,5 +1,4 @@
 from ..scoring import SetHandler
-from PIL import Image
 from datetime import datetime, timedelta
 from pathlib import Path
 from ..dtos import MatchDto
@@ -20,7 +19,8 @@ class ScoreboardGenerator:
         video_file_path=None,
         video_start=None,
         video_end=None,
-        video_duration=None
+        video_duration=None,
+        just_analysis=False
     ):
         self.match = match
         # self.sets = sets
@@ -33,7 +33,7 @@ class ScoreboardGenerator:
         self.video_start = video_start
         self.video_end = video_end
         self.video_duration = video_duration
-   
+        self.just_analysis = just_analysis
     
     def get_video_start(self):
         if self.video_start is not None:
@@ -48,9 +48,7 @@ class ScoreboardGenerator:
         # Path(output_path2).mkdir(parents=True, exist_ok=True)
         Path(output_path).mkdir(parents=True, exist_ok=True)
         sets_dicts = []
-        all_frames = [
-            self.get_empty_opening_frame()
-        ]
+        all_frames = []
         for set_ix, set in enumerate(self.match.sets):
             if not set.has_points():
                 continue
@@ -59,9 +57,12 @@ class ScoreboardGenerator:
                 set_ix=set_ix,
                 us_name=self.us_name,
                 them_name=self.them_name,
-                deuces_allowed=self.deuces_allowed
+                deuces_allowed=self.deuces_allowed,
                 # output_path2=output_path2
+                just_analysis=self.just_analysis
             )
+            if set_ix == 0:
+                all_frames.append(sh.get_empty_opening_frame())
             frames = sh.get_frames(sets_dicts)
             sets_dicts = sh.update_sets_dict(sets_dicts)
             all_frames.extend(frames)
@@ -136,25 +137,19 @@ class ScoreboardGenerator:
         #     fr"{output_path}\a.webm"
         # ] #-c:v prores -pix_fmt yuva444p10le logo.mov
         #ffmpeg -f concat -safe 0 -i frames.txt -vf format=yuva444p -c:v prores_ks -profile:v 4444 a_alpha.mov
+        ffmpeg_cmd = [
+            "ffmpeg",
+            "-f", "concat",
+            "-safe", "0",
+            "-i", concat_file_path,
+            "-vf", "format=yuva444p",
+            "-c:v", "prores_ks", 
+            "-profile:v", "4444",
+            fr"{output_path}\a_alpha.mov"
+        ] # works but weird playback
 
-        if create_mov:
-            ffmpeg_cmd = [
-                "ffmpeg",
-                "-f", "concat",
-                "-safe", "0",
-                "-i", concat_file_path,
-                "-vf", "format=yuva444p",
-                "-c:v", "prores_ks", 
-                "-profile:v", "4444",
-                fr"{output_path}\a_alpha.mov"
-            ]
-
+        if create_mov:          
             subprocess.run(ffmpeg_cmd, check=True)
-
-            # 5️⃣ Cleanup (optional)
-            # import shutil
-            # shutil.rmtree(temp_dir)
-
             print(f"Video saved to {output_path}")
 
 
@@ -165,18 +160,6 @@ class ScoreboardGenerator:
             duration=durations,
             loop=0
         )
-
-
-    def get_empty_opening_frame(
-        self,
-        cell_width: int = 120,
-        cell_height: int = 80,
-        rows: int = 2
-    ) -> Image:
-        width = 5 * cell_width
-        height = rows * cell_height
-        img = Image.new("RGBA", (width, height), (0, 0, 0, 0))        
-        return img
     
     def get_durations(self) -> list[int]:
         timestamps = [self.match.start_timestamp]

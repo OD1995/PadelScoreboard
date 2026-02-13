@@ -14,7 +14,8 @@ class PadelPointerScoreboardGenerator(ScoreboardGenerator):
         video_file_path,
         video_start=None,
         video_end=None,
-        video_duration=None
+        video_duration=None,
+        just_analysis=False
     ):
         ScoreboardGenerator.__init__(
             self=self,
@@ -26,7 +27,8 @@ class PadelPointerScoreboardGenerator(ScoreboardGenerator):
             video_file_path=video_file_path,
             video_start=video_start,
             video_end=video_end,
-            video_duration=video_duration
+            video_duration=video_duration,
+            just_analysis=just_analysis
         )
     
     def build_match(self, match_js) -> MatchDto:

@@ -1,6 +1,7 @@
 from .games import GameHandler
 from ..dtos import SetDto
 from ..drawing import ScoreboardImageDrawer
+from PIL import Image
 
 class SetHandler:
 
@@ -11,7 +12,8 @@ class SetHandler:
         us_name,
         them_name,
         deuces_allowed,
-        output_path2=None
+        output_path2=None,
+        just_analysis=False
     ):
         self.set = set
         self.set_ix = set_ix
@@ -23,12 +25,16 @@ class SetHandler:
             "us": 0,
             "them": 0
         }
+        self.sid = ScoreboardImageDrawer(
+            us_name=self.us_name,
+            them_name=self.them_name,
+            just_analysis=just_analysis
+        )
+
+    def get_empty_opening_frame(self):
+        return self.sid.get_empty_opening_frame()
 
     def get_frames(self, sets_dicts):
-        sid = ScoreboardImageDrawer(
-            us_name=self.us_name,
-            them_name=self.them_name
-        )
         frames = []
         for game_ix, game in enumerate(self.set.games):
             if not game.has_points():
@@ -41,12 +47,12 @@ class SetHandler:
                 if ix == len(game_scores) - 1:
                     self.games_counts[game_winner] += 1
                 frames.append(
-                    sid.generate_scoreboard_image(
+                    self.sid.generate_scoreboard_image(
                         sets_dicts=[*sets_dicts, self.games_counts],
                         game_score=game_score,
-                        set_ix=len(sets_dicts),
-                        frame_ix=len(frames),
-                        output_path2=self.output_path2
+                        # set_ix=len(sets_dicts),
+                        # frame_ix=len(frames),
+                        # output_path2=self.output_path2
                     )
                 )
         return frames

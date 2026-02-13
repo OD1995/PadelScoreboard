@@ -11,15 +11,17 @@ class MultiMatchScoreboardGenerator:
         player_info:OrderedDict,
         video_file_path:str,
         video_start:datetime,
-        output_folder:str
+        output_folder:str,
+        just_analysis:bool
     ):
         self.js = js
         self.player_info = player_info
         self.video_file_path = video_file_path
         self.video_start = video_start
         self.output_folder = output_folder
+        self.just_analysis = just_analysis
 
-    def output_scoreboard(self, just_analysis):
+    def output_scoreboard(self):
         starting_i = 0
         video_start = self.video_start
         dfs = []
@@ -32,7 +34,8 @@ class MultiMatchScoreboardGenerator:
                 video_file_path=self.video_file_path,
                 video_start=video_start,
                 video_end=None,
-                video_duration=None
+                video_duration=None,
+                just_analysis=self.just_analysis
             )
             video_start, starting_i = sg.build_video(
                 output_path=self.output_folder,
