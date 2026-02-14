@@ -36,7 +36,7 @@ class ScoreCalculator:
     
     def get_returner(self, point:PointDto):
         us_server = point.serving_pair == "us"
-        return self.them_name if (not us_server) else self.us_name
+        return self.us_name if (not us_server) else self.them_name
     
     def get_next_server(self, point:PointDto):
         us_server = point.serving_pair == "us"
@@ -48,7 +48,7 @@ class ScoreCalculator:
     
     def get_loser(self, point: PointDto):
         us_winner = point.winner == "us"
-        return self.them_name if (not us_winner) else self.us_name
+        return self.us_name if (not us_winner) else self.them_name
 
     def set_game_over(self, point_winner, point, is_deciding_point=False):
         self.game_winner = point_winner
@@ -111,6 +111,14 @@ class NormalGameScoreCalculator(ScoreCalculator):
         self.score_dict['server'] = self.get_server(point)
         self.score_dict['point_winner'] = point.winner
         self.score_dict['timestamp'] = point.timestamp
+        self.update_match_stats(
+            point,
+            is_break_point=self.get_is_break_point(point),
+            is_converted_break_point=self.get_is_converted_break_point(point),
+            is_deciding_point=self.get_is_deciding_point(point),
+            is_last_game_point=is_last_game_point,
+            is_last_set_point=is_last_set_point
+        )
         winner = self.get_winner(point)
         loser = self.get_loser(point)
         match self.score_dict[winner]:
@@ -135,14 +143,6 @@ class NormalGameScoreCalculator(ScoreCalculator):
             case self.ADVANTAGE:
                 self.set_game_over(winner, point)
         self.update_deuce_count()
-        self.update_match_stats(
-            point,
-            is_break_point=self.get_is_break_point(point),
-            is_converted_break_point=self.get_is_converted_break_point(point),
-            is_deciding_point=self.get_is_deciding_point(point),
-            is_last_game_point=is_last_game_point,
-            is_last_set_point=is_last_set_point
-        )
 
     def get_is_break_point(self, point:PointDto):
         server = self.get_server(point)
@@ -152,7 +152,7 @@ class NormalGameScoreCalculator(ScoreCalculator):
         return is_advantage or is_40 or self.get_is_deciding_point(point)
     
     def get_is_converted_break_point(self, point:PointDto):
-        return self.get_is_break_point(point) and (self.get_returner() == self.get_winner())
+        return self.get_is_break_point(point) and (self.get_returner(point) == self.get_winner(point))
     
     def get_is_deciding_point(self, point:PointDto):
         return self.is_deciding_point

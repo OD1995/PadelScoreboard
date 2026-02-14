@@ -7,8 +7,9 @@ class ScoreboardCellInfoDto:
     row_ix: int
     height: int
     width: int
-    colour: str
-    is_transparent: bool
+    colour:str=None
+    is_transparent:bool=False
+    category:str="scoreboard"
 
     def get_rectangle_coords(
         self,
@@ -36,10 +37,11 @@ class ScoreboardCellInfoDto:
         self,
         cumulative_cell_widths
     ):
-        return cumulative_cell_widths[self.col_ix - 1]
+        if self.category == "scoreboard":
+            return cumulative_cell_widths[self.col_ix - 1]
+        return cumulative_cell_widths[self.col_ix] - self.width
     
     def get_y0(self, cumulative_cell_heights):
-        # return self.row_ix * self.height
-        if self.row_ix == 0:
-            return 0
-        return cumulative_cell_heights[self.row_ix - 1]
+        if self.category == "scoreboard":
+            return self.row_ix * self.height
+        return cumulative_cell_heights[self.row_ix] - self.height

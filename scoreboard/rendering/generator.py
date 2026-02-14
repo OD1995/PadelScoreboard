@@ -45,6 +45,7 @@ class ScoreboardGenerator:
     
 
     def build_video_and_get_analysis_df(self, output_path, starting_i, create_mov, video_start_override):
+        print(f"{datetime.now()} - build_video_and_get_analysis_df")
         Path(output_path).mkdir(parents=True, exist_ok=True)
         sets_dicts = []
         all_frames = []
@@ -79,7 +80,7 @@ class ScoreboardGenerator:
             if set_ix == 0:
                 all_frames.append(sh.get_empty_opening_frame())
             frames, set_rows = sh.get_frames_and_match_states(
-                sets=sets_dicts,
+                sets_dicts=sets_dicts,
                 video_start=video_start_override or self.get_video_start(),
                 match_stats=match_stats
             )

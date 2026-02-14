@@ -22,15 +22,15 @@ MATCH_PLAYERS = OrderedDict(
         (
             1,
             {
-                'us_name' : ["ALEX", "OLI"],
-                'them_name' : ["NIGEL", "KUSHAGRA"]
+                'us_name' : ("ALEX", "OLI"),
+                'them_name' : ("NIGEL", "KUSHAGRA")
             }
         ),
         (
             0,
             {
-                'us_name' : ["ALEX", "OLI"],
-                'them_name' : ["NIGEL", "KUSHAGRA"]
+                'us_name' : ("ALEX", "OLI"),
+                'them_name' : ("NIGEL", "KUSHAGRA")
             }
         )
     ]

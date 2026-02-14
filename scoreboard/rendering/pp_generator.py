@@ -17,6 +17,7 @@ class PadelPointerScoreboardGenerator(ScoreboardGenerator):
         video_duration=None,
         just_analysis=False
     ):
+        print(f"{datetime.now()} - PadelPointerScoreboardGenerator init")
         ScoreboardGenerator.__init__(
             self=self,
             match=self.build_match(js['matches'][match_ix]),
@@ -35,6 +36,8 @@ class PadelPointerScoreboardGenerator(ScoreboardGenerator):
         sets = []
         for set_js in match_js['sets']:
             games = []
+            if 'games' not in set_js:
+                continue
             for game_js in set_js['games']:
                 points = []
                 for point_js in game_js['points']:

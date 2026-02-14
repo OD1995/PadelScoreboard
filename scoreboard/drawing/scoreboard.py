@@ -3,7 +3,7 @@ from ..dtos import ScoreboardCellInfoDto
 from pathlib import Path
 from collections import OrderedDict
 from decimal import Decimal, ROUND_HALF_UP
-
+from datetime import datetime
 
 class ScoreboardImageDrawer:
 
@@ -41,8 +41,10 @@ class ScoreboardImageDrawer:
         self.stats_table_cell_height = 50 * self.multiplier
                
     def get_empty_opening_frame(self) -> Image:
-        width = self.calculate_scoreboard_width()
-        height = self.scoreboard_cell_height * 2
+        # width = self.calculate_scoreboard_width()
+        # height = self.scoreboard_cell_height * 2
+        width = 1920
+        height = 1080
         img = Image.new("RGBA", (width, height), (0, 0, 0, 0))        
         return img
 
@@ -53,7 +55,7 @@ class ScoreboardImageDrawer:
         return width
     
     def get_width_from_str_or_list(self, val, width):
-        if isinstance(val, list):
+        if isinstance(val, (list, tuple)):
             for nm in val:
                 width = max(width, self.width_calc(nm))
         else:
@@ -108,6 +110,7 @@ class ScoreboardImageDrawer:
             spacing=2,
             anchor="mm"
         )
+        # print(f"Draw text - `{cell_info.text}` - `{cell_info.get_middle_of_cell(cumulative_cell_widths, cumulative_cell_heights)}`")
 
     def fill_cell_if_text(
         self,
@@ -122,6 +125,7 @@ class ScoreboardImageDrawer:
             xy=cell_info.get_rectangle_coords(cumulative_cell_widths,cumulative_cell_heights),
             fill=cell_info.colour
         )
+        # print(f"Fill cell - `{cell_info.colour}` - `{cell_info.text}` - `{cell_info.get_rectangle_coords(cumulative_cell_widths,cumulative_cell_heights)}")
 
     def build_scoreboard_cell_information(self, game_score) -> list[list[ScoreboardCellInfoDto]]:
         ## Don't consider logo here
@@ -137,7 +141,7 @@ class ScoreboardImageDrawer:
                 row_ix=0,
                 height=self.scoreboard_cell_height,
                 width=self.widths['player_names'],
-                colour="green" if server == "us" else "white"
+                colour="green" if server == self.us_name else "white"
             )
         )
         bottom_row.append(
@@ -147,7 +151,7 @@ class ScoreboardImageDrawer:
                 row_ix=1,
                 height=self.scoreboard_cell_height,
                 width=self.widths['player_names'],
-                colour="green" if server != "us" else "white"
+                colour="green" if server != self.us_name else "white"
             )
         )
         col_ix += 1
@@ -155,7 +159,7 @@ class ScoreboardImageDrawer:
         for set_dict in self.sets_dicts:
             top_row.append(
                 ScoreboardCellInfoDto(
-                    text=set_dict['us'],
+                    text=set_dict[self.us_name],
                     col_ix=col_ix,
                     row_ix=0,
                     height=self.scoreboard_cell_height,
@@ -167,7 +171,7 @@ class ScoreboardImageDrawer:
                 ScoreboardCellInfoDto(
                     col_ix=col_ix,
                     row_ix=1,
-                    text=set_dict['them'],
+                    text=set_dict[self.them_name],
                     height=self.scoreboard_cell_height,
                     width=self.widths['set_games'],
                     colour="black"
@@ -177,7 +181,7 @@ class ScoreboardImageDrawer:
         ## Game score
         top_row.append(
             ScoreboardCellInfoDto(
-                text=self.game_score['us'],
+                text=self.game_score[self.us_name],
                 col_ix=col_ix,
                 row_ix=0,
                 height=self.scoreboard_cell_height,
@@ -187,7 +191,7 @@ class ScoreboardImageDrawer:
         )
         bottom_row.append(
             ScoreboardCellInfoDto(
-                text=self.game_score['them'],
+                text=self.game_score[self.them_name],
                 col_ix=col_ix,
                 row_ix=1,
                 height=self.scoreboard_cell_height,
@@ -207,24 +211,28 @@ class ScoreboardImageDrawer:
         game_score: dict,
         match_stats: dict            
     ):
+        START = datetime.now()
+        print(f"{START} - generate_whole_screen_image")
         canvas_size = (1920, 1080)
         canvas_w, canvas_h = canvas_size
 
         # Create transparent base canvas
         canvas = Image.new("RGBA", canvas_size, (0,0,0,0))
-
+        b = datetime.now()
         scoreboard_image = self.generate_scoreboard_image(
             sets_dicts,
             game_score,
         )
+        print(f"scoreboard_image time: {datetime.now() - b}")
         target_h_a = int(canvas_h * 0.15)
         scale_a = target_h_a / scoreboard_image.height
         target_w_a = int(scoreboard_image.width * scale_a)
 
         scoreboard_image_resized = scoreboard_image.resize((target_w_a, target_h_a), Image.LANCZOS)
         canvas.paste(scoreboard_image_resized, (0, 0), scoreboard_image_resized)
-
+        a = datetime.now()
         match_stats_table_image = self.generate_match_stats_table_image(match_stats)
+        print(f"match_stats_table_image time: {datetime.now() - a}")
         target_h_b = int(canvas_h * 0.75)
         scale_b = target_h_b / match_stats_table_image.height
         target_w_b = int(match_stats_table_image.width * scale_b)
@@ -235,7 +243,9 @@ class ScoreboardImageDrawer:
         y_b = int(canvas_h * 0.20)
 
         canvas.paste(match_stats_table_image_resized, (x_b, y_b), match_stats_table_image_resized)
-
+        END = datetime.now()
+        print(f"{END} - generate_whole_screen_image DONE")
+        print(f"generate_whole_screen_image total: {END-START}")
         return canvas
         
 
@@ -243,6 +253,7 @@ class ScoreboardImageDrawer:
         self,
         match_stats: dict
     ):
+        print(f"{datetime.now()} - generate_match_stats_table_image")
         metrics = OrderedDict(
             [
                 ("Sets Won", "setsWon"),
@@ -258,7 +269,9 @@ class ScoreboardImageDrawer:
             v : self.widths['player_names']
             for v in [self.us_name, self.them_name]
         }
-        row_heights = {}
+        row_heights = {
+            "" : self.stats_table_cell_height * 2.5
+        }
         max_metric_width = 0
         for long_met in metrics.keys():
             met_list = long_met.split("\n")
@@ -268,16 +281,17 @@ class ScoreboardImageDrawer:
                 self.stats_table_cell_height * 2
         column_widths[""] = max_metric_width
 
-        table_width = sum(column_widths)
-        table_height = sum(row_heights)
-        margin_x = 6
-        margin_y = 10
-        width = table_width + (2 * margin_x * self.multiplier)
-        height = table_height + (2 * margin_y * self.multiplier)
+        table_width = sum(column_widths.values())
+        table_height = sum(row_heights.values())
+        margin_x = 6 * self.multiplier
+        margin_y = 10 * self.multiplier
+        width = int(table_width + (2 * margin_x))
+        height = int(table_height + (2 * margin_y))
 
-        transparency_percent = 20
+        transparency_percent = 100#20
         alpha = int(255 * (transparency_percent / 100))
-        img = Image.new("RGBA", (width, height), (128, 128, 128, alpha)), 
+        grey = 128
+        img = Image.new("RGBA", (width, height), (grey, grey, grey, alpha))
         draw = ImageDraw.Draw(img)
 
         cell_informations = self.build_match_stats_table_cell(
@@ -291,14 +305,14 @@ class ScoreboardImageDrawer:
             margin_x + column_widths[self.us_name] + column_widths[""],
             margin_x + column_widths[self.us_name] + column_widths[""] + column_widths[self.them_name],
         ]
-        cumulative_cell_heights = self.get_cumulative_match_stats_cell_heights(metrics, row_heights)
+        cumulative_cell_heights = self.get_cumulative_match_stats_cell_heights(metrics, row_heights, margin_y)
         for y in range(len(cell_informations)):
             for x in range(len(cell_informations[0])):
                 cell_info = cell_informations[y][x]
                 # x0 = cell_info.get_x0(cumulative_cell_widths)
                 # y0 = cell_info.get_y0()
                 # width = cell_widths[cell_info.col_ix]
-                self.fill_cell_if_text(draw, cell_info)
+                self.fill_cell_if_text(draw, cell_info, cumulative_cell_widths, cumulative_cell_heights)
                 self.draw_centered_text(
                     draw,
                     cell_info,
@@ -306,11 +320,14 @@ class ScoreboardImageDrawer:
                     cumulative_cell_widths,
                     cumulative_cell_heights
                 )
+        return img
 
 
     def get_cumulative_match_stats_cell_heights(self, metrics, row_heights, margin_y):
-        val = margin_y
-        listo = []
+        val = row_heights[""] + margin_y
+        listo = [
+            val
+        ]
         for met in metrics.keys():
             val += row_heights[met]
             listo.append(val)
@@ -333,7 +350,9 @@ class ScoreboardImageDrawer:
                     row_ix=0,
                     height=row_heights[""],
                     width=column_widths[self.us_name],
-                    is_transparent=True
+                    # is_transparent=True,
+                    colour="pink",
+                    category="match_stats"
                 ),
                 ScoreboardCellInfoDto(
                     text="",
@@ -341,7 +360,9 @@ class ScoreboardImageDrawer:
                     row_ix=0,
                     height=row_heights[""],
                     width=column_widths[""],
-                    is_transparent=True
+                    # is_transparent=True,
+                    colour="purple",
+                    category="match_stats"
                 ),
                 ScoreboardCellInfoDto(
                     text="\n".join(self.them_name),
@@ -349,7 +370,9 @@ class ScoreboardImageDrawer:
                     row_ix=0,
                     height=row_heights[""],
                     width=column_widths[self.them_name],
-                    is_transparent=True
+                    # is_transparent=True,
+                    colour="orange",
+                    category="match_stats"
                 )
             ]
         )
@@ -362,7 +385,9 @@ class ScoreboardImageDrawer:
                         row_ix=ix,
                         height=row_heights[long_met],
                         width=column_widths[self.us_name],
-                        is_transparent=True
+                        # is_transparent=True,
+                        colour="green",
+                        category="match_stats"
                     ),
                     ScoreboardCellInfoDto(
                         text=long_met,
@@ -370,7 +395,9 @@ class ScoreboardImageDrawer:
                         row_ix=ix,
                         height=row_heights[long_met],
                         width=column_widths[""],
-                        is_transparent=True
+                        # is_transparent=True,
+                        colour="blue",
+                        category="match_stats"
                     ),
                     ScoreboardCellInfoDto(
                         text=self.get_match_stats_cell_value(short_met, self.them_name, match_stats),
@@ -378,7 +405,9 @@ class ScoreboardImageDrawer:
                         row_ix=ix,
                         height=row_heights[long_met],
                         width=column_widths[self.them_name],
-                        is_transparent=True
+                        # is_transparent=True,
+                        colour="red",
+                        category="match_stats"
                     )
                 ]
             )
@@ -388,8 +417,10 @@ class ScoreboardImageDrawer:
     def get_match_stats_cell_value(self, short_met, pair_name, match_stats):
         if short_met is None:
             break_points = match_stats[pair_name]["breakPoints"]
+            if break_points == 0:
+                return "-"
             break_points_converted = match_stats[pair_name]["breakPointsConverted"]
-            return f"{self.round_half_up(break_points / break_points_converted)}%"
+            return f"{int(self.round_half_up(break_points_converted * 100 / break_points))}%"
         return match_stats[pair_name][short_met]
     
 
@@ -403,6 +434,7 @@ class ScoreboardImageDrawer:
         sets_dicts: list,
         game_score: dict,
     ):
+        print(f"{datetime.now()} - generate_scoreboard_image")
         self.sets_dicts = sets_dicts
         self.game_score = game_score
         rows = 2
@@ -433,6 +465,7 @@ class ScoreboardImageDrawer:
         cell_informations = self.build_scoreboard_cell_information(game_score)
         cumulative_cell_widths = self.get_cumulative_scoreboard_cell_widths()
         cell_widths = self.get_scoreboard_cell_widths()
+        cumulative_cell_heights = [self.scoreboard_cell_height, self.scoreboard_cell_height * 2]
 
         for y in range(len(cell_informations)):
             for x in range(len(cell_informations[0])):
@@ -440,12 +473,13 @@ class ScoreboardImageDrawer:
                 x0 = cell_info.get_x0(cumulative_cell_widths)
                 # y0 = cell_info.get_y0()
                 # width = cell_widths[cell_info.col_ix]
-                self.fill_cell_if_text(draw, cell_info)
+                self.fill_cell_if_text(draw, cell_info, cumulative_cell_widths, cumulative_cell_heights)
                 self.draw_centered_text(
                     draw=draw,
                     cell_info=cell_info,
                     font_size=self.scoreboard_font_size,
-                    cumulative_cell_widths=cumulative_cell_widths
+                    cumulative_cell_widths=cumulative_cell_widths,
+                    cumulative_cell_heights=cumulative_cell_heights
                 )
                 if y == 1:
                     ## Draw vertical line
