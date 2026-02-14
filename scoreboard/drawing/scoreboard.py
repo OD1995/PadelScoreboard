@@ -119,11 +119,11 @@ class ScoreboardImageDrawer:
         cumulative_cell_widths:list,
         cumulative_cell_heights:list
     ):
-        if (cell_info.text is None) or (cell_info.text == ""):
+        if (cell_info.text is None) or (cell_info.text == "") or (cell_info.colour is None):
             return
         draw.rectangle(
             xy=cell_info.get_rectangle_coords(cumulative_cell_widths,cumulative_cell_heights),
-            fill=cell_info.colour
+            fill=cell_info.colour,
         )
         # print(f"Fill cell - `{cell_info.colour}` - `{cell_info.text}` - `{cell_info.get_rectangle_coords(cumulative_cell_widths,cumulative_cell_heights)}")
 
@@ -288,9 +288,9 @@ class ScoreboardImageDrawer:
         width = int(table_width + (2 * margin_x))
         height = int(table_height + (2 * margin_y))
 
-        transparency_percent = 100#20
+        transparency_percent = 80#100
         alpha = int(255 * (transparency_percent / 100))
-        grey = 128
+        grey = 211
         img = Image.new("RGBA", (width, height), (grey, grey, grey, alpha))
         draw = ImageDraw.Draw(img)
 
@@ -350,8 +350,8 @@ class ScoreboardImageDrawer:
                     row_ix=0,
                     height=row_heights[""],
                     width=column_widths[self.us_name],
-                    # is_transparent=True,
-                    colour="pink",
+                    is_transparent=True,
+                    # colour="pink",
                     category="match_stats"
                 ),
                 ScoreboardCellInfoDto(
@@ -360,8 +360,8 @@ class ScoreboardImageDrawer:
                     row_ix=0,
                     height=row_heights[""],
                     width=column_widths[""],
-                    # is_transparent=True,
-                    colour="purple",
+                    is_transparent=True,
+                    # colour="purple",
                     category="match_stats"
                 ),
                 ScoreboardCellInfoDto(
@@ -370,8 +370,8 @@ class ScoreboardImageDrawer:
                     row_ix=0,
                     height=row_heights[""],
                     width=column_widths[self.them_name],
-                    # is_transparent=True,
-                    colour="orange",
+                    is_transparent=True,
+                    # colour="orange",
                     category="match_stats"
                 )
             ]
@@ -385,8 +385,8 @@ class ScoreboardImageDrawer:
                         row_ix=ix,
                         height=row_heights[long_met],
                         width=column_widths[self.us_name],
-                        # is_transparent=True,
-                        colour="green",
+                        is_transparent=True,
+                        # colour="green",
                         category="match_stats"
                     ),
                     ScoreboardCellInfoDto(
@@ -395,8 +395,8 @@ class ScoreboardImageDrawer:
                         row_ix=ix,
                         height=row_heights[long_met],
                         width=column_widths[""],
-                        # is_transparent=True,
-                        colour="blue",
+                        is_transparent=True,
+                        # colour="blue",
                         category="match_stats"
                     ),
                     ScoreboardCellInfoDto(
@@ -405,8 +405,8 @@ class ScoreboardImageDrawer:
                         row_ix=ix,
                         height=row_heights[long_met],
                         width=column_widths[self.them_name],
-                        # is_transparent=True,
-                        colour="red",
+                        is_transparent=True,
+                        # colour="red",
                         category="match_stats"
                     )
                 ]
