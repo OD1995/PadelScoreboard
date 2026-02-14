@@ -207,9 +207,10 @@ class ScoreboardImageDrawer:
     
     def generate_whole_screen_image(
         self,
-        sets_dicts: list,
-        game_score: dict,
-        match_stats: dict            
+        sets_dicts:list,
+        game_score:dict,
+        match_stats:dict,
+        display_stats_table:bool=False
     ):
         START = datetime.now()
         print(f"{START} - generate_whole_screen_image")
@@ -230,19 +231,17 @@ class ScoreboardImageDrawer:
 
         scoreboard_image_resized = scoreboard_image.resize((target_w_a, target_h_a), Image.LANCZOS)
         canvas.paste(scoreboard_image_resized, (0, 0), scoreboard_image_resized)
-        a = datetime.now()
-        match_stats_table_image = self.generate_match_stats_table_image(match_stats)
-        print(f"match_stats_table_image time: {datetime.now() - a}")
-        target_h_b = int(canvas_h * 0.75)
-        scale_b = target_h_b / match_stats_table_image.height
-        target_w_b = int(match_stats_table_image.width * scale_b)
-
-        match_stats_table_image_resized = match_stats_table_image.resize((target_w_b, target_h_b), Image.LANCZOS)
-
-        x_b = (canvas_w - target_w_b) // 2
-        y_b = int(canvas_h * 0.20)
-
-        canvas.paste(match_stats_table_image_resized, (x_b, y_b), match_stats_table_image_resized)
+        if display_stats_table:
+            a = datetime.now()
+            match_stats_table_image = self.generate_match_stats_table_image(match_stats)
+            print(f"match_stats_table_image time: {datetime.now() - a}")
+            target_h_b = int(canvas_h * 0.75)
+            scale_b = target_h_b / match_stats_table_image.height
+            target_w_b = int(match_stats_table_image.width * scale_b)
+            match_stats_table_image_resized = match_stats_table_image.resize((target_w_b, target_h_b), Image.LANCZOS)
+            x_b = (canvas_w - target_w_b) // 2
+            y_b = int(canvas_h * 0.20)
+            canvas.paste(match_stats_table_image_resized, (x_b, y_b), match_stats_table_image_resized)
         END = datetime.now()
         print(f"{END} - generate_whole_screen_image DONE")
         print(f"generate_whole_screen_image total: {END-START}")

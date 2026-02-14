@@ -71,6 +71,7 @@ class ScoreboardGenerator:
             sh = SetHandler(
                 set=set,
                 set_ix=set_ix,
+                is_last_set_of_match=set_ix == len(self.match.sets) - 1,
                 us_name=self.us_name,
                 them_name=self.them_name,
                 deuces_allowed=self.deuces_allowed,
@@ -179,22 +180,50 @@ class ScoreboardGenerator:
 
     
     def get_durations(self) -> list[int]:
-        timestamps = [self.match.start_timestamp]
-        for set in self.match.sets:
-            for game in set.games:
-                timestamps.extend(
-                    [p.timestamp for p in game.points]
+        timestamp_info_array = [
+            {
+                'timestamp' : self.match.start_timestamp,
+                'show_stats_after' : False
+            }            
+        ]
+        for set_ix, set in enumerate(self.match.sets):
+            for game_ix, game in enumerate(set.games):
+                timestamp_info_array.extend(
+                    [
+                        {
+                            'timestamp' : p.timestamp,
+                            'show_stats_after' : (
+                                (point_ix == len(game.points) - 1) and 
+                                (game_ix == len(set.games) - 1)
+                            ),
+                            'is_last_point_of_match' : (
+                                (point_ix == len(game.points) - 1) and 
+                                (game_ix == len(set.games) - 1) and
+                                (set_ix == len(self.match.sets) - 1)
+                            ),
+                        }
+                        for point_ix, p in enumerate(game.points)
+                    ]
                 )
         durations_reversed = []
-        last_timestamp = timestamps[-1]
-        for ts in reversed(timestamps[:-1]):
-            durations_reversed.append(int((last_timestamp - ts).total_seconds() * 1000))
-            last_timestamp = ts
-        # ## Have empty frame from video start to match start
+        last_timestamp = timestamp_info_array[-1]["timestamp"]
+        for timestamp_info in reversed(timestamp_info_array[:-1]):
+            new_timestamp = timestamp_info['timestamp']
+            time_diff = int((last_timestamp - new_timestamp).total_seconds() * 1000)
+            if timestamp_info['show_stats_after'] and (not timestamp_info['is_last_point_of_match']):
+                ## Leave X seconds to make sure the first point of the next set isn't missed
+                ## And show the match stats for the remainder of the time, with the assumption that's a break between sets
+                X = 30 * 1000
+                durations_reversed.append(time_diff - X)            
+                durations_reversed.append(X)
+            else:
+                durations_reversed.append(time_diff)
+            last_timestamp = new_timestamp
+        ## Have empty frame from video start to match start
         video_start = self.get_video_start()
         durations_reversed.append(int((last_timestamp - video_start).total_seconds() * 1000)) #07:45
         durations = list(reversed(durations_reversed))
-        ## Show final score for 10 seconds
+        ## Show final score and match stats for 10 seconds
         durations.append(10*1000)
         return durations
     

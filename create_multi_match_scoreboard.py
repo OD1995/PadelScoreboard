@@ -3,7 +3,7 @@ from scoreboard import MultiMatchScoreboardGenerator
 from datetime import datetime
 from zoneinfo import ZoneInfo
 from collections import OrderedDict
-
+START = datetime.now()
 JSON_PATH = r"D:\Dev\PadelScoreboard\data\padel_pointer_backup_2026-01-29_84332 amZ.json"
 OUTPUT_FOLDER = r"D:\Dev\PadelScoreboard\movs"
 VIDEO_FILE_PATH = r"D:\PadelVideos\Full Videos\28 Jan 26 Padel Original.mp4"
@@ -52,7 +52,8 @@ sg = MultiMatchScoreboardGenerator(
 )
 
 sg.output_scoreboard()
-
+END = datetime.now()
+print(f"TOTAL TIME TAKEN: {END - START}")
 # sets won
 # games won
 # service games won

@@ -8,8 +8,9 @@ class SetHandler:
 
     def __init__(
         self,
-        set: SetDto,
+        set:SetDto,
         set_ix,
+        is_last_set_of_match:bool,
         us_name,
         them_name,
         deuces_allowed,
@@ -18,6 +19,7 @@ class SetHandler:
     ):
         self.set = set
         self.set_ix = set_ix
+        self.is_last_set_of_match = is_last_set_of_match
         self.us_name = us_name
         self.them_name = them_name
         self.deuces_allowed = deuces_allowed
@@ -60,13 +62,26 @@ class SetHandler:
                     self.games_counts[game_winner] += 1
                 if not ((ix == 0) and is_first_point_of_match):
                     match_states.append(self.calculate_match_state(game_score, sets_dicts, video_start))
-                frames.append(
-                    self.sid.generate_whole_screen_image(
-                        sets_dicts=[*sets_dicts, self.games_counts],
-                        game_score=game_score,
-                        match_stats=match_stats_array[ix]
+                is_last_point_of_game = ix == len(game_scores) - 1
+                is_last_point_of_set = is_last_point_of_game and is_last_game_of_set
+                is_last_point_of_match = is_last_point_of_game and is_last_game_of_set and self.is_last_set_of_match
+                if is_last_point_of_set:
+                    frames.append(
+                        self.sid.generate_whole_screen_image(
+                            sets_dicts=[*sets_dicts, self.games_counts],
+                            game_score=game_score,
+                            match_stats=match_stats_array[ix],
+                            display_stats_table=True
+                        )
                     )
-                )
+                if not is_last_point_of_match:
+                    frames.append(
+                        self.sid.generate_whole_screen_image(
+                            sets_dicts=[*sets_dicts, self.games_counts],
+                            game_score=game_score,
+                            match_stats=match_stats_array[ix]
+                        )
+                    )
         return frames, match_stats_array[-1]
 
     def update_sets_dict(self, sets_dicts):
