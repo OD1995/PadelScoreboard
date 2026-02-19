@@ -82,7 +82,7 @@ class SetHandler:
                             match_stats=match_stats_array[ix]
                         )
                     )
-        return frames, match_stats_array[-1]
+        return frames, match_states
 
     def update_sets_dict(self, sets_dicts):
         return sets_dicts + [self.games_counts]

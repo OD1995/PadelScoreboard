@@ -214,8 +214,8 @@ class ScoreboardGenerator:
                 ## Leave X seconds to make sure the first point of the next set isn't missed
                 ## And show the match stats for the remainder of the time, with the assumption that's a break between sets
                 X = 30 * 1000
-                durations_reversed.append(time_diff - X)            
                 durations_reversed.append(X)
+                durations_reversed.append(time_diff - X)            
             else:
                 durations_reversed.append(time_diff)
             last_timestamp = new_timestamp

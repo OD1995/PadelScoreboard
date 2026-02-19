@@ -109,7 +109,7 @@ class NormalGameScoreCalculator(ScoreCalculator):
     ):
         self.point_history.append(point)
         self.score_dict['server'] = self.get_server(point)
-        self.score_dict['point_winner'] = point.winner
+        self.score_dict['point_winner'] = self.get_winner(point)
         self.score_dict['timestamp'] = point.timestamp
         self.update_match_stats(
             point,
@@ -182,17 +182,26 @@ class TiebreakGameScoreCalculator(ScoreCalculator):
             match_stats=match_stats
         )        
 
-    def add_point(self, point:PointDto):
-        self.point_history.append(point)        
+    def add_point(
+        self,
+        point:PointDto,
+        is_last_game_point:bool,
+        is_last_set_point:bool
+    ):
+        self.point_history.append(point)
         self.score_dict['server'] = self.get_server(point)
         if len(self.point_history) % 2 == 1:
             self.score_dict['next_server'] = self.get_next_server(point)
-        self.score_dict['point_winner'] = point.winner
-        self.score_dict['timestamp'] = point.timestamp
+        self.score_dict['point_winner'] = self.get_winner(point)
+        self.score_dict['timestamp'] = point.timestamp     
+        self.update_match_stats(
+            point=point,
+            is_last_game_point=is_last_game_point,
+            is_last_set_point=is_last_set_point
+        )
         winner = self.get_winner(point)
         loser = self.get_loser(point)
         if (self.score_dict[winner] < 6) or (self.score_dict[winner] - self.score_dict[loser] != 1):
             self.score_dict[winner] = self.score_dict[winner] + 1
         else:
             self.set_game_over(winner, point)
-        self.update_match_stats(point)
